@@ -1,0 +1,117 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #ffd700;
+  --color-accent: #27224a;
+  --footer-color: #b5b0b0;
+  --color-headings: #707070;
+  --color-body: #000;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--color-body);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Typography Section Starts */
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 0.4rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 5.6rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+/* Typography Section Ends */
+
+/* Button Styles Starts */
+.btn {
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.btn-secondary {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: #f8d404;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.8rem;
+  }
+}
+/* Button Styles Ends */
+
+/* Heading Styles Starts */
+
+.heading {
+  color: var(--color-headings);
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.heading::after {
+  content: '';
+  height: 0.2rem;
+  width: 10rem;
+  background: var(--color-secondary);
+  position: absolute;
+  left: 8rem;
+  bottom: -5px;
+}
+
+/* Heading Styles Ends */
