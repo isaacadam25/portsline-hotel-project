@@ -384,3 +384,18 @@ ul {
 }
 
 /* Footer area style ends */
+
+/* Banner styles starts */
+
+.banner-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.banner-text a::after {
+  left: 0.3rem;
+}
+
+/* Banner styles ends */
