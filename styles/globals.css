@@ -44,12 +44,23 @@ ul {
   color: var(--color-primary);
 }
 
-.nav-link {
+/* .nav-link {
   color: #fff !important;
   padding: 2px 0;
 }
 
 .nav-link:hover {
+  border-bottom: 1.5px solid var(--color-secondary);
+  transition: border 1s ease;
+} */
+
+/* Styles For The Link-Tag From Next-Js */
+.navigation-links {
+  color: #fff !important;
+  padding: 2px 5px;
+}
+
+.navigation-links:hover {
   border-bottom: 1.5px solid var(--color-secondary);
   transition: border 1s ease;
 }
@@ -399,3 +410,43 @@ ul {
 }
 
 /* Banner styles ends */
+
+/* About-Us-Page styles starts */
+
+.title-under-line {
+  height: 3px;
+  background: var(--color-secondary);
+  margin: 0.3rem auto;
+  width: 20%;
+  float: left;
+  flex: 1;
+}
+
+.title-under-line-center {
+  height: 3px;
+  background: var(--color-secondary);
+  margin: 0.3rem auto;
+  width: 10%;
+  flex: 1;
+}
+
+.row-divider {
+  height: 3px;
+  background: var(--color-headings);
+  margin: 1.7rem auto;
+  flex: 1;
+}
+
+.contents-parent {
+  background-color:var(--color-primary);
+  padding: 5% 10%;
+}
+
+.about-us-image {
+  border-radius: 35px;
+}
+
+.staff-image {
+  border-radius: 95px;
+}
+/* About-Us-Page styles ends */

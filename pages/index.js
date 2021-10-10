@@ -13,13 +13,13 @@ export default function Home() {
     <div style={{ height: '200vh', position: 'relative' }}>
       <TopNav />
       <NavigationBar />
-      <Banner />
-      {/* <ShowCase />
+      {/* <Banner title="About Us" /> */}
+      <ShowCase />
       <WelcomeNote />
       <FeaturedRooms />
       <Testimonial />
-      <Services /> */}
-      {/* <Footer /> */}
+      <Services />
+      <Footer />
     </div>
   );
 }
