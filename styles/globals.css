@@ -402,7 +402,7 @@ ul {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 8rem 0;
 }
 
 .banner-text a::after {
