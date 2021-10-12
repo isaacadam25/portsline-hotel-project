@@ -9,7 +9,7 @@ const Services = () => {
           <h2 className="services-header">Services</h2>
         </Col>
         <Col xs={12} md={12}>
-          <h1>Pictures</h1>
+          {/* <h1>Pictures</h1> */}
         </Col>
       </Row>
     </Container>

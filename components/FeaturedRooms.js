@@ -10,13 +10,13 @@ const FeaturedRooms = () => {
           <h3>Featured Rooms</h3>
         </Col>
         <Col className="room-card" xs={12} md={4}>
-          <RoomCard roomTitle="Comfort Tripple Room" />
+          <RoomCard roomTitle="Comfort Tripple Room" roomPrice="150,000" />
         </Col>
         <Col className="room-card" xs={12} md={4}>
-          <RoomCard roomTitle="Business Twin Room" />
+          <RoomCard roomTitle="Business Twin Room" roomPrice="100,000" />
         </Col>
         <Col className="room-card" xs={12} md={4}>
-          <RoomCard roomTitle="Standard Twin Room" />
+          <RoomCard roomTitle="Standard Twin Room" roomPrice="250,000" />
         </Col>
         <Col className="room-card" xs={12} md={12}>
           <a className="scroll-button" href="#">

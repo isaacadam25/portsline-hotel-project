@@ -50,7 +50,7 @@ export default function Blog() {
           <Col
             style={{ textAlign: "center", width: "100%", backgroundColor: "" }}
           >
-            <Pagination total={50} itemRender={itemRender} />
+            <Pagination total={30} itemRender={itemRender} />
           </Col>
         </Row>
         <Row>

@@ -1,7 +1,6 @@
 import TopNav from '../components/TopNav';
 import NavigationBar from '../components/NavigationBar';
 import Banner from '../components/Banner';
-import Services from '../components/Services';
 import Footer from '../components/Footer';
 import { Card, Row, Col } from 'react-bootstrap';
 import RoomImage from '../images/room1.jpg';
