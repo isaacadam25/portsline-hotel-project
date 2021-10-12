@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 
 const NavigationBar = () => {
@@ -10,12 +11,17 @@ const NavigationBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">About Us</Nav.Link>
-            <Nav.Link href="#">Rooms</Nav.Link>
+            <Link href="/"><a className="navigation-links">Home</a></Link>
+            <Link href="/about-us"><a className="navigation-links">About Us</a></Link>
+            <Link href="/rooms"><a className="navigation-links">Rooms</a></Link>
+            <Link href="/gallery"><a className="navigation-links">Gallery</a></Link>
+            <Link href="/our-services"><a className="navigation-links">Services</a></Link>
+            <Link href="/blog"><a className="navigation-links">Blog</a></Link>
+
+            {/* <Nav.Link href="#">Rooms</Nav.Link>
             <Nav.Link href="#">Gallery</Nav.Link>
             <Nav.Link href="#">Services</Nav.Link>
-            <Nav.Link href="#">Blog</Nav.Link>
+            <Nav.Link href="#">Blog</Nav.Link> */}
             <Button size="sm">BOOK NOW</Button>
           </Nav>
         </Navbar.Collapse>
