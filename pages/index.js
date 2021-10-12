@@ -18,9 +18,8 @@ export default function Home() {
       <WelcomeNote />
       <FeaturedRooms />
       <Testimonial />
-      {/*
       <Services />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
