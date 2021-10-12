@@ -10,7 +10,7 @@ const TopNav = () => {
         <i className="fa fa-envelope" /> mail@domain.com
       </a>
       <a href="#">
-        <i className="fa fa-exclamation-circle " /> COVID-19 Travel Updates
+        <i className="fa fa-exclamation-circle "> COVID-19 Travel Updates </i>
       </a>
     </div>
   );

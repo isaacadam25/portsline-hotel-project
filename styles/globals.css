@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
 :root {
   --color-primary: #fff;
   --color-secondary: #ffd700;
@@ -13,6 +15,12 @@ a {
 
 ul {
   list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Tangerine', cursive;
 }
 
 /* Button Styles Starts */
@@ -44,16 +52,6 @@ ul {
   color: var(--color-primary);
 }
 
-/* .nav-link {
-  color: #fff !important;
-  padding: 2px 0;
-}
-
-.nav-link:hover {
-  border-bottom: 1.5px solid var(--color-secondary);
-  transition: border 1s ease;
-} */
-
 /* Styles For The Link-Tag From Next-Js */
 .navigation-links {
   color: #fff !important;
@@ -77,49 +75,68 @@ ul {
 }
 
 .welcome-text {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .welcome-note {
   text-align: center;
+  position: relative;
 }
 
 .welcome-note .welcome-title {
   color: var(--color-headings);
   display: inline-block;
-  position: relative;
-  margin-bottom: 0;
-  padding: 0 6rem;
-  padding-top: 1.3rem;
-  padding-bottom: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.4rem 0;
 }
 
 .welcome-note .welcome-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
   background: var(--color-secondary);
-  width: 10rem;
-  height: 0.2rem;
-  left: 4rem;
-  margin: 0 6rem;
+  content: '';
+  height: 2px;
+  left: 8rem;
+  position: absolute;
+  top: 2rem;
+  width: 5rem;
 }
 
 .welcome-note p {
-  padding: 2rem 0;
-  width: 25rem;
-  margin: auto;
+  padding: 0.5rem 1.2rem;
   text-align: justify;
 }
 
-.heading::after {
-  content: '';
-  height: 0.2rem;
-  width: 10rem;
-  background: var(--color-secondary);
-  position: absolute;
-  left: 4rem;
-  bottom: -5px;
+.welcome-note b {
+  display: inline-block;
+  padding: 0.5rem 0;
+  font-family: 'Tangerine', cursive;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 760px) {
+  .welcome-note .welcome-title {
+    color: var(--color-headings);
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .welcome-note .welcome-title::after {
+    background: var(--color-secondary);
+    content: '';
+    height: 2px;
+    left: 12rem;
+    position: absolute;
+    top: 3rem;
+    width: 7rem;
+  }
+
+  .welcome-note p {
+    padding: 0.5rem 1rem;
+    text-align: justify;
+  }
 }
 
 /* Heading Styles Ends */
@@ -128,25 +145,40 @@ ul {
 
 .top-nav {
   background: var(--color-primary);
-  padding: 0.6rem;
+  padding: 0.4rem;
+  width: 100%;
+  text-align: center;
 }
 
 .top-nav a {
   color: #000;
   font-size: 1rem;
-  padding: 0 0.6rem;
+  padding: 0.4rem 0.6rem;
 }
 
 .top-nav a:nth-child(3) {
   color: #000;
   font-size: 1rem;
-  padding-left: 1rem;
-  border-left: 2px solid #000;
 }
 
 .top-nav a:nth-child(3) i {
   color: var(--color-secondary);
-  font-size: 1.3rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 760px) {
+  .top-nav {
+    background: var(--color-primary);
+    padding: 0.4rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .top-nav a:nth-child(3) {
+    color: #000;
+    font-size: 1rem;
+    border-left: 2px solid #000;
+  }
 }
 
 /* TOP nav styles Ends */
@@ -155,39 +187,63 @@ ul {
 
 .showcase {
   background-image: url('../public/hotel.jpg');
-  background-repeat: repeat;
-  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.showcase .title {
-  color: var(--color-primary);
-  text-align: center;
-  padding: 2rem 0;
-  padding-top: 6rem;
-}
-
-.showcase .subtitle {
-  color: var(--color-primary);
-  text-align: center;
-  width: 36rem;
-  padding: 4rem 0;
-}
-
 .showcase button {
   background: var(--color-secondary) !important;
   color: var(--color-primary);
-  margin: 2rem 0;
-  border: none;
+  margin: 1rem 0;
+  border: 0;
 }
 
 .showcase button:hover {
   background: var(--color-primary) !important;
   color: var(--color-secondary);
-  margin: 2rem 0;
+  margin: 1rem 0;
   border: 0;
+}
+
+.showcase .title {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 3rem;
+  padding: 0.5rem 0;
+  padding-top: 2rem;
+}
+
+.showcase .subtitle {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.1rem;
+}
+
+@media screen and (min-width: 760px) {
+  .showcase .subtitle {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .showcase .title {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 4rem;
+    padding: 1rem 0;
+    padding-top: 3rem;
+  }
+
+  .showcase {
+    background-image: url('../public/hotel.jpg');
+    display: flex;
+    height: 40%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Showcase styles ends */
@@ -195,25 +251,50 @@ ul {
 /* Featured Rooms style starts */
 
 .featured-rooms {
-  padding: 1.5rem 0;
-  text-align: center;
-}
-
-.featured-rooms h3 {
-  color: var(--color-headings);
   padding: 0.5rem 0;
+  text-align: center;
   position: relative;
 }
 
-.featured-rooms h3::after {
+.position-container {
+  position: relative;
+}
+
+.position-container h3 {
+  color: var(--color-headings);
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.position-container h3::after {
   content: '';
   position: absolute;
-  width: 9rem;
-  height: 0.2rem;
+  width: 5rem;
+  height: 2px;
   background: var(--color-secondary);
-  bottom: 0;
-  right: 30rem;
-  margin: 2px 0;
+  top: 2rem;
+  left: 8rem;
+}
+
+@media screen and (min-width: 760px) {
+  .position-container h3 {
+    color: var(--color-headings);
+    padding: 0;
+    font-size: 3rem;
+    margin: 0.5rem 0;
+  }
+
+  .position-container h3::after {
+    content: '';
+    position: absolute;
+    width: 7rem;
+    height: 2px;
+    background: var(--color-secondary);
+    top: 3.5rem;
+    left: 32rem;
+  }
 }
 
 /* Featured Rooms style ends */
@@ -222,6 +303,7 @@ ul {
 
 .room-card {
   padding: 1rem 1.5rem;
+  position: inherit;
 }
 
 .card-img-overlay .room-price {
@@ -290,25 +372,22 @@ ul {
 .scroll-button:hover {
   color: black;
 }
-
 /* Button scroll from room featured ends */
 
 /* Testimonial Style starts */
-
 .testimonial-section {
   background-image: url('../public//hotel.jpg');
-  padding: 3rem;
+  height: 50vh; /* //TODO Remove this height property */
 }
-
 /* Testimonial Style ends */
 
 /* Services section styles starts */
-
 .services .services-header {
   text-align: center;
   color: var(--color-headings);
+  font-size: 3rem;
   padding-top: 1rem;
-  padding-bottom: 0.2rem;
+  margin: 0;
   position: relative;
 }
 
@@ -316,9 +395,9 @@ ul {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 11rem;
-  width: 4.5rem;
-  height: 3px;
+  left: 12rem;
+  width: 3rem;
+  height: 2px;
   background: var(--color-secondary);
 }
 
@@ -417,6 +496,13 @@ ul {
   padding: 8rem 0;
 }
 
+.banner-text h3 {
+  position: absolute;
+  bottom: 5rem;
+  color: var(--color-primary);
+  font-size: 4rem;
+}
+
 .banner-text a::after {
   left: 0.3rem;
 }
@@ -450,7 +536,7 @@ ul {
 }
 
 .contents-parent {
-  background-color:var(--color-primary);
+  background-color: var(--color-primary);
   padding: 5% 10%;
 }
 

@@ -6,7 +6,7 @@ const FeaturedRooms = () => {
   return (
     <Container>
       <Row className="justify-content-center featured-rooms">
-        <Col xs={12} md={12}>
+        <Col xs={12} md={12} className="position-container">
           <h3>Featured Rooms</h3>
         </Col>
         <Col className="room-card" xs={12} md={4}>
