@@ -1,24 +1,28 @@
 import React from 'react';
 import Head from 'next/head';
+import NavigationBar from './NavigationBar';
+import TopNav from './TopNav';
+import Footer from './Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title }) => {
   return (
     <>
       <Head>
-        <title>Portsline Hotel and SPA | Home</title>
+        <title>Portsline Hotel and SPA | {title ? title : 'Home'}</title>
       </Head>
-      {/* 
+
       <header>
-        <h1>Header</h1>
-      </header> */}
+        <TopNav />
+        <NavigationBar />
+      </header>
 
       <main>{children}</main>
 
-      {/* <footer>
+      <footer>
         <section>
-          <h1>Footer</h1>
+          <Footer />
         </section>
-      </footer> */}
+      </footer>
     </>
   );
 };
