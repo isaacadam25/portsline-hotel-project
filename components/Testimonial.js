@@ -7,7 +7,7 @@ import TestimonialCard from './TestimonialCard';
 const Testimonial = () => {
   return (
     <Container fluid className="testimonial-section">
-      <Row className="justify-content-center">
+      <Row className="justify-content-center test-1">
         <Col md={12} xs={12} sm={12} className="testimonial-header">
           <h1>Testimonials</h1>
         </Col>

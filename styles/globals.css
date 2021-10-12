@@ -240,7 +240,7 @@ h3 {
   .showcase {
     background-image: url('../public/hotel.jpg');
     display: flex;
-    height: 40%;
+    height: 85vh;
     flex-direction: column;
     align-items: center;
   }
@@ -383,7 +383,6 @@ h3 {
 
 .testimonial-header {
   text-align: center;
-  position: relative;
 }
 
 .testimonial-header h1 {
@@ -391,15 +390,15 @@ h3 {
   color: var(--color-primary);
 }
 
-.testimonial-header h1:after {
+/* .testimonial-section .testimonial-header h1::after {
   content: '';
   position: absolute;
   top: 3rem;
-  left: 40rem;
+  left: 40rem; TODO Fix me here
   width: 5rem;
   height: 2px;
   background: var(--color-secondary);
-}
+} */
 
 .testimonial-card {
   background: linear-gradient(45deg, rgb(175, 171, 118), rgb(183, 223, 230));
