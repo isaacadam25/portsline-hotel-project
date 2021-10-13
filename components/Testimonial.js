@@ -18,7 +18,7 @@ const Testimonial = () => {
           <h1>Testimonials</h1>
         </Col>
         <Col md={12} xs={12} sm={12}>
-          <Carousel breakPoints={breakPoints}>
+          <Carousel enableAutoPlay={true} breakPoints={breakPoints}>
             <TestimonialCard />
             <TestimonialCard />
             <TestimonialCard />

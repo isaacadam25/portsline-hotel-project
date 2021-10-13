@@ -450,6 +450,10 @@ h3 {
   text-align: center;
 }
 
+.rec-arrow {
+  background-color: var(--color-secondary);
+}
+
 @media screen and (min-width: 760px) {
   .testimonial-content .testimonial-message {
     text-align: justify;
@@ -480,6 +484,10 @@ h3 {
 /* Testimonial Style ends */
 
 /* Services section styles starts */
+.services {
+  padding-bottom: 3rem;
+}
+
 .services .services-header {
   text-align: center;
   color: var(--color-headings);
@@ -577,10 +585,17 @@ h3 {
 
 .map {
   color: var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+  padding-left: 1.5rem;
 }
 
 .map h6 {
   padding: 0.1rem 0;
+}
+
+.mylink {
+  padding: 0.5rem;
+  color: var(--color-primary);
 }
 
 /* Footer area style ends */
