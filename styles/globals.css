@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
 
 :root {
   --color-primary: #fff;
@@ -20,7 +20,7 @@ ul {
 h1,
 h2,
 h3 {
-  font-family: "Tangerine", cursive;
+  font-family: 'Tangerine', cursive;
 }
 
 /* Button Styles Starts */
@@ -94,7 +94,7 @@ h3 {
 
 .welcome-note .welcome-title::after {
   background: var(--color-secondary);
-  content: "";
+  content: '';
   height: 2px;
   left: 8rem;
   position: absolute;
@@ -110,7 +110,7 @@ h3 {
 .welcome-note b {
   display: inline-block;
   padding: 0.5rem 0;
-  font-family: "Tangerine", cursive;
+  font-family: 'Tangerine', cursive;
   font-size: 1.5rem;
 }
 
@@ -125,7 +125,7 @@ h3 {
 
   .welcome-note .welcome-title::after {
     background: var(--color-secondary);
-    content: "";
+    content: '';
     height: 2px;
     left: 12rem;
     position: absolute;
@@ -186,7 +186,7 @@ h3 {
 /* Showcase styles starts */
 
 .showcase {
-  background-image: url("../public/hotel.jpg");
+  background-image: url('../public/hotel.jpg');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,7 +238,7 @@ h3 {
   }
 
   .showcase {
-    background-image: url("../public/hotel.jpg");
+    background-image: url('../public/hotel.jpg');
     display: flex;
     height: 85vh;
     flex-direction: column;
@@ -269,7 +269,7 @@ h3 {
 }
 
 .position-container h3::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 5rem;
   height: 2px;
@@ -287,7 +287,7 @@ h3 {
   }
 
   .position-container h3::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 7rem;
     height: 2px;
@@ -346,7 +346,7 @@ h3 {
 }
 
 .card-img-overlay a::after {
-  content: "";
+  content: '';
   position: inherit;
   bottom: 0;
   left: 1rem;
@@ -367,7 +367,7 @@ h3 {
 }
 
 .scroll-button::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   width: 2rem;
@@ -383,8 +383,8 @@ h3 {
 
 /* Testimonial Style starts */
 .testimonial-section {
-  background-image: url("../public//hotel.jpg");
-  padding: 1rem;
+  background-image: url('../public//hotel.jpg');
+  padding: 0.5rem;
   /* height: 50vh; //TODO Remove this height property */
 }
 
@@ -413,7 +413,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 .testimonial-card .testimonial-image {
@@ -436,7 +435,7 @@ h3 {
 
 .testimonial-content .testimonial-message {
   text-align: justify;
-  padding: 0 1.5rem;
+  padding: 0 0.5rem;
   font-style: italic;
 }
 
@@ -448,6 +447,34 @@ h3 {
 
 .testimonial-content .author {
   padding: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 760px) {
+  .testimonial-content .testimonial-message {
+    text-align: justify;
+    padding: 0 1.5rem;
+    font-style: italic;
+  }
+
+  .testimonial-card {
+    background: linear-gradient(45deg, rgb(175, 171, 118), rgb(183, 223, 230));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+  }
+
+  .testimonial-section {
+    background-image: url('../public//hotel.jpg');
+    padding: 1rem;
+    /* height: 50vh; //TODO Remove this height property */
+  }
+
+  .testimonial-content .author {
+    padding: 0.5rem;
+  }
 }
 
 /* Testimonial Style ends */
@@ -463,7 +490,7 @@ h3 {
 }
 
 .services .services-header::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 12rem;
@@ -482,7 +509,7 @@ h3 {
 }
 
 .footer::before {
-  content: ""; /* TODO: Add logo here */
+  content: ''; /* TODO: Add logo here */
   width: 8rem;
   position: absolute;
   height: 8rem;
