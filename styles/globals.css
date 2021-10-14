@@ -620,10 +620,13 @@ h3 {
 }
 /* About-Us-Page styles end */
 
-/* Gallery-Page styles start */
+/* Restaurant-Page styles start */
 
-.gallery-images {
-  /* border-radius: 10px; */
+.restaurant-first-row {
+  /* background-color: green; */
+  background-image: url(../public/images/foodPlate.png);
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  padding: 13% 0 0 30%;
 }
-
-/* Gallery-Page styles end */
+/* Restaurant-Page styles end */

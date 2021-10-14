@@ -7,6 +7,7 @@ import ContentPlaceholder from "../components/ContentPlaceholder";
 import BlogPostCard from "../components/BlogPostCard";
 import { Card, Row, Col } from "react-bootstrap";
 import { Pagination } from "antd";
+import SpaceDiv from "../components/SpaceDiv";
 
 export default function Blog() {
   const posts = [];
@@ -53,15 +54,7 @@ export default function Blog() {
             <Pagination total={30} itemRender={itemRender} />
           </Col>
         </Row>
-        <Row>
-          <Col
-            md={{ span: 0, offset: 0 }}
-            xs={{ span: 12, offset: 0 }}
-            sm={{ span: 12, offset: 0 }}
-          >
-            <div style={{ backgroundColor: "", height: "70px" }}></div>
-          </Col>
-        </Row>
+        <SpaceDiv />
       </Row>
 
       {/* Blog Contents End */}

@@ -2,6 +2,7 @@ import Banner from "../components/Banner";
 import Layout from "../components/Layout";
 import RoomCard from "../components/RoomCard";
 import { Col, Row } from "react-bootstrap";
+import SpaceDiv from "../components/SpaceDiv";
 
 export default function Rooms() {
   const rooms = [
@@ -37,13 +38,7 @@ export default function Rooms() {
           </Col>
         ))}
       </Row>
-      <Col
-        md={{ span: 0, offset: 0 }}
-        xs={{ span: 12, offset: 0 }}
-        sm={{ span: 12, offset: 0 }}
-      >
-        <div style={{ backgroundColor: "", height: "70px" }}></div>
-      </Col>
+      <SpaceDiv />
     </Layout>
   );
 }

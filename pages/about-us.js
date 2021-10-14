@@ -1,29 +1,30 @@
-import TopNav from '../components/TopNav';
-import NavigationBar from '../components/NavigationBar';
-import Banner from '../components/Banner';
-import Footer from '../components/Footer';
-import { Card, Row, Col } from 'react-bootstrap';
-import RoomImage from '../images/room1.jpg';
-import RoomImage2 from '../images/room2.jpg';
-import Image from 'next/image';
-import StaffCard from '../components/StaffCard';
+import TopNav from "../components/TopNav";
+import NavigationBar from "../components/NavigationBar";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
+import { Card, Row, Col } from "react-bootstrap";
+import RoomImage from "../public/images/room1.jpg";
+import RoomImage2 from "../public/images/room2.jpg";
+import Image from "next/image";
+import StaffCard from "../components/StaffCard";
+import SpaceDiv from "../components/SpaceDiv";
 
 export default function AboutUs() {
   return (
-    <div style={{ height: '100vh', position: 'relative' }}>
+    <div style={{ height: "100vh", position: "relative" }}>
       <TopNav />
       <NavigationBar />
       <Banner title="About Us" />
 
-      {/* About-Us contents start */}
+      {/*  About-Us contents start */}
 
-      <Row className="contents-parent" style={{ width: '100%', margin: 0 }}>
+      <Row className="contents-parent" style={{ width: "100%", margin: 0 }}>
         {/* First Row Starts */}
         <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
+          style={{ backgroundColor: "", padding: 0, width: "100%", margin: 0 }}
         >
           <Col
-            style={{ backgroundColor: '', padding: '0', margin: 0 }}
+            style={{ backgroundColor: "", padding: "0", margin: 0 }}
             md={6}
             xs={12}
             sm={{ span: 11, offset: 1 }}
@@ -44,12 +45,12 @@ export default function AboutUs() {
           </Col>
 
           <Col
-            style={{ backgroundColor: 'maroon', padding: 0 }}
+            style={{ backgroundColor: "maroon", padding: 0 }}
             md={{ span: 5, offset: 1 }}
             xs={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 2 }}
           >
-            <Card style={{ backgroundColor: '', border: 0 }}>
+            <Card style={{ backgroundColor: "", border: 0 }}>
               <Image
                 src={RoomImage}
                 alt="Room Image"
@@ -64,10 +65,10 @@ export default function AboutUs() {
 
         {/* Horizontal Line */}
         <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
+          style={{ backgroundColor: "", padding: 0, width: "100%", margin: 0 }}
         >
           <Col
-            style={{ backgroundColor: '', padding: 0 }}
+            style={{ backgroundColor: "", padding: 0 }}
             md={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 1 }}
           >
@@ -77,15 +78,15 @@ export default function AboutUs() {
 
         {/* Second Row Starts */}
         <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
+          style={{ backgroundColor: "", padding: 0, width: "100%", margin: 0 }}
         >
           <Col
-            style={{ backgroundColor: '', padding: 0, marginBottom: '4%' }}
+            style={{ backgroundColor: "", padding: 0, marginBottom: "4%" }}
             md={{ span: 5, offset: 0 }}
             xs={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 2 }}
           >
-            <Card style={{ backgroundColor: '', border: 0 }}>
+            <Card style={{ backgroundColor: "", border: 0 }}>
               <Image
                 src={RoomImage2}
                 alt="Room Image"
@@ -98,7 +99,7 @@ export default function AboutUs() {
 
           <Col></Col>
           <Col
-            style={{ backgroundColor: '', padding: '0', margin: 0 }}
+            style={{ backgroundColor: "", padding: "0", margin: 0 }}
             md={{ span: 6, offset: 0 }}
             xs={{ span: 12, offset: 0 }}
             sm={{ span: 11, offset: 1 }}
@@ -119,10 +120,10 @@ export default function AboutUs() {
 
         {/* Horizontal Line */}
         <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
+          style={{ backgroundColor: "", padding: 0, width: "100%", margin: 0 }}
         >
           <Col
-            style={{ backgroundColor: '', padding: 0 }}
+            style={{ backgroundColor: "", padding: 0 }}
             md={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 1 }}
           >
@@ -132,10 +133,10 @@ export default function AboutUs() {
 
         {/* Third Row Starts */}
         <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
+          style={{ backgroundColor: "", padding: 0, width: "100%", margin: 0 }}
         >
           <Col
-            style={{ backgroundColor: '', padding: '0', margin: 0 }}
+            style={{ backgroundColor: "", padding: "0", margin: 0 }}
             md={5}
             xs={12}
             sm={{ span: 11, offset: 1 }}
@@ -150,12 +151,12 @@ export default function AboutUs() {
           </Col>
 
           <Col
-            style={{ backgroundColor: 'maroon', padding: 0 }}
+            style={{ backgroundColor: "maroon", padding: 0 }}
             md={{ span: 6, offset: 1 }}
             xs={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 2 }}
           >
-            <Card style={{ backgroundColor: '', border: 0 }}>
+            <Card style={{ backgroundColor: "", border: 0 }}>
               <Image
                 src={RoomImage}
                 alt="Room Image"
@@ -170,10 +171,10 @@ export default function AboutUs() {
 
         {/* Horizontal Line */}
         <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
+          style={{ backgroundColor: "", padding: 0, width: "100%", margin: 0 }}
         >
           <Col
-            style={{ backgroundColor: '', padding: 0 }}
+            style={{ backgroundColor: "", padding: 0 }}
             md={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 1 }}
           >
@@ -183,15 +184,15 @@ export default function AboutUs() {
 
         {/* Fourth Row Starts */}
         <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
+          style={{ backgroundColor: "", padding: 0, width: "100%", margin: 0 }}
         >
           <Col
-            style={{ backgroundColor: '', padding: 0, marginBottom: '4%' }}
+            style={{ backgroundColor: "", padding: 0, marginBottom: "4%" }}
             md={{ span: 4, offset: 0 }}
             xs={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 2 }}
           >
-            <Card style={{ backgroundColor: '', border: 0 }}>
+            <Card style={{ backgroundColor: "", border: 0 }}>
               <Image
                 src={RoomImage2}
                 alt="Room Image"
@@ -204,7 +205,7 @@ export default function AboutUs() {
 
           <Col></Col>
           <Col
-            style={{ backgroundColor: '', padding: '0', margin: 0 }}
+            style={{ backgroundColor: "", padding: "0", margin: 0 }}
             md={{ span: 7, offset: 0 }}
             xs={{ span: 12, offset: 0 }}
             sm={{ span: 11, offset: 1 }}
@@ -220,10 +221,10 @@ export default function AboutUs() {
 
         {/* Horizontal Line */}
         <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
+          style={{ backgroundColor: "", padding: 0, width: "100%", margin: 0 }}
         >
           <Col
-            style={{ backgroundColor: '', padding: 0 }}
+            style={{ backgroundColor: "", padding: 0 }}
             md={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 1 }}
           >
@@ -233,14 +234,14 @@ export default function AboutUs() {
 
         {/* Staffs Row Starts */}
         <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
+          style={{ backgroundColor: "", padding: 0, width: "100%", margin: 0 }}
         >
           <div
             style={{
-              width: '100%',
-              backgroundColor: '',
-              textAlign: 'center',
-              placeItems: 'center',
+              width: "100%",
+              backgroundColor: "",
+              textAlign: "center",
+              placeItems: "center",
             }}
           >
             <h3>OUR STAFF</h3>
@@ -263,15 +264,7 @@ export default function AboutUs() {
           />
         </Row>
         {/* Staffs Row Ends */}
-        <Row>
-          <Col
-            md={{ span: 0, offset: 0 }}
-            xs={{ span: 12, offset: 0 }}
-            sm={{ span: 12, offset: 0 }}
-          >
-            <div style={{ backgroundColor: '', height: '50px' }}></div>
-          </Col>
-        </Row>
+        <SpaceDiv />
       </Row>
 
       {/* About-Us contents end */}

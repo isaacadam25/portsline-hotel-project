@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Hotel from '../images/room1.jpg';
+import Hotel from '../public/images/room1.jpg';
 import { Col, Container, Row, Card } from 'react-bootstrap';
 
 const Banner = ({ title }) => {
