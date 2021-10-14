@@ -1,7 +1,7 @@
 import TopNav from "../components/TopNav";
 import NavigationBar from "../components/NavigationBar";
 import Banner from "../components/Banner";
-import Services from "../components/Services";
+// import Services from "../components/Services";
 import Footer from "../components/Footer";
 import ContentPlaceholder from "../components/ContentPlaceholder";
 import BlogPostCard from "../components/BlogPostCard";
