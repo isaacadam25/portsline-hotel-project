@@ -75,7 +75,7 @@ export default function Restaurant() {
             margin: 0,
           }}
         >
-          <Col>
+          <Col md={6} xs={12} sm={12}>
             <Card style={{ backgroundColor: "inherit", border: "none" }}>
               <Card.Title style={{ marginBottom: "3%" }}>
                 Book a Table
@@ -103,7 +103,7 @@ export default function Restaurant() {
                       <Form.Control type="date" placeholder="select date" />
                     </Form.Group>
                   </Col>
-                  <Col>
+                  <Col md={6} xs={12} sm={12}>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlTextarea1"

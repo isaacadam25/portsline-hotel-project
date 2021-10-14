@@ -1,9 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import Hotel from '../public/hotel.jpg';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from "react";
+import Image from "next/image";
+import Hotel from "../public/hotel.jpg";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
+  const dt = new Date();
+  const year = dt.getFullYear();
   return (
     <Container fluid>
       <Row className="footer justify-content-center">
@@ -67,7 +69,7 @@ const Footer = () => {
         </Col>
 
         <Col
-          style={{ borderTop: '1px solid #fff', marginTop: 4 }}
+          style={{ borderTop: "1px solid #fff", marginTop: 4 }}
           xs={12}
           md={7}
         >
@@ -83,12 +85,12 @@ const Footer = () => {
         </Col>
 
         <Col
-          style={{ borderTop: '1px solid #fff', marginTop: 4 }}
+          style={{ borderTop: "1px solid #fff", marginTop: 4 }}
           xs={12}
           md={5}
         >
-          <p style={{ textAlign: 'center', padding: '.5rem' }}>
-            &copy; 2021 | Portsline Hotel & SPA Limited
+          <p style={{ textAlign: "center", padding: ".5rem" }}>
+            &copy; {year} | Portsline Hotel & SPA Limited
           </p>
         </Col>
       </Row>
