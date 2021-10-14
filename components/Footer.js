@@ -65,6 +65,32 @@ const Footer = () => {
           <h6>Visit Us:</h6>
           <Image src={Hotel} width={400} height={200} alt="map-image" />
         </Col>
+
+        <Col
+          style={{ borderTop: '1px solid #fff', marginTop: 4 }}
+          xs={12}
+          md={7}
+        >
+          <a className="mylink" href="#">
+            Terms and Conditions
+          </a>
+          <a className="mylink" href="#">
+            Privacy Policy
+          </a>
+          <a className="mylink" href="#">
+            FAQs
+          </a>
+        </Col>
+
+        <Col
+          style={{ borderTop: '1px solid #fff', marginTop: 4 }}
+          xs={12}
+          md={5}
+        >
+          <p style={{ textAlign: 'center', padding: '.5rem' }}>
+            &copy; 2021 | Portsline Hotel & SPA Limited
+          </p>
+        </Col>
       </Row>
     </Container>
   );

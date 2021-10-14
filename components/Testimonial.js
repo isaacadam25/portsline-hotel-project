@@ -1,8 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
-import { Container, Row, Carousel, Col } from 'react-bootstrap';
-import Hotel from '../public/hotel.jpg';
+import { Container, Row, Col } from 'react-bootstrap';
+import Carousel from 'react-elastic-carousel';
 import TestimonialCard from './TestimonialCard';
+
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2 },
+  { width: 760, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 4 },
+];
 
 const Testimonial = () => {
   return (
@@ -11,17 +17,15 @@ const Testimonial = () => {
         <Col md={12} xs={12} sm={12} className="testimonial-header">
           <h1>Testimonials</h1>
         </Col>
-        <Col md={3} xs={12} sm={12}>
-          <TestimonialCard />
-        </Col>
-        <Col md={3} xs={12} sm={12}>
-          <TestimonialCard />
-        </Col>
-        <Col md={3} xs={12} sm={12}>
-          <TestimonialCard />
-        </Col>
-        <Col md={3} xs={12} sm={12}>
-          <TestimonialCard />
+        <Col md={12} xs={12} sm={12}>
+          <Carousel enableAutoPlay={true} breakPoints={breakPoints}>
+            <TestimonialCard />
+            <TestimonialCard />
+            <TestimonialCard />
+            <TestimonialCard />
+            <TestimonialCard />
+            <TestimonialCard />
+          </Carousel>
         </Col>
       </Row>
     </Container>
