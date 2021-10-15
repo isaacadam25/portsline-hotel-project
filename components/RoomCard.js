@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import { Card, Row, Col } from "react-bootstrap";
-import Hotel from "../public/hotel.jpg";
+import React from 'react';
+import Image from 'next/image';
+import { Card, Row, Col } from 'react-bootstrap';
+import Hotel from '../public/hotel.jpg';
 
 const RoomCard = ({ roomTitle, roomPrice }) => {
   return (

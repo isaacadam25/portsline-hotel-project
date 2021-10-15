@@ -1,9 +1,10 @@
-import FeaturedRooms from '../components/FeaturedRooms';
-import Services from '../components/Services';
-import ShowCase from '../components/ShowCase';
-import Testimonial from '../components/Testimonial';
-import WelcomeNote from '../components/WelcomeNote';
 import Layout from '../components/Layout';
+import ShowCase from '../components/ShowCase';
+import WelcomeNote from '../components/WelcomeNote';
+import FeaturedRooms from '../components/FeaturedRooms';
+import Testimonial from '../components/Testimonial';
+import Services from '../components/Services';
+import InputWithIcon from '../components/InputWithIcon';
 
 export default function Home() {
   return (
