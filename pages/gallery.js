@@ -2,8 +2,9 @@ import Banner from "../components/Banner";
 import { Col, Row } from "react-bootstrap";
 import Layout from "../components/Layout";
 import Image from "next/image";
-import RoomImage2 from "../images/room2.jpg";
-import RoomImage from "../images/room1.jpg";
+import RoomImage2 from "../public/images/room2.jpg";
+import RoomImage from "../public/images/room1.jpg";
+import SpaceDiv from "../components/SpaceDiv";
 
 export default function Gallery() {
   const images = [];
@@ -41,15 +42,7 @@ export default function Gallery() {
             </a>
           </Col>
         </Row>
-        <Row>
-          <Col
-            md={{ span: 0, offset: 0 }}
-            xs={{ span: 12, offset: 0 }}
-            sm={{ span: 12, offset: 0 }}
-          >
-            <div style={{ backgroundColor: "", height: "70px" }}></div>
-          </Col>
-        </Row>
+        <SpaceDiv />
       </Row>{" "}
     </Layout>
   );

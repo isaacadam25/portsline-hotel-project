@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Hotel from '../public/hotel.jpg';
 import { Col, Container, Row, Card } from 'react-bootstrap';
-import StaffImage from '../images/staffImage.jpeg'
+import StaffImage from '../public/images/staffImage.jpeg'
 
 
 const StaffCard = ({name, title, description}) => {

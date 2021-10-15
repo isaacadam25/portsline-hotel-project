@@ -23,8 +23,11 @@ const NavigationBar = () => {
             <Link href="/gallery">
               <a className="navigation-links">Gallery</a>
             </Link>
-            <Link href="/our-services">
+            {/* <Link href="/our-services">
               <a className="navigation-links">Services</a>
+            </Link> */}
+            <Link href="/restaurant">
+              <a className="navigation-links">Restaurant</a>
             </Link>
             <Link href="/blog">
               <a className="navigation-links">Blog</a>

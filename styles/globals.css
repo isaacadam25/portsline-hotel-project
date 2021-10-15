@@ -53,6 +53,11 @@ h3 {
 }
 
 /* Styles For The Link-Tag From Next-Js */
+.home-link {
+  display:flex;
+  color: #fff !important;
+}
+
 .navigation-links {
   color: #fff !important;
   padding: 2px 5px;
@@ -186,7 +191,7 @@ h3 {
 /* Showcase styles starts */
 
 .showcase {
-  background-image: url('../public/hotel.jpg');
+  background-image: url('../public/images/receiption.jpg');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,10 +243,12 @@ h3 {
   }
 
   .showcase {
-    background-image: url('../public/hotel.jpg');
+    background-image: url('../public/images/receiption.jpg');
     display: flex;
     height: 85vh;
     flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     align-items: center;
   }
 }
@@ -521,6 +528,7 @@ h3 {
   width: 8rem;
   position: absolute;
   height: 8rem;
+  /* background: var(--color-accent); */
   background: var(--color-secondary);
   top: -4rem;
   border-radius: 50%;
@@ -662,10 +670,13 @@ h3 {
 }
 /* About-Us-Page styles end */
 
-/* Gallery-Page styles start */
+/* Restaurant-Page styles start */
 
-.gallery-images {
-  /* border-radius: 10px; */
+.restaurant-first-row {
+  /* background-color: green; */
+  background-image: url(../public/images/foodPlate.png);
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  padding: 13% 0 0 30%;
 }
-
-/* Gallery-Page styles end */
+/* Restaurant-Page styles end */
