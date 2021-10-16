@@ -54,7 +54,7 @@ h3 {
 
 /* Styles For The Link-Tag From Next-Js */
 .home-link {
-  display:flex;
+  display: flex;
   color: #fff !important;
 }
 
@@ -194,6 +194,7 @@ h3 {
   background-image: url('../public/images/receiption.jpg');
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -226,6 +227,11 @@ h3 {
   padding: 0.5rem 0.1rem;
 }
 
+.showcase-input {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (min-width: 760px) {
   .showcase .subtitle {
     color: var(--color-primary);
@@ -250,10 +256,52 @@ h3 {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     align-items: center;
+    justify-content: center;
+  }
+
+  .showcase-input {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
   }
 }
 
 /* Showcase styles ends */
+
+/* Showcase Buttons style starts */
+.input {
+  width: 10rem;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 10px;
+  border: none;
+}
+
+.icon-inside {
+  width: 10rem;
+  position: relative;
+  margin: 0 1rem;
+}
+
+.icon-inside i {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  padding: 10px;
+  color: #30a3f1;
+}
+
+/* .input[type='date'] {
+  text-align: left;
+}
+
+.input[type='date']:before {
+  color: lightgrey;
+  content: attr(placeholder) !important;
+  margin-right: 1.5em;
+} */
+
+/* Showcase Buttons style ends */
 
 /* Featured Rooms style starts */
 
@@ -551,13 +599,8 @@ h3 {
   position: absolute;
 }
 
-.quick-links h6 {
-  text-align: center;
-  color: var(--color-primary);
-}
-
 .quick-links ul {
-  margin: 0 1rem;
+  padding: 0;
 }
 
 .quick-links ul li a {
@@ -585,6 +628,7 @@ h3 {
 .addresses {
   color: var(--color-primary);
   font-size: 1rem;
+  margin: 1rem 0 0 0;
 }
 
 .addresses p {
@@ -593,20 +637,53 @@ h3 {
 
 .map {
   color: var(--color-primary);
-  border-left: 3px solid var(--color-primary);
-  padding-left: 1.5rem;
 }
 
 .map h6 {
   padding: 0.1rem 0;
 }
 
-.mylink {
-  padding: 0.5rem;
-  color: var(--color-primary);
+@media screen and (min-width: 760px) {
+  .addresses {
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .quick-links {
+    padding: 0 0 0 2rem;
+  }
 }
 
 /* Footer area style ends */
+
+/* Bottom area style starts */
+.bottom-area {
+  border-top: 1px solid var(--color-primary);
+  text-align: center;
+}
+
+.bottom-links {
+  /* padding: 0.5rem; */
+  color: var(--color-primary);
+}
+
+.bottom-links:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 760px) {
+  .bottom-area {
+    border-top: 1px solid var(--color-primary);
+    text-align: left;
+  }
+
+  .bottom-links {
+    margin: 2rem 0.5rem;
+    color: var(--color-primary);
+  }
+}
+/* Bottom area style ends */
 
 /* Banner styles starts */
 

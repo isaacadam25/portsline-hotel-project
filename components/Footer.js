@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import Hotel from "../public/hotel.jpg";
-import { Container, Row, Col } from "react-bootstrap";
+import React from 'react';
+import Image from 'next/image';
+import Hotel from '../public/hotel.jpg';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
   const dt = new Date();
@@ -67,31 +67,16 @@ const Footer = () => {
           <h6>Visit Us:</h6>
           <Image src={Hotel} width={400} height={200} alt="map-image" />
         </Col>
-
-        <Col
-          style={{ borderTop: "1px solid #fff", marginTop: 4 }}
-          xs={12}
-          md={7}
-        >
-          <a className="mylink" href="#">
+        <Col className="bottom-area" xs={12} md={10} lg={10}>
+          <a className="bottom-links" href="#">
             Terms and Conditions
           </a>
-          <a className="mylink" href="#">
+          <a className="bottom-links" href="#">
             Privacy Policy
           </a>
-          <a className="mylink" href="#">
+          <a className="bottom-links" href="#">
             FAQs
           </a>
-        </Col>
-
-        <Col
-          style={{ borderTop: "1px solid #fff", marginTop: 4 }}
-          xs={12}
-          md={5}
-        >
-          <p style={{ textAlign: "center", padding: ".5rem" }}>
-            &copy; {year} | Portsline Hotel & SPA Limited
-          </p>
         </Col>
       </Row>
     </Container>
