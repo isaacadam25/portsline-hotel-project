@@ -679,4 +679,12 @@ h3 {
   background-size: 50% 100%;
   padding: 13% 0 0 30%;
 }
+
+.shadowCard {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  /* box-shadow:         3px 3px 5px 6px #ccc; */
+  box-shadow:         0px 5px 20px 1px lightgray
+  
+}
 /* Restaurant-Page styles end */

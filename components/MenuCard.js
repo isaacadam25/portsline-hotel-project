@@ -6,7 +6,8 @@ const MenuCard = ({ title, subTitle, description, pic }) => {
   return (
     <Col md={{ span: 4 }} xs={{ span: 12 }}>
       <Card
-        style={{ width: "100%", border: "2px solid gray", marginBottom: "10%"}}
+        className="shadowCard"
+        style={{ width: "100%", border: "none", marginBottom: "10%" }}
       >
         <Image src={pic} width={300} height={200} alt="Menu-Image" />
         <Card.Body>

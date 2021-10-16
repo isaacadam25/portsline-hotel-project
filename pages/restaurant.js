@@ -75,60 +75,60 @@ export default function Restaurant() {
             margin: 0,
           }}
         >
-          <Col md={6} xs={12} sm={12}>
-            <Card style={{ backgroundColor: "inherit", border: "none" }}>
-              <Card.Title style={{ marginBottom: "3%" }}>
-                Book a Table
-              </Card.Title>
-              <Form>
-                <Row>
-                  <Col>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Label>Full Name</Form.Label>
-                      <Form.Control type="text" placeholder="Enter full name" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Label>Email </Form.Label>
-                      <Form.Control type="email" placeholder="Enter email" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Label>Phone </Form.Label>
-                      <Form.Control
-                        type="number"
-                        placeholder="Enter phone number"
-                      />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Label>Date </Form.Label>
-                      <Form.Control type="date" placeholder="select date" />
-                    </Form.Group>
-                  </Col>
-                  <Col md={6} xs={12} sm={12}>
-                    <Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlTextarea1"
-                    >
-                      <Form.Label>Comments</Form.Label>
-                      <Form.Control
-                        as="textarea"
-                        rows={3}
-                        style={{ height: "36vh" }}
-                      />
-                    </Form.Group>
-                  </Col>
-                </Row>
-                <Row>
-                  <Button
-                    variant=""
-                    type="submit"
-                    style={{ backgroundColor: "blue" }}
+          {/* <Col md={6} xs={12} sm={12}> */}
+          <Card style={{ backgroundColor: "inherit", border: "none" }}>
+            <Card.Title style={{ marginBottom: "3%" }}>Book a Table</Card.Title>
+            <Form>
+              <Row>
+                <Col md={6} xs={12} sm={12}>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter full name" />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email </Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Phone </Form.Label>
+                    <Form.Control
+                      type="number"
+                      placeholder="Enter phone number"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Date </Form.Label>
+                    <Form.Control type="date" placeholder="select date" />
+                  </Form.Group>
+                </Col>
+                <Col md={6} xs={12} sm={12}>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextarea1"
                   >
-                    Submit
-                  </Button>
-                </Row>
-              </Form>
-            </Card>
-          </Col>
+                    <Form.Label>Comments</Form.Label>
+                    <Form.Control
+                      as="textarea"
+                      rows={3}
+                      style={{ height: "36vh" }}
+                    />
+                  </Form.Group>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={2}>
+                <Button
+                  variant=""
+                  type="submit"
+                  style={{ backgroundColor: "blue" }}
+                >
+                  Submit
+                </Button>
+                </Col>
+              </Row>
+            </Form>
+          </Card>
+          {/* </Col> */}
         </Row>
       </Row>
       {/* Menu Contents End */}

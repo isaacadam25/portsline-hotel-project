@@ -7,9 +7,10 @@ const BlogPostCard = ({ title, subTitle, description }) => {
   return (
     <Col md={{ span: 4 }} xs={{ span: 12 }}>
       <Card
-        style={{ width: "100%", border: "2px solid gray", marginBottom: "10%" }}
+        className="shadowCard"
+        style={{ width: "100%", marginBottom: "10%", border: "none"}}
       >
-        <Image src={Hotel} width={300} height={200} alt="Post-Image"/>
+        <Image src={Hotel} width={300} height={200} alt="Post-Image" />
         <Card.Body>
           <h3 style={{ color: "gray" }}>{title}</h3>
           <Card.Title style={{ color: "darkblue" }}>{subTitle}</Card.Title>
