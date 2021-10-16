@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
         </Col>
         <Col className="addresses" xs={12} md={3}>
-          <h6>Addresses</h6>
+          <h6>Address</h6>
           <address>
             <p>Portsline Hotel & SPA</p>
             <p>CR No. 489654</p>
