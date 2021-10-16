@@ -44,9 +44,23 @@ export default function Blog() {
 
       <Row
         className="contents-parent"
-        style={{ width: "100%", backgroundColor: "", margin: 0 }}
+        style={{
+          width: "100%",
+          backgroundColor: "",
+          margin: 0,
+          padding: "0 10%",
+        }}
       >
-        {posts}
+        <Col
+          md={{ span: 10, offset: 1 }}
+          xs={12}
+          sm={12}
+          style={{ backgroundColor: "", paddingTop: "5%" }}
+        >
+          <Row style={{ backgroundColor: "", justifyContent: "center" }}>
+            {posts}
+          </Row>
+        </Col>
         <Row>
           <Col
             style={{ textAlign: "center", width: "100%", backgroundColor: "" }}

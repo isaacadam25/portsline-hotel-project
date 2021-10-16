@@ -5,6 +5,7 @@ import FeaturedRooms from '../components/FeaturedRooms';
 import Testimonial from '../components/Testimonial';
 import Services from '../components/Services';
 import InputWithIcon from '../components/InputWithIcon';
+import SpaceDiv from '../components/SpaceDiv';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <FeaturedRooms />
       <Services />
       <Testimonial />
+      <SpaceDiv />
     </Layout>
   );
 }
