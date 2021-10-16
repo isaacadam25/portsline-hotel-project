@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import HotelMap from '../public/images/portsline-map.png';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from "react";
+import Image from "next/image";
+import HotelMap from "../public/images/portsline-map.png";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
   const dt = new Date();
@@ -60,7 +60,7 @@ const Footer = () => {
             <p>Open: 24 HRS</p>
             <p>63/65 Block-T Bingo/Taifa Road</p>
             <p>P.O Box 6052,</p>
-            <p>Tel From: 8:30 AM - 4:30 PM</p>
+            {/* <p>Tel From: 8:30 AM - 4:30 PM</p> */}
           </address>
         </Col>
         <Col className="map" xs={12} md={4}>

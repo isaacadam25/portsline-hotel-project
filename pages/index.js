@@ -12,8 +12,8 @@ export default function Home() {
       <ShowCase />
       <WelcomeNote />
       <FeaturedRooms />
-      <Testimonial />
       <Services />
+      <Testimonial />
     </Layout>
   );
 }
