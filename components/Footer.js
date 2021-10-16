@@ -41,7 +41,7 @@ const Footer = () => {
         <Col className="contact-us" xs={12} md={3}>
           <h6>Contact Us:</h6>
           <address>
-            <p>Phone : +255 787 978 908.</p>
+            <p>Phone : +255 787 978 908</p>
             <p>Email : info@portslinehotel.co.tz</p>
             <p>info@portslinehotel.co.tz</p>
           </address>
