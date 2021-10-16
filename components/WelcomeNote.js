@@ -21,7 +21,7 @@ const WelcomeNote = () => {
             International Airport and the Sea Port. These ideal landmarks have
             lead into naming the hotel as introduced herein. With these ideal
             landmarks and features. I hope you will choose Ports Line Hotel as
-            we welcome the opportunity to serve you for Dar Es Salaam's better
+            we welcome the opportunity to serve you for Dar Es Salaam better
             memories. Karibu Sana!
           </p>
           <b>Karibu Sana!</b>
