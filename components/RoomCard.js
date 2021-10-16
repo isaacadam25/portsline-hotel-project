@@ -1,11 +1,16 @@
-import React from 'react';
-import Image from 'next/image';
-import { Card, Row, Col } from 'react-bootstrap';
-import Hotel from '../public/hotel.jpg';
+import React from "react";
+import Image from "next/image";
+import { Card, Row, Col } from "react-bootstrap";
+import Hotel from "../public/hotel.jpg";
 
 const RoomCard = ({ roomTitle, roomPrice }) => {
   return (
-    <Card className="bg-dark text-white">
+    <Card
+      className="bg-dark text-white"
+      style={{ border: "none",
+       boxShadow: "0px 5px 20px 1px lightgray" 
+      }}
+    >
       <Image src={Hotel} alt="Card image" width={300} height={300} />
       <Card.ImgOverlay>
         <div className="room-price">

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Hotel from '../public/hotel.jpg';
+import HotelMap from '../public/images/portsline-map.png';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
@@ -65,7 +65,7 @@ const Footer = () => {
         </Col>
         <Col className="map" xs={12} md={4}>
           <h6>Visit Us:</h6>
-          <Image src={Hotel} width={400} height={200} alt="map-image" />
+          <Image src={HotelMap} width={400} height={200} alt="map-image" />
         </Col>
         <Col className="bottom-area" xs={12} md={10} lg={10}>
           <a className="bottom-links" href="#">

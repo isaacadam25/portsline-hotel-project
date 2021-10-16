@@ -230,6 +230,8 @@ h3 {
 .showcase-input {
   display: flex;
   flex-direction: column;
+  /* background-color: red; */
+  padding-top: 5%;
 }
 
 @media screen and (min-width: 760px) {
@@ -440,7 +442,7 @@ h3 {
 .testimonial-section {
   background-image: url('../public//hotel.jpg');
   padding: 0.5rem;
-  /* height: 50vh; //TODO Remove this height property */
+  /* height: 50vh; // TODO Remove this height property */
 }
 
 .testimonial-header {
@@ -569,6 +571,7 @@ h3 {
 .footer {
   background: #b5b0b0;
   position: relative;
+  padding-bottom: 2%;
 }
 
 .footer::before {
