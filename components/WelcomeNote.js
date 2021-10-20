@@ -16,13 +16,13 @@ const WelcomeNote = () => {
         >
           <h3 className="welcome-title">Portsline Hotel & SPA</h3>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
-            facilis molestias minus quisquam natus soluta rerum ipsum nesciunt,
-            mollitia excepturi velit quos ex porro at perspiciatis illo dolore
-            exercitationem. Totam! Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Odio facilis molestias minus quisquam natus soluta
-            rerum ipsum nesciunt, mollitia excepturi velit quos ex porro at
-            perspiciatis illo dolore exercitationem. Totam!
+            A strategically built Hotel with features of its own kind, located
+            between the two main ports of Dar Es Salaam - Julius Nyerere
+            International Airport and the Sea Port. These ideal landmarks have
+            lead into naming the hotel as introduced herein. With these ideal
+            landmarks and features. I hope you will choose Ports Line Hotel as
+            we welcome the opportunity to serve you for Dar Es Salaam better
+            memories. Karibu Sana!
           </p>
           <b>Karibu Sana!</b>
         </Col>

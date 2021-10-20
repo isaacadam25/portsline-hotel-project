@@ -20,7 +20,7 @@ const answers = [1, 2];
 const serviceList = [];
 for (let i = 1; i < 15; i++) {
   serviceList.push(
-    <Image src={answers.includes(i % 2)? bed1 : bed2} alt="Service-Image" width={100} height={100} />
+    <Image src={answers.includes(i % 2)? bed1 : bed2} alt="Service-Image" width={100} height={80} />
   );
 }
 
@@ -28,11 +28,11 @@ for (let i = 1; i < 15; i++) {
 const Services = () => {
   return (
     <Container fluid>
-      <Row className="justify-content-center services">
+      <Row className="justify-content-center services" >
         <Col xs={12} md={4}>
           <h2 className="services-header">Services</h2>
         </Col>
-        <Col xs={12} md={10} style={{ paddingTop: "5%" }}>
+        <Col xs={12} md={10} style={{ paddingTop: "2%" }}>
           <Carousel
             disableArrowsOnEnd={false}
             enableAutoPlay={true}
@@ -45,7 +45,6 @@ const Services = () => {
           </Carousel>
         </Col>
       </Row>
-      <SpaceDiv />
     </Container>
   );
 };

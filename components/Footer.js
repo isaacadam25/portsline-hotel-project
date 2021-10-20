@@ -1,11 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import Hotel from '../public/hotel.jpg';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from "react";
+import Image from "next/image";
+import HotelMap from "../public/images/portsline-map.png";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
-  const dt = new Date();
-  const year = dt.getFullYear();
+  const year = new Date().getFullYear();
+
   return (
     <Container fluid>
       <Row className="footer justify-content-center">
@@ -53,31 +53,40 @@ const Footer = () => {
           </div>
         </Col>
         <Col className="addresses" xs={12} md={3}>
-          <h6>Addresses</h6>
+          <h6>Address</h6>
           <address>
             <p>Portsline Hotel & SPA</p>
             <p>CR No. 489654</p>
             <p>Open: 24 HRS</p>
             <p>63/65 Block-T Bingo/Taifa Road</p>
             <p>P.O Box 6052,</p>
-            <p>Tel From: 8:30 AM - 4:30 PM</p>
           </address>
         </Col>
         <Col className="map" xs={12} md={4}>
           <h6>Visit Us:</h6>
-          <Image src={Hotel} width={400} height={200} alt="map-image" />
+          <Image src={HotelMap} width={400} height={200} alt="map-image" />
         </Col>
-        <Col className="bottom-area" xs={12} md={10} lg={10}>
-          <a className="bottom-links" href="#">
-            Terms and Conditions
-          </a>
-          <a className="bottom-links" href="#">
-            Privacy Policy
-          </a>
-          <a className="bottom-links" href="#">
-            FAQs
-          </a>
-        </Col>
+        <Row>
+          <Col
+            className="bottom-area"
+            xs={12}
+            md={10}
+            lg={{ span: 10, offset: 1 }}
+          >
+            <a className="bottom-links" href="#">
+              Terms and Conditions
+            </a>
+            <a className="bottom-links" href="#">
+              Privacy Policy
+            </a>
+            <a className="bottom-links" href="#">
+              FAQs
+            </a>
+            <span style={{ float: "right", padding: "" }}>
+              &copy; {year} | Portsline Hotel & SPA Limited 
+            </span>
+          </Col>
+        </Row>
       </Row>
     </Container>
   );
