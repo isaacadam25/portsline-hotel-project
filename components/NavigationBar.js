@@ -8,11 +8,11 @@ const NavigationBar = () => {
   return (
     <Navbar collapseOnSelect bg="dark" variant="dark" sticky="top" expand="lg">
       <Container>
-        <Link href="/">
-        <Navbar.Brand href="#" style={{backgroundColor: 'lightgray'}}>
-          <Image src={Logo2} alt="logo-image" width={200} height={50} />
-          {/* Portsline Hotel */}
-        </Navbar.Brand>
+        <Link href="/" passHref>
+          <Navbar.Brand href="#" style={{ backgroundColor: 'lightgray' }}>
+            <Image src={Logo2} alt="logo-image" width={200} height={50} />
+            {/* Portsline Hotel */}
+          </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

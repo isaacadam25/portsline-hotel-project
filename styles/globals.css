@@ -288,7 +288,7 @@ h3 {
 .icon-inside i {
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 6px;
   padding: 10px;
   color: #30a3f1;
 }
@@ -418,6 +418,7 @@ h3 {
 
 .scroll-button {
   color: var(--color-headings);
+  font-weight: 600;
   font-size: 2rem;
   position: relative;
   margin: 2rem 0;
@@ -442,27 +443,28 @@ h3 {
 .testimonial-section {
   background-image: url('../public//hotel.jpg');
   padding: 0.5rem;
-  /* height: 50vh; // TODO Remove this height property */
+  position: relative;
+  /* height: 50vh; // TODO Remove this height property later */
 }
 
 .testimonial-header {
   text-align: center;
-}
-
-.testimonial-header h1 {
+  padding: 1rem 0;
   font-size: 3rem;
+  font-weight: 600;
   color: var(--color-primary);
 }
 
-/* .testimonial-section .testimonial-header h1::after {
+.testimonial-header::after {
   content: '';
   position: absolute;
-  top: 3rem;
-  left: 40rem; TODO Fix me here
-  width: 5rem;
+  top: 4.5rem;
+  left: 8rem;
+  width: 4rem;
+  margin-bottom: 5px;
   height: 2px;
   background: var(--color-secondary);
-} */
+}
 
 .testimonial-card {
   background: linear-gradient(45deg, rgb(175, 171, 118), rgb(183, 223, 230));
@@ -536,6 +538,25 @@ h3 {
   .testimonial-content .author {
     padding: 0.5rem;
   }
+
+  .testimonial-header {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .testimonial-header::after {
+    content: '';
+    position: absolute;
+    top: 5rem;
+    left: 48%;
+    width: 4rem;
+    margin-bottom: 5px;
+    height: 2px;
+    background: var(--color-secondary);
+  }
 }
 
 /* Testimonial Style ends */
@@ -549,6 +570,7 @@ h3 {
   text-align: center;
   color: var(--color-headings);
   font-size: 3rem;
+  font-weight: 600;
   padding-top: 1rem;
   margin: 0;
   position: relative;
@@ -558,10 +580,24 @@ h3 {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 12rem;
+  left: 8rem;
   width: 3rem;
+  margin-bottom: 5px;
   height: 2px;
   background: var(--color-secondary);
+}
+
+@media screen and (min-width: 760px) {
+  .services .services-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 12rem;
+    width: 3rem;
+    margin-bottom: 5px;
+    height: 2px;
+    background: var(--color-secondary);
+  }
 }
 
 /* Services section styles ends */
@@ -760,10 +796,98 @@ h3 {
 }
 
 .shadowCard {
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -moz-box-shadow: 3px 3px 5px 6px #ccc;
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   /* box-shadow:         3px 3px 5px 6px #ccc; */
-  box-shadow:         0px 5px 20px 1px lightgray
-  
+  box-shadow: 0px 5px 20px 1px lightgray;
 }
 /* Restaurant-Page styles end */
+
+/* Restaurant Page Styles Starts */
+.room-header {
+  padding: 0.5rem;
+  text-align: center;
+}
+/* Restaurant Page Styles ends */
+
+/* Single Room Style starts */
+.room-service-card {
+  margin: 0.5rem 0;
+}
+
+.room-service ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(236, 236, 236);
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.room-service ul li {
+  padding: 0.3rem 0;
+}
+
+.room-service ul i {
+  padding-right: 0.5rem;
+}
+
+.service-description {
+  padding: 0.2rem;
+}
+
+.service-description button {
+  background: var(--color-secondary);
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .room-service ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    background: rgb(236, 236, 236);
+  }
+  .room-service ul li {
+    padding: 0.5rem 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .room-service ul i {
+    padding-right: 0.5rem;
+  }
+
+  .service-description button {
+    background: var(--color-secondary);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 16rem;
+    float: right;
+    text-transform: uppercase;
+  }
+
+  .room-image {
+    margin-right: 30px !important;
+  }
+}
+
+/* Single Room Style ends */
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+  opacity: 0;
+}

@@ -13,9 +13,9 @@ const breakPoints = [
 const Testimonial = () => {
   return (
     <Container fluid className="testimonial-section">
-      <Row className="justify-content-center test-1">
-        <Col md={12} xs={12} sm={12} className="testimonial-header">
-          <h1>Testimonials</h1>
+      <Row className="justify-content-center">
+        <Col xs={12} md={4}>
+          <h2 className="testimonial-header">Testimonials</h2>
         </Col>
         <Col md={12} xs={12} sm={12}>
           <Carousel enableAutoPlay={true} breakPoints={breakPoints}>
