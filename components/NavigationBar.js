@@ -2,15 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
-import Logo2 from '../public/logo/pl_min_logo-01.png';
+import Logo from '../public/logo/pl_min_logo_white-01.png';
 
 const NavigationBar = () => {
   return (
     <Navbar collapseOnSelect bg="dark" variant="dark" sticky="top" expand="lg">
       <Container>
         <Link href="/" passHref>
-          <Navbar.Brand href="#" style={{ backgroundColor: 'lightgray' }}>
-            <Image src={Logo2} alt="logo-image" width={200} height={50} />
+          <Navbar.Brand href="#" style={{ backgroundColor: '' }}>
+            <Image src={Logo} alt="logo-image" width={200} height={50} />
             {/* Portsline Hotel */}
           </Navbar.Brand>
         </Link>

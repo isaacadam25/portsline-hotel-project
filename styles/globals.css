@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Kaushan+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carattere&family=Kaushan+Script&display=swap");
 
 :root {
   --color-primary: #fff;
@@ -22,7 +22,7 @@ ul {
 h1,
 h2,
 h3 {
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
 }
 
 /* Button Styles Starts */
@@ -101,7 +101,7 @@ h3 {
 
 .welcome-note .welcome-title::after {
   background: var(--color-secondary);
-  content: '';
+  content: "";
   height: 2px;
   left: 8rem;
   position: absolute;
@@ -117,7 +117,7 @@ h3 {
 .welcome-note b {
   display: inline-block;
   padding: 0.5rem 0;
-  font-family: 'Tangerine', cursive;
+  font-family: "Tangerine", cursive;
   font-size: 1.5rem;
 }
 
@@ -132,7 +132,7 @@ h3 {
 
   .welcome-note .welcome-title::after {
     background: var(--color-secondary);
-    content: '';
+    content: "";
     height: 2px;
     left: 12rem;
     position: absolute;
@@ -193,7 +193,7 @@ h3 {
 /* Showcase styles starts */
 
 .showcase {
-  background-image: url('../public/images/receiption.jpg');
+  background-image: url("../public/images/receiption.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -253,7 +253,7 @@ h3 {
   }
 
   .showcase {
-    background-image: url('../public/images/receiption.jpg');
+    background-image: url("../public/images/receiption.jpg");
     display: flex;
     height: 85vh;
     flex-direction: column;
@@ -328,7 +328,7 @@ h3 {
 }
 
 .position-container h3::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 5rem;
   height: 2px;
@@ -346,7 +346,7 @@ h3 {
   }
 
   .position-container h3::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 7rem;
     height: 2px;
@@ -405,7 +405,7 @@ h3 {
 }
 
 .card-img-overlay a::after {
-  content: '';
+  content: "";
   position: inherit;
   bottom: 0;
   left: 1rem;
@@ -427,7 +427,7 @@ h3 {
 }
 
 .scroll-button::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 2rem;
@@ -443,7 +443,7 @@ h3 {
 
 /* Testimonial Style starts */
 .testimonial-section {
-  background-image: url('../public//hotel.jpg');
+  background-image: url("../public//hotel.jpg");
   padding: 0.5rem;
   position: relative;
   /* height: 50vh; // TODO Remove this height property later */
@@ -458,7 +458,7 @@ h3 {
 }
 
 .testimonial-header::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4.5rem;
   left: 8rem;
@@ -532,7 +532,7 @@ h3 {
   }
 
   .testimonial-section {
-    background-image: url('../public//hotel.jpg');
+    background-image: url("../public//hotel.jpg");
     padding: 1rem;
     /* height: 50vh; //TODO Remove this height property */
   }
@@ -550,7 +550,7 @@ h3 {
   }
 
   .testimonial-header::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 5rem;
     left: 48%;
@@ -579,7 +579,7 @@ h3 {
 }
 
 .services .services-header::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 8rem;
@@ -591,7 +591,7 @@ h3 {
 
 @media screen and (min-width: 760px) {
   .services .services-header::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 12rem;
@@ -613,7 +613,7 @@ h3 {
 }
 
 .footer::before {
-  content: ''; /* TODO: Add logo here */
+  content: ""; /* TODO: Add logo here */
   width: 8rem;
   position: absolute;
   height: 8rem;
@@ -775,9 +775,15 @@ h3 {
 
 .contents-parent {
   background-color: var(--color-primary);
-  padding: 5% 10%;
+  padding: 5% 1%;
 }
 
+@media screen and (min-width: 760px) {
+  .contents-parent {
+    background-color: var(--color-primary);
+    padding: 2% 10%;
+  }
+}
 .about-us-image {
   border-radius: 35px;
 }
@@ -887,9 +893,18 @@ h3 {
 
 /* Single Room Style ends */
 
-input[type='date']::-webkit-inner-spin-button,
-input[type='date']::-webkit-calendar-picker-indicator {
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
   opacity: 0;
 }
+
+/* Booking Style starts */
+.room-type-image {
+  box-shadow: 0px 5px 20px 1px lightgray;
+  border-radius: 3%;
+  border: none;
+}
+
+/* Booking Style ends */
