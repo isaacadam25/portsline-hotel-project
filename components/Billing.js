@@ -1,4 +1,4 @@
-import { Card, Row, Table, Col } from "react-bootstrap";
+import { Card, Row, Table, Col, Button } from "react-bootstrap";
 import React from "react";
 import Image from "next/image";
 import Hotel from "../public/hotel.jpg";
@@ -11,6 +11,8 @@ function Billing({
   number_of_beds,
   bed_type,
   room_description,
+  next,
+  previous,
 }) {
   return (
     <Row
@@ -77,6 +79,43 @@ function Billing({
         </Col>
         <Col>
           <Image src={Tigopesa} width={100} height={100} alt="Tigopesa Image" />
+        </Col>
+      </Row>
+      <Row style={{ paddingTop: "2%" }}>
+        <Col md={{ span: 2 }} xs={6} sm={12} style={{ paddingTop: "3%" }}>
+          <Button
+            onClick={previous}
+            variant=""
+            style={{
+              backgroundColor: "gray",
+              padding: "5px 25px",
+              width: "100%",
+              border: "none",
+              color: "white",
+            }}
+          >
+            Previous
+          </Button>
+        </Col>
+        <Col
+          md={{ span: 2, offset: 8 }}
+          xs={6}
+          sm={12}
+          style={{ paddingTop: "3%" }}
+        >
+          <Button
+            onClick={next}
+            variant=""
+            style={{
+              backgroundColor: "blue",
+              padding: "5px 25px",
+              width: "100%",
+              border: "none",
+              color: "white",
+            }}
+          >
+            Next
+          </Button>
         </Col>
       </Row>
     </Row>

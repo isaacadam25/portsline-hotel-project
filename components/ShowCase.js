@@ -1,6 +1,7 @@
-import React from 'react';
-import { Button } from 'react-bootstrap';
-import InputWithIcon from './InputWithIcon';
+import React from "react";
+import { Button } from "react-bootstrap";
+import InputWithIcon from "./InputWithIcon";
+import Link from "next/link";
 
 const ShowCase = () => {
   return (
@@ -24,7 +25,9 @@ const ShowCase = () => {
         <InputWithIcon type="number" placeholder="Rooms" fontAwesome="bed" />
         <InputWithIcon type="number" placeholder="Guests" fontAwesome="plus" />
       </div>
-      <Button size="lg">BOOK NOW</Button>
+      <Link href="/booking" passHref>
+        <Button size="lg">BOOK NOW</Button>
+      </Link>
     </div>
   );
 };

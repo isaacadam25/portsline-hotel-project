@@ -12,6 +12,7 @@ function RoomTypeRow({
   number_of_beds,
   bed_type,
   room_description,
+  next
 }) {
   return (
     <Row
@@ -33,7 +34,7 @@ function RoomTypeRow({
           className="room-type-image"
         />
       </Col>
-      <Col style={{ paddingTop: "2%" }} xs={12} md={{span: 4, offset: 1}}>
+      <Col style={{ paddingTop: "2%" }} xs={12} md={{ span: 4, offset: 1 }}>
         <Card.Title>{room_type_name}</Card.Title>
         <Row>
           <Col style={{ display: "flex" }}>
@@ -46,7 +47,7 @@ function RoomTypeRow({
             />
             <span style={{ padding: "6%" }}>{number_of_adults} Adults</span>
           </Col>
-          <Col style={{ display: "flex", backgroundColor: ""}}>
+          <Col style={{ display: "flex", backgroundColor: "" }}>
             <Image
               src={double_bed}
               alt="Room image"
@@ -83,6 +84,7 @@ function RoomTypeRow({
           </Card.Title>
           <div style={{ backgroundColor: "", height: "50px" }} />
           <Button
+            onClick={next}
             variant=""
             type="submit"
             style={{

@@ -1,12 +1,13 @@
 import { Card, Row, Col, Form, Button } from "react-bootstrap";
 import React from "react";
 
-function BookingPersonalInfo() {
+function BookingPersonalInfo({next}) {
+  
   return (
     <Row
       style={{
         backgroundColor: "",
-        padding: "5% 10%",
+        padding: "2% 10%",
         borderRadius: "30px",
         margin: 0,
       }}
@@ -76,6 +77,7 @@ function BookingPersonalInfo() {
               >
                  <Col md={{offset: 10, span: 1}} xs={12} sm={12}>   
                 <Button
+                onClick={next}
                   variant=""
                   type="submit"
                   style={{ backgroundColor: "lightgreen", padding: '5px 25px' }}
