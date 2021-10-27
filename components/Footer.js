@@ -2,9 +2,17 @@ import React from "react";
 import Image from "next/image";
 import HotelMap from "../public/images/portsline-map.png";
 import { Container, Row, Col } from "react-bootstrap";
+import GoogleMapReact from "google-map-react";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+    const props = {
+    center: {
+      lat: 59.95,
+      lng: 30.33
+    },
+    zoom: 11
+  };
 
   return (
     <Container fluid>
@@ -64,7 +72,15 @@ const Footer = () => {
         </Col>
         <Col className="map" xs={12} md={4}>
           <h6>Visit Us:</h6>
-          <Image src={HotelMap} width={400} height={200} alt="map-image" />
+          <div style={{height: '175px', width: '330px'}}>
+            <GoogleMapReact
+          bootstrapURLKeys={{ key:""}}
+          defaultCenter={props.center}
+          defaultZoom={props.zoom}
+        >
+        </GoogleMapReact>
+        </div>
+          {/* <Image src={HotelMap} width={400} height={200} alt="map-image" /> */}
         </Col>
         <Row>
           <Col
@@ -83,7 +99,7 @@ const Footer = () => {
               FAQs
             </a>
             <span style={{ float: "right", padding: "" }}>
-              &copy; {year} | Portsline Hotel & SPA Limited 
+              &copy; {year} | Portsline Hotel & SPA Limited
             </span>
           </Col>
         </Row>

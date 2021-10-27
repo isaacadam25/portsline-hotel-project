@@ -96,7 +96,7 @@ export default function Booking() {
   ];
 
   // Prepare Contents Of Each Step
-  const step_1_Contents = <BookingPersonalInfo next={next} />;
+  const step_1_Contents = <BookingPersonalInfo next={next} previous={previous}/>;
   const step_2_Contents = (
     <>
       <Row
@@ -145,7 +145,7 @@ export default function Booking() {
         </Col>
       </Row>
       {roomTypesList}
-      <Row>
+      {/* <Row>
         <Col md={4} xs={12} sm={12}>
           <Button
             onClick={previous}
@@ -156,7 +156,7 @@ export default function Booking() {
             Previous
           </Button>
         </Col>
-      </Row>
+      </Row> */}
     </>
   );
 
@@ -229,12 +229,14 @@ export default function Booking() {
       previous={previous}
     />
   );
-  const step_6_Contents = <SuccessBookingInfo next={next} previous={previous}/>;
+  const step_6_Contents = (
+    <SuccessBookingInfo next={next} previous={previous} />
+  );
 
   const stepsArray = [
-    { title: "Personal Information", content: step_1_Contents },
     { title: "Select Room", content: step_2_Contents },
     { title: "Confirm Room", content: step_3_Contents },
+    { title: "Personal Information", content: step_1_Contents },
     { title: "Billing", content: step_4_Contents },
     { title: "Payment", content: step_5_Contents },
     { title: "Finish", content: step_6_Contents },

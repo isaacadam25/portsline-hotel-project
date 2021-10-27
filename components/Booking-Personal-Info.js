@@ -1,7 +1,7 @@
 import { Card, Row, Col, Form, Button } from "react-bootstrap";
 import React from "react";
 
-function BookingPersonalInfo({next}) {
+function BookingPersonalInfo({next, previous}) {
   
   return (
     <Row
@@ -75,7 +75,18 @@ function BookingPersonalInfo({next}) {
                 controlId="exampleForm.ControlTextarea1"
                 style={{backgroundColor: "", paddingTop: '6%'}}
               >
-                 <Col md={{offset: 10, span: 1}} xs={12} sm={12}>   
+                <Row style={{backgroundColor: "", margin: 0,}}>
+                 <Col md={{offset: 0, span: 4}} xs={6} sm={12}>   
+                <Button
+                onClick={previous}
+                  variant=""
+                  type="submit"
+                  style={{ backgroundColor: "lightgray", padding: '5px 25px' }}
+                >
+                  Previous
+                </Button>
+                </Col>
+                 <Col md={{offset: 5, span: 2}} xs={{span:4, offset: 1}} sm={12}>   
                 <Button
                 onClick={next}
                   variant=""
@@ -85,6 +96,7 @@ function BookingPersonalInfo({next}) {
                   Next
                 </Button>
                 </Col>
+                </Row>
               </Form.Group>
             </Col>
           </Row>

@@ -18,3 +18,16 @@ font
 => //blogs-2
 => //footer
 => //services 
+
+=>Modifications Done
+    1. Booking BuInputsttons On Landing Page => Moved Up
+    2. Booking Flow  => Select Room First, Then Enter Personal Info
+    3. Home-Page Titles Underlines => Added Margin-Top
+    4. Testimonial Message => Added Closing Quote Sign
+    5. Testimonial Background-Color Changed
+    6. About-Us => Re-arranged Image Vs Words Layout In Mobile View
+    7. Landing Page Background-Image => Display Full/Entire
+    8. Google-Map => Added But It Needs API-KEY to point direct to portsile location
+    9. Fonts => Changed But Not The One We Want.
+    
+=> Problem Arised => Home-Page width Exceeds Max-Width

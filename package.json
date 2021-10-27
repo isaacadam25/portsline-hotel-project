@@ -13,6 +13,8 @@
     "bootstrap": "^5.1.1",
     "font-awesome": "^4.7.0",
     "fontawesome-4.7": "^4.7.0",
+    "google-map-react": "^2.1.10",
+    "google-maps-react": "^2.0.6",
     "jquery": "^3.6.0",
     "materialize-css": "^1.0.0-rc.2",
     "next": "11.1.2",

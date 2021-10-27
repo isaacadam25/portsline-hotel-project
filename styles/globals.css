@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Carattere&family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carattere&family=Kaushan+Script&display=swap"); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=Roboto&display=swap');
+
 
 :root {
   --color-primary: #fff;
@@ -22,7 +26,7 @@ ul {
 h1,
 h2,
 h3 {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Kaushan Script", Andina New Basic;
 }
 
 /* Button Styles Starts */
@@ -102,10 +106,10 @@ h3 {
 .welcome-note .welcome-title::after {
   background: var(--color-secondary);
   content: "";
-  height: 2px;
+  height: 3px;
   left: 8rem;
   position: absolute;
-  top: 2rem;
+  top: 2.5rem;
   width: 5rem;
 }
 
@@ -133,10 +137,10 @@ h3 {
   .welcome-note .welcome-title::after {
     background: var(--color-secondary);
     content: "";
-    height: 2px;
+    height: 3px;
     left: 12rem;
     position: absolute;
-    top: 3rem;
+    top: 3.5rem;
     width: 7rem;
   }
 
@@ -195,6 +199,7 @@ h3 {
 .showcase {
   background-image: url("../public/images/receiption.jpg");
   display: flex;
+  background-size: 100% 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -217,7 +222,7 @@ h3 {
 .showcase .title {
   color: var(--color-primary);
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 0.5rem 0;
   padding-top: 2rem;
 }
@@ -233,7 +238,7 @@ h3 {
   display: flex;
   flex-direction: column;
   /* background-color: red; */
-  padding-top: 5%;
+  padding-top: 1%;
 }
 
 @media screen and (min-width: 760px) {
@@ -331,9 +336,9 @@ h3 {
   content: "";
   position: absolute;
   width: 5rem;
-  height: 2px;
+  height: 3px;
   background: var(--color-secondary);
-  top: 2rem;
+  top: 2.5rem;
   left: 8rem;
 }
 
@@ -349,9 +354,9 @@ h3 {
     content: "";
     position: absolute;
     width: 7rem;
-    height: 2px;
+    height: 3px;
     background: var(--color-secondary);
-    top: 3.5rem;
+    top: 4rem;
     left: 32rem;
   }
 }
@@ -443,7 +448,7 @@ h3 {
 
 /* Testimonial Style starts */
 .testimonial-section {
-  background-image: url("../public//hotel.jpg");
+  /* background-image: url("../public//hotel.jpg"); */
   padding: 0.5rem;
   position: relative;
   /* height: 50vh; // TODO Remove this height property later */
@@ -454,17 +459,18 @@ h3 {
   padding: 1rem 0;
   font-size: 3rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-headings);
+  /* color: var(--color-primary); */
 }
 
 .testimonial-header::after {
   content: "";
   position: absolute;
-  top: 4.5rem;
+  top: 5rem;
   left: 8rem;
   width: 4rem;
   margin-bottom: 5px;
-  height: 2px;
+  height: 3px;
   background: var(--color-secondary);
 }
 
@@ -532,7 +538,7 @@ h3 {
   }
 
   .testimonial-section {
-    background-image: url("../public//hotel.jpg");
+    /* background-image: url("../public//hotel.jpg"); */
     padding: 1rem;
     /* height: 50vh; //TODO Remove this height property */
   }
@@ -546,17 +552,18 @@ h3 {
     padding: 1rem 0;
     font-size: 3rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-headings);
+    /* color: var(--color-primary); */
   }
 
   .testimonial-header::after {
     content: "";
     position: absolute;
-    top: 5rem;
+    top: 5.5rem;
     left: 48%;
     width: 4rem;
     margin-bottom: 5px;
-    height: 2px;
+    height: 3px;
     background: var(--color-secondary);
   }
 }
@@ -584,8 +591,8 @@ h3 {
   bottom: 0;
   left: 8rem;
   width: 3rem;
-  margin-bottom: 5px;
-  height: 2px;
+  margin-bottom: -2px;
+  height: 3px;
   background: var(--color-secondary);
 }
 
@@ -596,8 +603,8 @@ h3 {
     bottom: 0;
     left: 12rem;
     width: 3rem;
-    margin-bottom: 5px;
-    height: 2px;
+    margin-bottom: 0px;
+    height: 3px;
     background: var(--color-secondary);
   }
 }
@@ -614,6 +621,7 @@ h3 {
 
 .footer::before {
   content: ""; /* TODO: Add logo here */
+  /* content: url(../public/services/conference.jpeg); */
   width: 8rem;
   position: absolute;
   height: 8rem;
@@ -752,7 +760,7 @@ h3 {
 .title-under-line {
   height: 3px;
   background: var(--color-secondary);
-  margin: 0.3rem auto;
+  margin: 0rem auto;
   width: 20%;
   float: left;
   flex: 1;
@@ -785,6 +793,8 @@ h3 {
   }
 }
 .about-us-image {
+  border: none;
+  padding: 0;
   border-radius: 35px;
 }
 
