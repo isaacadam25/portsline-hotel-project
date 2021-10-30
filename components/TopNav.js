@@ -2,11 +2,11 @@ import React from 'react';
 
 const TopNav = () => {
   return (
-    <div className="top-nav">
-      <a href="#">
-        <i className="fa fa-phone" /> +255 754 249 777
+    <div className="top-nav" style={{backgroundColor: "", display: "flex"}}>
+      <a href="#" style={{ backgroundColor: "", }}>
+        <i className="fa fa-phone" /> +255754249777
       </a>
-      <a href="#">
+      <a href="#" style={{ backgroundColor: "" }}>
         <i className="fa fa-envelope" /> info@portsline.co.tz
       </a>
       <a href="#" className="d-none d-md-inline">

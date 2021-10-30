@@ -70,9 +70,9 @@ const Footer = () => {
             <p>P.O Box 6052,</p>
           </address>
         </Col>
-        <Col className="map" xs={12} md={4}>
+        <Col className="map" xs={12} md={3}>
           <h6>Visit Us:</h6>
-          <div style={{ height: "175px", width: "330px" }}>
+          <div style={{ height: "175px", width: "100%" }}>
             <GoogleMapReact
               bootstrapURLKeys={{ key: "" }}
               defaultCenter={props.center}
