@@ -6,7 +6,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 const WelcomeNote = () => {
   return (
     <Container className="welcome-text">
-      <Row className="justify-content-center">
+      <Row className="justify-content-center" style={{width: '100%', backgroundColor: "", margin: 0}}>
         <Col
           style={{ padding: 0 }}
           className="welcome-note"

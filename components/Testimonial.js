@@ -13,7 +13,7 @@ const breakPoints = [
 const Testimonial = () => {
   return (
     <Container fluid className="testimonial-section">
-      <Row className="justify-content-center">
+      <Row className="justify-content-center" style={{ width: "100%", backgroundColor: "", margin: 0}}>
         <Col xs={12} md={4}>
           <h2 className="testimonial-header">Testimonials</h2>
         </Col>

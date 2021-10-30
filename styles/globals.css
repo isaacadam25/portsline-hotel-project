@@ -31,6 +31,10 @@ h3 {
 
 /* Button Styles Starts */
 
+input[type='date']:after {
+  content: attr(placeholder)
+}
+
 .btn-primary {
   color: var(--color-secondary);
   font-weight: bold;
@@ -203,6 +207,9 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-color: red; */
+  /* width:100%; */
+  /* margin: 0; */
 }
 
 .showcase button {
@@ -620,16 +627,31 @@ h3 {
 }
 
 .footer::before {
-  content: ""; /* TODO: Add logo here */
-  /* content: url(../public/services/conference.jpeg); */
+  content: "";
+  background-image: url('../public/logo/Portsline\ logo-single-p.png');
+  background-size: 100% 100%;
+  display: inline-block;
+
+  /*size of your image*/
+  height: 8rem;
+  width: 8rem;
+
+  /*if you want to change the position you can use margins or:*/
+  position:absolute;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  top: -4rem;
+}
+
+/* .footer::before {
+  content: ""; TODO: Add logo here 
+  content: url(../public/logo/Portsline\ logo-single-p.png);
   width: 8rem;
   position: absolute;
   height: 8rem;
-  /* background: var(--color-accent); */
-  background: var(--color-secondary);
+   background: var(--color-accent); 
   top: -4rem;
-  border-radius: 50%;
-}
+} */
 
 .footer-header {
   text-align: center;

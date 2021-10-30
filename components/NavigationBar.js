@@ -39,6 +39,14 @@ const NavigationBar = () => {
             <Link href="/blog">
               <a className="navigation-links">Blog</a>
             </Link>
+            <Link href="#">
+              <a href="#" className="d-inline d-md-none" style={{color: 'yellow'}}>
+                <i className="fa fa-exclamation-circle ">
+                  {" "}
+                  COVID-19 Travel Updates{" "}
+                </i>
+              </a>
+            </Link>
 
             {/* <Nav.Link href="#">Rooms</Nav.Link>
             <Nav.Link href="#">Gallery</Nav.Link>

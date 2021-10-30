@@ -14,16 +14,16 @@ const ShowCase = () => {
       <div className="showcase-input">
         <InputWithIcon
           type="date"
-          placeholder="Check in"
-          fontAwesome="calendar"
+          placeholder="In"
+          fontAwesome=""
         />
         <InputWithIcon
           type="date"
-          placeholder="Check out"
-          fontAwesome="calendar"
+          placeholder="Out"
+          fontAwesome=""
         />
-        <InputWithIcon type="number" placeholder="Rooms" fontAwesome="bed" />
-        <InputWithIcon type="number" placeholder="Guests" fontAwesome="plus" />
+        <InputWithIcon type="select" placeholder="Room Type" fontAwesome="" />
+        <InputWithIcon type="number" placeholder="Number of Guests" fontAwesome="" />
       </div>
       <Link href="/booking" passHref>
         <Button size="lg">BOOK NOW</Button>
