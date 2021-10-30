@@ -14,12 +14,12 @@ const ShowCase = () => {
       <div className="showcase-input">
         <InputWithIcon
           type="date"
-          placeholder="In"
+          placeholder="Check In"
           fontAwesome=""
         />
         <InputWithIcon
           type="date"
-          placeholder="Out"
+          placeholder="Check Out"
           fontAwesome=""
         />
         <InputWithIcon type="select" placeholder="Room Type" fontAwesome="" />
