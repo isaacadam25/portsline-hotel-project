@@ -8,21 +8,22 @@ import BlogPostCard from "../components/BlogPostCard";
 import { Card, Row, Col } from "react-bootstrap";
 import { Pagination } from "antd";
 import SpaceDiv from "../components/SpaceDiv";
+import { getAllBlogPosts } from "./api/api";
 
-export default function Blog() {
-  const posts = [];
+export default function Blog({ posts }) {
+  // const posts = [];
 
-  for (let i = 1; i < 7; i++) {
-    posts.push(
-      <BlogPostCard
-        title="Menu"
-        subTitle="Awesome Food"
-        description="Check out our new menu with the 
-            special dessert ,free delivery 
-            is now available."
-      />
-    );
-  }
+  // for (let i = 1; i < 7; i++) {
+  //   posts.push(
+  //     <BlogPostCard
+  //       title="Menu"
+  //       subTitle="Awesome Food"
+  //       description="Check out our new menu with the
+  //           special dessert ,free delivery
+  //           is now available."
+  //     />
+  //   );
+  // }
 
   function itemRender(current, type, originalElement) {
     if (type === "prev") {
@@ -58,7 +59,15 @@ export default function Blog() {
           style={{ backgroundColor: "", paddingTop: "5%" }}
         >
           <Row style={{ backgroundColor: "", justifyContent: "center" }}>
-            {posts}
+            {posts.map((post) => (
+              <BlogPostCard
+                key={post.id}
+                title={post.post_title}
+                subTitle="Subtitle"
+                description={post.description}
+                postImage={post.post_image}
+              />
+            ))}
           </Row>
         </Col>
         <Row>
@@ -76,4 +85,19 @@ export default function Blog() {
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  let posts = [];
+  try {
+    posts = await getAllBlogPosts();
+  } catch (error) {
+    console.log({ "Error => ": error });
+  }
+
+  return {
+    props: {
+      posts,
+    },
+  };
 }

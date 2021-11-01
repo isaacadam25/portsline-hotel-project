@@ -63,3 +63,10 @@ Home page -->
     5. Moved Covid-19-Updates Into Drop-Down List In Mobile View 
     6. Added Logo In Footer
     7. Removed Icons In Booking Inputs => Added In And Out Placeholders -->
+
+
+    <==========  API Consumption Section  ==========>
+
+    1. Remove Authentication Over Blog-Posts.
+    2. Design Has Blog-Post-Subtitle but API/Model Doesn't have that property.
+    3. Either Add Max-Height Css-Property or leave as it is
