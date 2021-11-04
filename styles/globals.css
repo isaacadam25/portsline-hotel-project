@@ -950,3 +950,44 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 /* Blog Styles ends */
+
+/* Booking CASE starts */
+
+.booking-case {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #999;
+  border-radius: 16px;
+  padding: 0.5rem;
+}
+
+.icon-label {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.1rem 1rem;
+}
+
+@media screen and (min-width: 760px) {
+  .booking-case {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #999;
+    border-radius: 16px;
+    padding: 1rem;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .icon-label {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.1rem 1rem;
+  }
+}
+
+/* Booking CASE ends */

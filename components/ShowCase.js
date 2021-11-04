@@ -1,7 +1,8 @@
-import React from "react";
-import { Button } from "react-bootstrap";
-import InputWithIcon from "./InputWithIcon";
-import Link from "next/link";
+import React from 'react';
+import { Button } from 'react-bootstrap';
+import InputWithIcon from './InputWithIcon';
+import Link from 'next/link';
+import BookingCase from './BookingCase';
 
 const ShowCase = () => {
   return (
@@ -11,20 +12,7 @@ const ShowCase = () => {
         We guarantee to offer the world-famous, Deeply Relaxing Quality
         Unforgetable Experience to all our guests
       </p>
-      <div className="showcase-input">
-        <InputWithIcon
-          type="date"
-          placeholder="Check In"
-          fontAwesome=""
-        />
-        <InputWithIcon
-          type="date"
-          placeholder="Check Out"
-          fontAwesome=""
-        />
-        <InputWithIcon type="select" placeholder="Room Type" fontAwesome="" />
-        <InputWithIcon type="number" placeholder="Number of Guests" fontAwesome="" />
-      </div>
+      <BookingCase />
       <Link href="/booking" passHref>
         <Button size="lg">BOOK NOW</Button>
       </Link>

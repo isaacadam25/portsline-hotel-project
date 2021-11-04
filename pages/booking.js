@@ -1,16 +1,17 @@
-import Layout from "../components/Layout";
-import { Row, Col, Card, Form, Button } from "react-bootstrap";
-import SpaceDiv from "../components/SpaceDiv";
-import BookingPersonalInfo from "../components/Booking-Personal-Info";
-import RoomTypeRow from "../components/RoomTypeRow";
-import InputWithIcon from "../components/InputWithIcon";
-import SelectedRoomTypeRow from "../components/SelectedRoomTypeRow";
-import Billing from "../components/Billing";
-import PaymentInstructions from "../components/PaymentInstructions";
-import MpesaLogo from "../public/paymentMethodsImages/tpesa.jpg";
-import SuccessBookingInfo from "../components/SuccessBookingInfo";
-import { Steps } from "antd";
-import React, { useState } from "react";
+import Layout from '../components/Layout';
+import { Row, Col, Card, Form, Button } from 'react-bootstrap';
+import SpaceDiv from '../components/SpaceDiv';
+import BookingPersonalInfo from '../components/Booking-Personal-Info';
+import RoomTypeRow from '../components/RoomTypeRow';
+import InputWithIcon from '../components/InputWithIcon';
+import SelectedRoomTypeRow from '../components/SelectedRoomTypeRow';
+import Billing from '../components/Billing';
+import PaymentInstructions from '../components/PaymentInstructions';
+import MpesaLogo from '../public/paymentMethodsImages/tpesa.jpg';
+import SuccessBookingInfo from '../components/SuccessBookingInfo';
+import { Steps } from 'antd';
+import React, { useState } from 'react';
+import BookingCase from '../components/BookingCase';
 
 export default function Booking() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -27,39 +28,39 @@ export default function Booking() {
   const roomTypes = [
     {
       id: 1,
-      name: "Standard Room",
+      name: 'Standard Room',
       price: 50000,
       number_of_beds: 2,
-      bed_type: "Queen Size Bed",
+      bed_type: 'Queen Size Bed',
       number_of_adults: 2,
       description:
-        "Our Standard City View rooms - 33 m2 - offer a king size bed of 1.8x2m or 2 twin beds of 1.1x2m and a working desk as well as a seating area. The rooms are overlooking the vivid city centre.",
+        'Our Standard City View rooms - 33 m2 - offer a king size bed of 1.8x2m or 2 twin beds of 1.1x2m and a working desk as well as a seating area. The rooms are overlooking the vivid city centre.',
     },
     {
       id: 2,
-      name: "Burget Room",
+      name: 'Burget Room',
       price: 200000,
       number_of_beds: 1,
-      bed_type: "King Size Bed",
+      bed_type: 'King Size Bed',
       number_of_adults: 1,
       description:
-        "Our Standard City View rooms - 33 m2 - offer a king size bed of 1.8x2m or 2 twin beds of 1.1x2m and a working desk as well as a seating area. The rooms are overlooking the vivid city centre.",
+        'Our Standard City View rooms - 33 m2 - offer a king size bed of 1.8x2m or 2 twin beds of 1.1x2m and a working desk as well as a seating area. The rooms are overlooking the vivid city centre.',
     },
     {
       id: 3,
-      name: "VIP Room",
+      name: 'VIP Room',
       price: 350000,
       number_of_beds: 3,
-      bed_type: "Family Bed",
+      bed_type: 'Family Bed',
       number_of_adults: 6,
       description:
-        "Our Standard City View rooms - 33 m2 - offer a king size bed of 1.8x2m or 2 twin beds of 1.1x2m and a working desk as well as a seating area. The rooms are overlooking the vivid city centre.",
+        'Our Standard City View rooms - 33 m2 - offer a king size bed of 1.8x2m or 2 twin beds of 1.1x2m and a working desk as well as a seating area. The rooms are overlooking the vivid city centre.',
     },
   ];
 
   const selectedRoomsTypesList = [
-    { id: 1, name: "VIP Room", price: 350000, number_of_adults: 1 },
-    { id: 2, name: "Standard Room", price: 300000, number_of_adults: 2 },
+    { id: 1, name: 'VIP Room', price: 350000, number_of_adults: 1 },
+    { id: 2, name: 'Standard Room', price: 300000, number_of_adults: 2 },
   ];
 
   const roomTypesList = roomTypes.map((item) => (
@@ -85,63 +86,31 @@ export default function Booking() {
   ));
 
   const m_pesa_instructions = [
-    "1. Dial *150*00# ok",
-    "2. Select 1 Activate or 2 Wezesha",
-    "3. Enter start key PIN",
-    "4. Enter new PIN",
-    "5. Re-enter new PIN",
-    "6. Enter date of birth",
-    "7. Go the calculator at the top of this page and make sure Tanzania is the chosen country",
-    "8. We’ll send you and your recipient SMS and email notifications when the funds have been paid",
+    '1. Dial *150*00# ok',
+    '2. Select 1 Activate or 2 Wezesha',
+    '3. Enter start key PIN',
+    '4. Enter new PIN',
+    '5. Re-enter new PIN',
+    '6. Enter date of birth',
+    '7. Go the calculator at the top of this page and make sure Tanzania is the chosen country',
+    '8. We’ll send you and your recipient SMS and email notifications when the funds have been paid',
   ];
 
   // Prepare Contents Of Each Step
-  const step_1_Contents = <BookingPersonalInfo next={next} previous={previous}/>;
+  const step_1_Contents = (
+    <BookingPersonalInfo next={next} previous={previous} />
+  );
   const step_2_Contents = (
     <>
       <Row
         style={{
-          backgroundColor: "lightgray",
-          width: "100%",
-          borderRadius: "10px",
-          padding: "1%",
+          width: '100%',
+          borderRadius: '10px',
+          padding: '1%',
         }}
       >
-        <Col
-          xs={{ span: 12, offset: 0 }}
-          md={{ span: 6, offset: 0 }}
-          style={{ backgroundColor: "" }}
-        >
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Number of Residents</Form.Label>
-            <Form.Control
-              type="number"
-              placeholder="Enter number"
-              style={{ width: "150px" }}
-            />
-          </Form.Group>
-        </Col>
-        <Col
-          xs={{ span: 10, offset: 2 }}
-          md={{ span: 3, offset: 0 }}
-          style={{ backgroundColor: "", paddingTop: "2%" }}
-        >
-          <InputWithIcon
-            type="date"
-            placeholder="Check in"
-            fontAwesome="calendar"
-          />
-        </Col>
-        <Col
-          xs={{ span: 10, offset: 2 }}
-          md={{ span: 3, offset: 0 }}
-          style={{ backgroundColor: "", paddingTop: "2%" }}
-        >
-          <InputWithIcon
-            type="date"
-            placeholder="Check out"
-            fontAwesome="calendar"
-          />
+        <Col xs={12} md={12}>
+          <BookingCase />
         </Col>
       </Row>
       {roomTypesList}
@@ -167,11 +136,11 @@ export default function Booking() {
           <Button
             variant=""
             style={{
-              backgroundColor: "green",
-              padding: "5px 25px",
-              width: "100%",
-              border: "none",
-              color: "white",
+              backgroundColor: 'green',
+              padding: '5px 25px',
+              width: '100%',
+              border: 'none',
+              color: 'white',
             }}
           >
             Add Room
@@ -179,17 +148,17 @@ export default function Booking() {
         </Col>
       </Row>
       {selectedRooms}
-      <Row style={{ paddingTop: "2%", backgroundColor: "" }}>
-        <Col md={{ span: 2 }} xs={6} sm={12} style={{ paddingTop: "3%" }}>
+      <Row style={{ paddingTop: '2%', backgroundColor: '' }}>
+        <Col md={{ span: 2 }} xs={6} sm={12} style={{ paddingTop: '3%' }}>
           <Button
             onClick={previous}
             variant=""
             style={{
-              backgroundColor: "gray",
-              padding: "5px 25px",
-              width: "100%",
-              border: "none",
-              color: "white",
+              backgroundColor: 'gray',
+              padding: '5px 25px',
+              width: '100%',
+              border: 'none',
+              color: 'white',
             }}
           >
             Previous
@@ -199,17 +168,17 @@ export default function Booking() {
           md={{ span: 2, offset: 8 }}
           xs={6}
           sm={12}
-          style={{ paddingTop: "3%" }}
+          style={{ paddingTop: '3%' }}
         >
           <Button
             onClick={next}
             variant=""
             style={{
-              backgroundColor: "blue",
-              padding: "5px 25px",
-              width: "100%",
-              border: "none",
-              color: "white",
+              backgroundColor: 'blue',
+              padding: '5px 25px',
+              width: '100%',
+              border: 'none',
+              color: 'white',
             }}
           >
             Confirm
@@ -234,12 +203,12 @@ export default function Booking() {
   );
 
   const stepsArray = [
-    { title: "Select Room", content: step_2_Contents },
-    { title: "Confirm Room", content: step_3_Contents },
-    { title: "Personal Information", content: step_1_Contents },
-    { title: "Billing", content: step_4_Contents },
-    { title: "Payment", content: step_5_Contents },
-    { title: "Finish", content: step_6_Contents },
+    { title: 'Select Room', content: step_2_Contents },
+    { title: 'Confirm Room', content: step_3_Contents },
+    { title: 'Personal Information', content: step_1_Contents },
+    { title: 'Billing', content: step_4_Contents },
+    { title: 'Payment', content: step_5_Contents },
+    { title: 'Finish', content: step_6_Contents },
   ];
 
   const stepsList = stepsArray.map((item) => (
@@ -251,10 +220,10 @@ export default function Booking() {
       <Row
         className="contents-parent"
         style={{
-          width: "100%",
-          backgroundColor: "",
+          width: '100%',
+          backgroundColor: '',
           margin: 0,
-          justifyContent: "center",
+          justifyContent: 'center',
         }}
       >
         {/* Booking Contents Start */}
@@ -278,7 +247,7 @@ export default function Booking() {
         {/* Step-6: Success Payment Info ends */}
         <Steps
           current={currentStep}
-          style={{ backgroundColor: "", paddingBottom: "4%" }}
+          style={{ backgroundColor: '', paddingBottom: '4%' }}
         >
           {stepsList}
         </Steps>
