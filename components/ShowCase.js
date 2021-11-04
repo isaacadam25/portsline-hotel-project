@@ -1,6 +1,7 @@
-import React from 'react';
-import { Button } from 'react-bootstrap';
-import InputWithIcon from './InputWithIcon';
+import React from "react";
+import { Button } from "react-bootstrap";
+import InputWithIcon from "./InputWithIcon";
+import Link from "next/link";
 
 const ShowCase = () => {
   return (
@@ -13,18 +14,20 @@ const ShowCase = () => {
       <div className="showcase-input">
         <InputWithIcon
           type="date"
-          placeholder="Check in"
-          fontAwesome="calendar"
+          placeholder="Check In"
+          fontAwesome=""
         />
         <InputWithIcon
           type="date"
-          placeholder="Check out"
-          fontAwesome="calendar"
+          placeholder="Check Out"
+          fontAwesome=""
         />
-        <InputWithIcon type="number" placeholder="Rooms" fontAwesome="bed" />
-        <InputWithIcon type="number" placeholder="Guests" fontAwesome="plus" />
+        <InputWithIcon type="select" placeholder="Room Type" fontAwesome="" />
+        <InputWithIcon type="number" placeholder="Number of Guests" fontAwesome="" />
       </div>
-      <Button size="lg">BOOK NOW</Button>
+      <Link href="/booking" passHref>
+        <Button size="lg">BOOK NOW</Button>
+      </Link>
     </div>
   );
 };

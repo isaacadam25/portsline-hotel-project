@@ -19,6 +19,7 @@ const TestimonialCard = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum odit
           nam officia, vitae blanditiis similique perferendis iure neque aut
           nesciunt.
+          <i className="fa fa-quote-right"  style={{float: "right"}} />
         </div>
         <div className="author">
           <b>Aika Magolo, Project Manager</b>

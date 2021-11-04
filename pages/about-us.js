@@ -3,7 +3,7 @@ import NavigationBar from "../components/NavigationBar";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import { Card, Row, Col } from "react-bootstrap";
-import RoomImage from "../public/images/room1.jpg";
+import RoomImage from "../public/images/acc1.jpg";
 import RoomImage2 from "../public/images/room2.jpg";
 import Image from "next/image";
 import StaffCard from "../components/StaffCard";
@@ -45,20 +45,20 @@ export default function AboutUs() {
           </Col>
 
           <Col
-            style={{ backgroundColor: "maroon", padding: 0 }}
+            style={{ backgroundColor: "", padding: 0 }}
             md={{ span: 5, offset: 1 }}
             xs={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 2 }}
           >
-            <Card style={{ backgroundColor: "", border: 0 }}>
+            <div style={{ backgroundColor: "" }}>
               <Image
                 src={RoomImage}
                 alt="Room Image"
-                width={300}
+                width={500}
                 height={300}
                 className="about-us-image"
               />
-            </Card>
+            </div>
           </Col>
         </Row>
         {/* First Row Ends */}
@@ -82,27 +82,27 @@ export default function AboutUs() {
         >
           <Col
             style={{ backgroundColor: "", padding: 0, marginBottom: "4%" }}
-            md={{ span: 5, offset: 0 }}
-            xs={{ span: 12, offset: 0 }}
-            sm={{ span: 10, offset: 2 }}
+            md={{ span: 5, offset: 0, order: 1 }}
+            xs={{ span: 12, offset: 0, order: 2 }}
+            sm={{ span: 10, offset: 2, order: 2 }}
           >
-            <Card style={{ backgroundColor: "", border: 0 }}>
+            <div style={{ backgroundColor: "", border: 0 }}>
               <Image
                 src={RoomImage2}
                 alt="Room Image"
-                width={300}
+                width={500}
                 height={300}
                 className="about-us-image"
               />
-            </Card>
+            </div>
           </Col>
 
-          <Col></Col>
+          <Col md={{order: 2}}></Col>
           <Col
             style={{ backgroundColor: "", padding: "0", margin: 0 }}
-            md={{ span: 6, offset: 0 }}
-            xs={{ span: 12, offset: 0 }}
-            sm={{ span: 11, offset: 1 }}
+            md={{ span: 6, offset: 0, order: 3 }}
+            xs={{ span: 12, offset: 0, order: 1 }}
+            sm={{ span: 11, offset: 1, order: 1 }}
           >
             <h3>Why Us</h3>
             <div className="title-under-line" /> <br />
@@ -151,20 +151,20 @@ export default function AboutUs() {
           </Col>
 
           <Col
-            style={{ backgroundColor: "maroon", padding: 0 }}
+            style={{ backgroundColor: "", padding: 0 }}
             md={{ span: 6, offset: 1 }}
             xs={{ span: 12, offset: 0 }}
             sm={{ span: 10, offset: 2 }}
           >
-            <Card style={{ backgroundColor: "", border: 0 }}>
+            <div style={{ backgroundColor: "", border: 0 }}>
               <Image
                 src={RoomImage}
                 alt="Room Image"
-                width={300}
+                width={600}
                 height={300}
                 className="about-us-image"
               />
-            </Card>
+            </div>
           </Col>
         </Row>
         {/* Third Row Ends */}
@@ -188,27 +188,27 @@ export default function AboutUs() {
         >
           <Col
             style={{ backgroundColor: "", padding: 0, marginBottom: "4%" }}
-            md={{ span: 4, offset: 0 }}
-            xs={{ span: 12, offset: 0 }}
-            sm={{ span: 10, offset: 2 }}
+            md={{ span: 4, offset: 0, order: 1 }}
+            xs={{ span: 12, offset: 0, order: 2 }}
+            sm={{ span: 10, offset: 2, order: 2 }}
           >
-            <Card style={{ backgroundColor: "", border: 0 }}>
+            <div style={{ backgroundColor: "", border: 0 }}>
               <Image
                 src={RoomImage2}
                 alt="Room Image"
-                width={300}
+                width={500}
                 height={300}
                 className="about-us-image"
               />
-            </Card>
+            </div>
           </Col>
 
-          <Col></Col>
+          <Col md={{order: 2}}></Col>
           <Col
             style={{ backgroundColor: "", padding: "0", margin: 0 }}
-            md={{ span: 7, offset: 0 }}
-            xs={{ span: 12, offset: 0 }}
-            sm={{ span: 11, offset: 1 }}
+            md={{ span: 7, offset: 0, order: 3 }}
+            xs={{ span: 12, offset: 0, order: 1 }}
+            sm={{ span: 11, offset: 1, order: 1 }}
           >
             <h3>Our Vision</h3>
             <div className="title-under-line" /> <br />

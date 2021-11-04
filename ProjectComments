@@ -5,16 +5,68 @@ API (With Their Images) For
     4. Blog-Post
 
 
-=> 1. Icons Kwenye ShowCase Inputs, Inputs Must pull Down
-=> 2. Footer Message &copy @2021 
-=> 3. Shadow Size
-4. Hotel Map
-5. Logo
-6. Title Underlines
+ <!-- => 1. Icons Kwenye ShowCase Inputs, Inputs Must pull Down 
+    2. Footer Message &copy @2021 
+    3. Shadow Size
+    4. Hotel Map
+    5. Logo
+    6. Title Underlines  -->
 
-=> //Logo
-calender-
+<!-- => Logo
+calender
 font
-=> //blogs-2
-=> //footer
-=> //services 
+=> blogs-2
+=> footer
+=> services  -->
+<!-- 
+=> Modifications Done
+    1. Booking BuInputsttons On Landing Page => Moved Up
+    2. Booking Flow  => Select Room First, Then Enter Personal Info
+    3. Home-Page Titles Underlines => Added Margin-Top
+    4. Testimonial Message => Added Closing Quote Sign
+    5. Testimonial Background-Color Changed
+    6. About-Us => Re-arranged Image Vs Words Layout In Mobile View
+    7. Landing Page Background-Image => Display Full/Entire
+    8. Google-Map => Added But It Needs API-KEY to point direct to portsile location
+    9. Fonts => Changed But Not The One We Want. -->
+
+<!-- => Problem Arised => Home-Page width Exceeds Max-Width => Space At Right-Side
+Home page -->
+
+=> Modifications Remaining
+    <!-- 1. Logo on footer -->
+    //2. Font
+    3. Room Expansion
+    <!-- 4. Map API Keys -->
+<!-- 
+- button on placeholders
+    - Checkin -
+    - - check out --
+    - - Room type
+    - Number of guest -->
+<!-- View more(room)
+    -Instead of repeat the picture make it display on landing picture -->
+
+<!-- Room Details
+    -Allow Mini(Other Pages Title Banner To Accept Background-Image As Prop) -->
+
+<!-- Booking
+    Another payment method should be add.(PayPal, master marked)
+    In process  instead of tigopesa is ttcl -->
+
+
+<!-- => Modifications Done Today
+    1. Fix Responsiveness In Home-Page
+    2. Mini-Banner Background-Image  Display Acccording To Room-Type
+    3. Extra Room-Images Wrapped In Corousel(in Mobile View)
+    4. Changed Email And Phone Number To Real-Information
+    5. Moved Covid-19-Updates Into Drop-Down List In Mobile View 
+    6. Added Logo In Footer
+    7. Removed Icons In Booking Inputs => Added In And Out Placeholders -->
+
+
+    <==========  API Consumption Section  ==========>
+
+    1. Remove Authentication Over Blog-Posts.
+    2. Design Has Blog-Post-Subtitle but API/Model Doesn't have that property.
+    3. Either Add Max-Height Css-Property or leave as it is

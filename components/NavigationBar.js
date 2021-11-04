@@ -1,16 +1,16 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Navbar, Container, Nav, Button } from 'react-bootstrap';
-import Logo2 from '../public/logo/pl_min_logo-01.png';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import Logo from "../public/logo/pl_min_logo_white-01.png";
 
 const NavigationBar = () => {
   return (
     <Navbar collapseOnSelect bg="dark" variant="dark" sticky="top" expand="lg">
       <Container>
         <Link href="/" passHref>
-          <Navbar.Brand href="#" style={{ backgroundColor: 'lightgray' }}>
-            <Image src={Logo2} alt="logo-image" width={200} height={50} />
+          <Navbar.Brand href="#" style={{ backgroundColor: "" }}>
+            <Image src={Logo} alt="logo-image" width={200} height={50} />
             {/* Portsline Hotel */}
           </Navbar.Brand>
         </Link>
@@ -39,12 +39,22 @@ const NavigationBar = () => {
             <Link href="/blog">
               <a className="navigation-links">Blog</a>
             </Link>
+            <Link href="#">
+              <a href="#" className="d-inline d-md-none" style={{color: 'yellow'}}>
+                <i className="fa fa-exclamation-circle ">
+                  {" "}
+                  COVID-19 Travel Updates{" "}
+                </i>
+              </a>
+            </Link>
 
             {/* <Nav.Link href="#">Rooms</Nav.Link>
             <Nav.Link href="#">Gallery</Nav.Link>
             <Nav.Link href="#">Services</Nav.Link>
             <Nav.Link href="#">Blog</Nav.Link> */}
-            <Button size="sm">BOOK NOW</Button>
+            <Link href="/booking" passHref>
+              <Button size="sm">BOOK NOW</Button>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

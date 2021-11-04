@@ -16,7 +16,7 @@ const Layout = ({ children, title }) => {
         <NavigationBar />
       </header>
 
-      <main>{children}</main>
+      <main style={{ backgroundColor: ''}}>{children}</main>
 
       <footer>
         <section>
