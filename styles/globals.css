@@ -94,7 +94,7 @@ h3 {
   color: var(--color-headings);
   display: inline-block;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
   padding: 0.4rem 0;
 }
@@ -323,7 +323,7 @@ h3 {
   color: var(--color-headings);
   padding: 0;
   font-size: 2rem;
-  font-weight: 600;
+  /* font-weight: 400; */
   margin: 0;
 }
 
@@ -333,7 +333,7 @@ h3 {
   width: 5rem;
   height: 2px;
   background: var(--color-secondary);
-  top: 2rem;
+  top: 2.4rem;
   left: 8rem;
 }
 
@@ -351,7 +351,7 @@ h3 {
     width: 7rem;
     height: 2px;
     background: var(--color-secondary);
-    top: 3.5rem;
+    top: 4.1rem;
     left: 32rem;
   }
 }
@@ -453,16 +453,16 @@ h3 {
   text-align: center;
   padding: 1rem 0;
   font-size: 3rem;
-  font-weight: 600;
+  /* font-weight: 600; */
   color: var(--color-primary);
 }
 
 .testimonial-header::after {
   content: '';
   position: absolute;
-  top: 4.5rem;
-  left: 8rem;
-  width: 4rem;
+  top: 5rem;
+  left: 6rem;
+  width: 8rem;
   margin-bottom: 5px;
   height: 2px;
   background: var(--color-secondary);
@@ -545,7 +545,7 @@ h3 {
     text-align: center;
     padding: 1rem 0;
     font-size: 3rem;
-    font-weight: 600;
+    /* font-weight: 600; */
     color: var(--color-primary);
   }
 
@@ -572,7 +572,7 @@ h3 {
   text-align: center;
   color: var(--color-headings);
   font-size: 3rem;
-  font-weight: 600;
+  /* font-weight: 600; */
   padding-top: 1rem;
   margin: 0;
   position: relative;
@@ -581,7 +581,7 @@ h3 {
 .services .services-header::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: 4.5rem;
   left: 8rem;
   width: 3rem;
   margin-bottom: 5px;
