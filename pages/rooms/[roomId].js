@@ -1,14 +1,13 @@
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { Col, Row, Container, Card } from "react-bootstrap";
-import Banner from "../../components/Banner";
-import Layout from "../../components/Layout";
-import RoomCard from "../../components/RoomCard";
-import SpaceDiv from "../../components/SpaceDiv";
-import FeaturedRooms from "../../components/FeaturedRooms";
-import Room from "../../public/images/room1.jpg";
-import bg from "../../public/images/acc1.jpg";
-import Carousel from "react-elastic-carousel";
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import { Col, Row, Container, Card } from 'react-bootstrap';
+import Banner from '../../components/Banner';
+import Layout from '../../components/Layout';
+import SpaceDiv from '../../components/SpaceDiv';
+import FeaturedRooms from '../../components/FeaturedRooms';
+import Room from '../../public/images/room1.jpg';
+import bg from '../../public/images/acc1.jpg';
+import Carousel from 'react-elastic-carousel';
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -57,14 +56,14 @@ export default function RoomDetail({ caution }) {
             xs={12}
             sm={0}
             md={{ span: 0 }}
-            style={{ backgroundColor: "#F3F3F4", marginTop: "2%" }}
+            style={{ backgroundColor: '#F3F3F4', marginTop: '2%' }}
             className="d-block d-md-none"
           >
             <Carousel
               showArrows={false}
               enableAutoPlay={true}
               breakPoints={breakPoints}
-              style={{ paddingTop: "5%" }}
+              style={{ paddingTop: '5%' }}
             >
               <Image
                 className="room-image"
@@ -136,13 +135,13 @@ export default function RoomDetail({ caution }) {
             <Card className="room-service-card">
               <Card.Body>
                 <div className="service-description">
-                  <p style={{ textAlign: "justify" }}>
+                  <p style={{ textAlign: 'justify' }}>
                     This room is located on the top floor of the hotel and has
                     hot / cold air conditioned, a furnished balcony with sun
                     loungers with swimming pool or mountain views and free WI
                     FI.
                   </p>
-                  <p style={{ textAlign: "justify" }}>
+                  <p style={{ textAlign: 'justify' }}>
                     <b>Room surface area:</b> 17 m²
                   </p>
                   <p>
@@ -156,7 +155,7 @@ export default function RoomDetail({ caution }) {
                     shampoo dispenser and bathtub.
                   </p>
                   <p>
-                    <i>{caution ? caution : "Non smoking room"}.</i>
+                    <i>{caution ? caution : 'Non smoking room'}.</i>
                   </p>
                   <button>Book Now</button>
                 </div>

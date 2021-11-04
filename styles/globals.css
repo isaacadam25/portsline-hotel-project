@@ -5,7 +5,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=Roboto&display=swap');
 
-
 :root {
   --color-primary: #fff;
   --color-secondary: #ffd700;
@@ -26,13 +25,13 @@ ul {
 h1,
 h2,
 h3 {
-  font-family: "Kaushan Script", Andina New Basic;
+  font-family: 'Kaushan Script', Andina New Basic;
 }
 
 /* Button Styles Starts */
 
 input[type='date']:after {
-  content: attr(placeholder)
+  content: attr(placeholder);
 }
 
 .btn-primary {
@@ -109,7 +108,7 @@ input[type='date']:after {
 
 .welcome-note .welcome-title::after {
   background: var(--color-secondary);
-  content: "";
+  content: '';
   height: 3px;
   left: 8rem;
   position: absolute;
@@ -125,7 +124,7 @@ input[type='date']:after {
 .welcome-note b {
   display: inline-block;
   padding: 0.5rem 0;
-  font-family: "Tangerine", cursive;
+  font-family: 'Tangerine', cursive;
   font-size: 1.5rem;
 }
 
@@ -140,7 +139,7 @@ input[type='date']:after {
 
   .welcome-note .welcome-title::after {
     background: var(--color-secondary);
-    content: "";
+    content: '';
     height: 3px;
     left: 12rem;
     position: absolute;
@@ -201,7 +200,7 @@ input[type='date']:after {
 /* Showcase styles starts */
 
 .showcase {
-  background-image: url("../public/images/receiption.jpg");
+  background-image: url('../public/images/receiption.jpg');
   display: flex;
   background-size: 100% 100%;
   flex-direction: column;
@@ -265,7 +264,7 @@ input[type='date']:after {
   }
 
   .showcase {
-    background-image: url("../public/images/receiption.jpg");
+    background-image: url('../public/images/receiption.jpg');
     display: flex;
     height: 85vh;
     flex-direction: column;
@@ -307,16 +306,6 @@ input[type='date']:after {
   color: #30a3f1;
 }
 
-/* .input[type='date'] {
-  text-align: left;
-}
-
-.input[type='date']:before {
-  color: lightgrey;
-  content: attr(placeholder) !important;
-  margin-right: 1.5em;
-} */
-
 /* Showcase Buttons style ends */
 
 /* Featured Rooms style starts */
@@ -340,16 +329,13 @@ input[type='date']:after {
 }
 
 .position-container h3::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 5rem;
   height: 3px;
   background: var(--color-secondary);
-<<<<<<< HEAD
   top: 2.4rem;
-=======
   top: 2.5rem;
->>>>>>> e174dcd14e51d87e011eacd4a9423e8e3a740935
   left: 8rem;
 }
 
@@ -362,16 +348,13 @@ input[type='date']:after {
   }
 
   .position-container h3::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 7rem;
     height: 3px;
     background: var(--color-secondary);
-<<<<<<< HEAD
     top: 4.1rem;
-=======
     top: 4rem;
->>>>>>> e174dcd14e51d87e011eacd4a9423e8e3a740935
     left: 32rem;
   }
 }
@@ -425,7 +408,7 @@ input[type='date']:after {
 }
 
 .card-img-overlay a::after {
-  content: "";
+  content: '';
   position: inherit;
   bottom: 0;
   left: 1rem;
@@ -447,7 +430,7 @@ input[type='date']:after {
 }
 
 .scroll-button::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   width: 2rem;
@@ -473,27 +456,21 @@ input[type='date']:after {
   text-align: center;
   padding: 1rem 0;
   font-size: 3rem;
-<<<<<<< HEAD
   /* font-weight: 600; */
   color: var(--color-primary);
-=======
   font-weight: 600;
   color: var(--color-headings);
   /* color: var(--color-primary); */
->>>>>>> e174dcd14e51d87e011eacd4a9423e8e3a740935
 }
 
 .testimonial-header::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 5rem;
-<<<<<<< HEAD
   left: 6rem;
   width: 8rem;
-=======
   left: 8rem;
   width: 4rem;
->>>>>>> e174dcd14e51d87e011eacd4a9423e8e3a740935
   margin-bottom: 5px;
   height: 3px;
   background: var(--color-secondary);
@@ -576,18 +553,13 @@ input[type='date']:after {
     text-align: center;
     padding: 1rem 0;
     font-size: 3rem;
-<<<<<<< HEAD
-    /* font-weight: 600; */
     color: var(--color-primary);
-=======
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-headings);
-    /* color: var(--color-primary); */
->>>>>>> e174dcd14e51d87e011eacd4a9423e8e3a740935
   }
 
   .testimonial-header::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 5.5rem;
     left: 48%;
@@ -616,7 +588,7 @@ input[type='date']:after {
 }
 
 .services .services-header::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 4.5rem;
   left: 8rem;
@@ -628,7 +600,7 @@ input[type='date']:after {
 
 @media screen and (min-width: 760px) {
   .services .services-header::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 12rem;
@@ -650,7 +622,7 @@ input[type='date']:after {
 }
 
 .footer::before {
-  content: "";
+  content: '';
   background-image: url('../public/logo/Portsline\ logo-single-p.png');
   background-size: 100% 100%;
   display: inline-block;
@@ -660,7 +632,7 @@ input[type='date']:after {
   width: 8rem;
 
   /*if you want to change the position you can use margins or:*/
-  position:absolute;
+  position: absolute;
   background-color: whitesmoke;
   border-radius: 50%;
   top: -4rem;
@@ -948,8 +920,8 @@ input[type='date']:after {
 
 /* Single Room Style ends */
 
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
   opacity: 0;
@@ -963,3 +935,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Booking Style ends */
+
+/* Blog Styles starts */
+
+.blog-description {
+  text-align: justify;
+  font-size: 1rem;
+  padding: 0 0.5rem 5rem 0.5rem;
+}
+
+.blog-heading {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Blog Styles ends */
