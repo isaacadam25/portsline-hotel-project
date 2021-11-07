@@ -10,20 +10,9 @@ import { Pagination } from "antd";
 import SpaceDiv from "../components/SpaceDiv";
 import { getAllBlogPosts } from "./api/api";
 
-export default function Blog({ posts }) {
-  // const posts = [];
-
-  // for (let i = 1; i < 7; i++) {
-  //   posts.push(
-  //     <BlogPostCard
-  //       title="Menu"
-  //       subTitle="Awesome Food"
-  //       description="Check out our new menu with the
-  //           special dessert ,free delivery
-  //           is now available."
-  //     />
-  //   );
-  // }
+export default function Blog({ data }) {
+  const posts = data;
+  // console.log('posts => > > ', data);
 
   function itemRender(current, type, originalElement) {
     if (type === "prev") {
@@ -88,16 +77,16 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  let posts = [];
+  let data = [];
   try {
-    posts = await getAllBlogPosts();
+    data = await getAllBlogPosts();
   } catch (error) {
     console.log({ "Error => ": error });
   }
 
   return {
     props: {
-      posts,
+      data,
     },
   };
 }

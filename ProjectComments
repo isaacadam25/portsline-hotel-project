@@ -1,9 +1,4 @@
-API (With Their Images) For 
-    1. room-types
-    2. food-menus 
-    3. Staffs
-    4. Blog-Post
-
+API (With Their Images) For 1. room-types 2. food-menus 3. Staffs 4. Blog-Post
 
  <!-- => 1. Icons Kwenye ShowCase Inputs, Inputs Must pull Down 
     2. Footer Message &copy @2021 
@@ -18,7 +13,7 @@ font
 => blogs-2
 => footer
 => services  -->
-<!-- 
+<!--
 => Modifications Done
     1. Booking BuInputsttons On Landing Page => Moved Up
     2. Booking Flow  => Select Room First, Then Enter Personal Info
@@ -34,11 +29,14 @@ font
 Home page -->
 
 => Modifications Remaining
-    <!-- 1. Logo on footer -->
-    //2. Font
-    3. Room Expansion
-    <!-- 4. Map API Keys -->
-<!-- 
+
+<!-- 1. Logo on footer -->
+
+//2. Font 3. Room Expansion
+
+<!-- 4. Map API Keys -->
+
+<!--
 - button on placeholders
     - Checkin -
     - - check out --
@@ -54,19 +52,39 @@ Home page -->
     Another payment method should be add.(PayPal, master marked)
     In process  instead of tigopesa is ttcl -->
 
-
 <!-- => Modifications Done Today
     1. Fix Responsiveness In Home-Page
     2. Mini-Banner Background-Image  Display Acccording To Room-Type
     3. Extra Room-Images Wrapped In Corousel(in Mobile View)
     4. Changed Email And Phone Number To Real-Information
-    5. Moved Covid-19-Updates Into Drop-Down List In Mobile View 
+    5. Moved Covid-19-Updates Into Drop-Down List In Mobile View
     6. Added Logo In Footer
     7. Removed Icons In Booking Inputs => Added In And Out Placeholders -->
 
-
-    <==========  API Consumption Section  ==========>
+    <==========  API Issues Section  ==========>
 
     1. Remove Authentication Over Blog-Posts.
-    2. Design Has Blog-Post-Subtitle but API/Model Doesn't have that property.
-    3. Either Add Max-Height Css-Property or leave as it is
+    <!-- 2. Design Has Blog-Post-Subtitle but API/Model Doesn't have that property. --> 
+        -Subtitle Changed To Date-Posted
+    <!-- 3. Return Testimonial Author's name -->
+    4. Restaurant API(Foods) Absent
+    5. Room-Type API Has Problem(500 Internal Server Error)
+    6. In Employee API
+        "employee_type", "employee_status" na "nextOfKing"
+        -Znakuja ID only instead of words(string)
+    7. Testimonial Author-Title ie.. Aika Magolo-Project Manager
+
+
+    <==========  UI Issues Section  ==========>
+    <!-- 1. Either Add Max-Height Css-Property or leave as it is (Blog-Post-Card-->
+    2. Testimonial Card Size(Height and Width) Should be the same for comments(long and short comments)
+
+
+    <==========  Data Fetching Issues Section  ==========>
+    <!-- 1. Tell Netlify/Vercel Where to direct urls, via _render -->
+
+
+    <==========  Next-js Debugging Tips Section  ==========>
+    1. When Fetching Data In Next-js using getStaticProps() Method,
+        -Dont Put that method in a component(Sub Element Which Is Not In a page-file In Which It Is Called), Bcoz The Method will not be called. So, Put the method in the parent page-file where this component is called and pass the data to that component as props.
+        -Reason: getStaticProps Method is called when building the page not a component.

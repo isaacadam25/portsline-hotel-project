@@ -8,8 +8,12 @@ import RoomImage2 from "../public/images/room2.jpg";
 import Image from "next/image";
 import StaffCard from "../components/StaffCard";
 import SpaceDiv from "../components/SpaceDiv";
+import { getAllStaff } from "./api/api";
 
-export default function AboutUs() {
+export default function AboutUs({ data }) {
+  const staffs = data;
+  // console.log("Staffs => > > ", data);
+
   return (
     <div style={{ height: "100vh", position: "relative" }}>
       <TopNav />
@@ -97,7 +101,7 @@ export default function AboutUs() {
             </div>
           </Col>
 
-          <Col md={{order: 2}}></Col>
+          <Col md={{ order: 2 }}></Col>
           <Col
             style={{ backgroundColor: "", padding: "0", margin: 0 }}
             md={{ span: 6, offset: 0, order: 3 }}
@@ -203,7 +207,7 @@ export default function AboutUs() {
             </div>
           </Col>
 
-          <Col md={{order: 2}}></Col>
+          <Col md={{ order: 2 }}></Col>
           <Col
             style={{ backgroundColor: "", padding: "0", margin: 0 }}
             md={{ span: 7, offset: 0, order: 3 }}
@@ -247,21 +251,14 @@ export default function AboutUs() {
             <h3>OUR STAFF</h3>
             <div className="title-under-line-center" /> <br />
           </div>
-          <StaffCard
-            name="John Doe"
-            title="Project Manager"
-            description="A strategically built Hotel with features of its own kind."
-          />
-          <StaffCard
-            name="John Doe"
-            title="Project Manager"
-            description="A strategically built Hotel with features of its own kind."
-          />
-          <StaffCard
-            name="John Doe"
-            title="Project Manager"
-            description="A strategically built Hotel with features of its own kind."
-          />
+          {staffs.map(staff => (
+            <StaffCard key={staff.id}
+              name={staff.first_name}
+              title={staff.username}
+              description="A strategically built Hotel with features of its own kind."
+            />
+
+          ))}
         </Row>
         {/* Staffs Row Ends */}
         <SpaceDiv />
@@ -272,4 +269,21 @@ export default function AboutUs() {
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  let data = [];
+  // let data = ['one', 'two', 'three']
+  try {
+    data = await getAllStaff();
+  } catch (error) {
+    // console.log({ "Error => ": error });
+    // return error;
+  }
+
+  return {
+    props: {
+      data,
+    },
+  };
 }

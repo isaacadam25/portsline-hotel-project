@@ -1,15 +1,35 @@
 import baseLink from "./base";
-import axios from "axios";
 
+// Config Object With Token In API-Request Header
 const config = {
   headers: {
-    Authorization: `Token 05d29e553b49720df642a64b9a658d13a02a5716`,
+    Accept: "application/json",
+    Authorization: `Token 1f08c90672d58a9f9f40d8874cc689acfcc0f891`,
   },
 };
 
+// Pull All Blog-Posts
 export async function getAllBlogPosts() {
-    const response = await baseLink.get(`blog/`, config)
-    return response.data
+  const response = await baseLink.get("blog/", config);
+  return response.data;
+}
+
+// Pull All Room-Type
+export async function getAllRoomTypes() {
+  const response = await baseLink.get("room_type/", config);
+  return response.data;
+}
+
+// Pull All Staff
+export async function getAllStaff() {
+  const response = await baseLink.get("employee/", config);
+  return response.data;
+}
+
+// Pull All Testimonials
+export async function getAllTestimonials() {
+  const response = await baseLink.get("testimonial/", config);
+  return response.data;
 }
 
 // // User APIs
