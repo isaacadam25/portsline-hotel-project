@@ -4,6 +4,7 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 :root {
@@ -13,6 +14,8 @@
   --footer-color: #b5b0b0;
   --color-headings: #707070;
   --color-body: #000;
+  --open-sans: 'Open Sans Condensed', sans-serif;
+  --abel-font: 'Abel', sans-serif;
 }
 
 a {
@@ -26,7 +29,8 @@ ul {
 h1,
 h2,
 h3 {
-  font-family: 'Kaushan Script', Andina New Basic;
+  font-family: var(--open-sans);
+  font-weight: 600;
 }
 
 /* Button Styles Starts */
@@ -71,12 +75,26 @@ input[type='date']:after {
 .navigation-links {
   color: #fff !important;
   padding: 2px 5px;
-  font-family: 'Abel', sans-serif;
+  font-family: var(--abel-font);
 }
 
 .navigation-links:hover {
   border-bottom: 1.5px solid var(--color-secondary);
   transition: border 1s ease;
+}
+
+.nav-button {
+  border: 0;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: 1rem;
+  padding: 1px 2px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin: 0 0 0 4px;
+  font-weight: 600;
+  font-family: var(--abel-font);
+  letter-spacing: 2px;
 }
 
 /* Navigation Styles Ends */
@@ -104,24 +122,28 @@ input[type='date']:after {
   color: var(--color-headings);
   display: inline-block;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
   padding: 0.4rem 0;
+  word-spacing: 1px;
 }
 
 .welcome-note .welcome-title::after {
   background: var(--color-secondary);
   content: '';
   height: 3px;
-  left: 8rem;
+  left: 7rem;
   position: absolute;
   top: 2.5rem;
   width: 5rem;
 }
 
 .welcome-note p {
-  padding: 0.5rem 1.2rem;
+  padding: 1rem 1.2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.7px;
   text-align: justify;
+  line-height: 1.6rem;
   font-family: 'Abel', sans-serif;
 }
 
@@ -145,7 +167,7 @@ input[type='date']:after {
     background: var(--color-secondary);
     content: '';
     height: 3px;
-    left: 12rem;
+    left: 11rem;
     position: absolute;
     top: 3.5rem;
     width: 7rem;
@@ -154,6 +176,8 @@ input[type='date']:after {
   .welcome-note p {
     padding: 0.5rem 1rem;
     text-align: justify;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
   }
 }
 
@@ -163,13 +187,14 @@ input[type='date']:after {
 
 .top-nav {
   background: var(--color-primary);
-  padding: 0.4rem;
+  padding: 1rem;
   width: 100%;
+  display: flex;
   text-align: center;
   justify-content: center;
 }
 
-.top-nav a {
+.top-nav div a {
   color: #000;
   font-size: 1rem;
   padding: 0.4rem 0.6rem;
@@ -189,16 +214,27 @@ input[type='date']:after {
 @media screen and (min-width: 760px) {
   .top-nav {
     background: var(--color-primary);
-    padding: 0.4rem;
+    padding: 0.8rem;
     width: 100%;
     text-align: left;
     justify-content: start;
   }
 
   .top-nav a:nth-child(3) {
-    color: #000;
+    color: var(--color-secondary);
     font-size: 1rem;
     border-left: 2px solid #000;
+    font-family: var(--abel-font);
+  }
+
+  .lang-div {
+    margin: 0 2rem 0 0;
+  }
+
+  .lang-div select {
+    border: 0;
+    font-family: var(--abel-font);
+    font-size: 1rem;
   }
 }
 
@@ -260,9 +296,8 @@ input[type='date']:after {
 .position-container h3 {
   color: var(--color-headings);
   padding: 0;
-  font-size: 2rem;
-  /* font-weight: 400; */
-  margin: 0;
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
 .position-container h3::after {
@@ -271,16 +306,15 @@ input[type='date']:after {
   width: 5rem;
   height: 3px;
   background: var(--color-secondary);
-  top: 2.4rem;
-  top: 2.5rem;
-  left: 8rem;
+  top: 3rem;
+  left: 7.5rem;
 }
 
 @media screen and (min-width: 760px) {
   .position-container h3 {
     color: var(--color-headings);
     padding: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 0.5rem 0;
   }
 
@@ -290,8 +324,7 @@ input[type='date']:after {
     width: 7rem;
     height: 3px;
     background: var(--color-secondary);
-    top: 4.1rem;
-    top: 4rem;
+    top: 3.5rem;
     left: 32rem;
   }
 }
@@ -313,11 +346,13 @@ input[type='date']:after {
   width: 6rem;
   padding: 0.2rem;
   border-bottom-right-radius: 16px;
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: var(--abel-font);
 }
 
 .card-img-overlay .room-price span {
-  font-weight: bold;
+  font-weight: 600;
   display: block;
 }
 
@@ -325,6 +360,10 @@ input[type='date']:after {
   position: absolute;
   bottom: 2rem;
   left: 1rem;
+  font-family: var(--abel-font);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.7px;
 }
 
 .room-price-div {
@@ -344,13 +383,14 @@ input[type='date']:after {
   color: var(--color-secondary);
   font-size: 0.8rem;
   padding: 0.1rem 0;
+  font-family: var(--abel-font);
 }
 
 .card-img-overlay a::after {
   content: '';
   position: inherit;
   bottom: 0;
-  left: 1rem;
+  left: 0.8rem;
   height: 2px;
   width: 1.5rem;
   background: var(--color-secondary);
@@ -358,7 +398,8 @@ input[type='date']:after {
 
 .tsh-price {
   font-weight: 600;
-  padding: 0.2rem;
+  padding: 0.5rem;
+  font-family: var(--abel-font);
 }
 
 /* Room card styles ends */
@@ -393,23 +434,21 @@ input[type='date']:after {
 /* Testimonial Style starts */
 
 .testimonial-section {
-  padding: 0.5rem;
   position: relative;
 }
 
 .testimonial-header {
   text-align: center;
   padding: 1rem 0;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--color-primary);
-  font-weight: 600;
   color: var(--color-headings);
 }
 
 .testimonial-header::after {
   content: '';
   position: absolute;
-  top: 5rem;
+  top: 3.4rem;
   left: 6rem;
   width: 8rem;
   left: 8rem;
@@ -425,11 +464,11 @@ input[type='date']:after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-height: 40rem;
 }
 
 .testimonial-card .testimonial-image {
   flex-basis: 100%;
-  /* background: rgb(37, 33, 33); */
   border-radius: 50%;
   padding: 0.3rem;
 }
@@ -443,13 +482,16 @@ input[type='date']:after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-height: 350px;
+  white-space: wrap;
 }
 
 .testimonial-content .testimonial-message {
   text-align: justify;
   padding: 0 0.5rem;
   font-style: italic;
-  font-family: 'Abel', sans-serif;
+  font-size: 1rem;
+  font-family: var(--abel-font);
 }
 
 .testimonial-content .testimonial-message i {
@@ -461,7 +503,7 @@ input[type='date']:after {
 .testimonial-content .author {
   padding: 0.5rem;
   text-align: center;
-  font-family: 'Abel', sans-serif;
+  font-family: var(--abel-font);
 }
 
 .rec-arrow {
@@ -485,7 +527,7 @@ input[type='date']:after {
   }
 
   .testimonial-section {
-    /* background-image: url("../public//hotel.jpg"); */
+    background-image: url('../public//hotel.jpg');
     padding: 1rem;
     /* height: 50vh; //TODO Remove this height property */
   }
@@ -499,16 +541,14 @@ input[type='date']:after {
     padding: 1rem 0;
     font-size: 3rem;
     color: var(--color-primary);
-    font-weight: 400;
-    color: var(--color-headings);
   }
 
   .testimonial-header::after {
     content: '';
     position: absolute;
     top: 5.5rem;
-    left: 48%;
-    width: 4rem;
+    left: 47%;
+    width: 6rem;
     margin-bottom: 5px;
     height: 3px;
     background: var(--color-secondary);
@@ -525,29 +565,32 @@ input[type='date']:after {
 .services .services-header {
   text-align: center;
   color: var(--color-headings);
-  font-size: 3rem;
-  /* font-weight: 600; */
+  font-size: 2rem;
   padding-top: 1rem;
   margin: 0;
   position: relative;
+  margin: 0.5rem 0;
 }
 
 .services .services-header::after {
   content: '';
   position: absolute;
-  top: 4.5rem;
-  left: 8rem;
-  width: 3rem;
-  margin-bottom: -2px;
+  top: 3.5rem;
+  left: 8.2rem;
+  width: 2rem;
   height: 3px;
   background: var(--color-secondary);
 }
 
 @media screen and (min-width: 760px) {
+  .services .services-header {
+    font-size: 2.5rem;
+  }
+
   .services .services-header::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 4rem;
     left: 12rem;
     width: 3rem;
     margin-bottom: 0px;
@@ -741,22 +784,40 @@ input[type='date']:after {
   padding: 5% 1%;
 }
 
-@media screen and (min-width: 760px) {
-  .contents-parent {
-    background-color: var(--color-primary);
-    padding: 2% 10%;
-  }
-}
 .about-us-image {
   border: none;
   padding: 0;
   border-radius: 35px;
 }
 
+.about-text {
+  font-family: var(--abel-font);
+  color: #000;
+  font-size: 1rem;
+  text-align: justify;
+  padding: 0 1rem;
+}
+
+.staff-text {
+  font-family: var(--abel-font);
+  color: #000;
+  font-size: 1rem;
+}
+
 .staff-image {
   border-radius: 95px;
 }
 
+@media screen and (min-width: 760px) {
+  .contents-parent {
+    background-color: var(--color-primary);
+    padding: 2% 10%;
+  }
+
+  .about-text {
+    padding: 0;
+  }
+}
 /* About-Us-Page styles end */
 
 /* Restaurant-Page styles start */
@@ -919,6 +980,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.5rem 0 0 0.4rem;
+  font-family: 'Abel', sans-serif;
 }
 
 @media screen and (min-width: 760px) {
@@ -940,6 +1002,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
     border: none;
     color: var(--color-primary);
     font-weight: 600;
+    font-family: var(--abel-font);
     margin: 1.5rem 0.7rem 0 0;
     padding: 0.3rem;
     text-transform: uppercase;
@@ -961,12 +1024,20 @@ input[type='date']::-webkit-calendar-picker-indicator {
   border-radius: 10px;
   border: none;
   background: #e6dddd;
+  font-family: var(--abel-font);
 }
 
 .icon-inside {
   width: 100%;
   position: relative;
   margin: 0 0 0 1rem;
+}
+
+.icon-inside i {
+  position: absolute;
+  right: 2rem;
+  top: 2.5rem;
+  color: var(--color-accent);
 }
 
 @media screen and (min-width: 760px) {

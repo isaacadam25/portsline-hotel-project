@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
-import Hotel from '../public/hotel.jpg';
-import { Col, Container, Row, Card } from 'react-bootstrap';
-import StaffImage from '../public/images/staffImage.jpeg';
+import React from "react";
+import Image from "next/image";
+import Hotel from "../public/hotel.jpg";
+import { Col, Container, Row, Card } from "react-bootstrap";
+import StaffImage from "../public/images/staffImage.jpeg";
 
 const StaffCard = ({ full_name, title, description, photo }) => {
   return (
@@ -27,7 +27,9 @@ const StaffCard = ({ full_name, title, description, photo }) => {
       />
       <h3>{full_name}</h3>
       <h6>{title}</h6>
-      <p style={{ padding: "0 20%" }}>{description}</p>
+      <p className="staff-text" style={{ padding: "0 20%" }}>
+        {description}
+      </p>
     </Col>
   );
 };
