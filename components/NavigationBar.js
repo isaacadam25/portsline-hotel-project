@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import Logo from '../public/logo/pl_min_logo_white-01.png';
+import PortLogo from '../public/logo/LOGO-Single-P.png';
 
 const NavigationBar = () => {
   return (
@@ -10,8 +11,7 @@ const NavigationBar = () => {
       <Container>
         <Link href="/" passHref>
           <Navbar.Brand href="#" style={{ backgroundColor: '' }}>
-            <Image src={Logo} alt="logo-image" width={200} height={50} />
-            {/* Portsline Hotel */}
+            <Image src={PortLogo} alt="logo-image" width={50} height={40} />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -57,7 +57,9 @@ const NavigationBar = () => {
             <Nav.Link href="#">Services</Nav.Link>
             <Nav.Link href="#">Blog</Nav.Link> */}
             <Link href="/booking" passHref>
-              <Button size="sm">BOOK NOW</Button>
+              <button className="nav-button">
+                <marquee> Book Now</marquee>
+              </button>
             </Link>
           </Nav>
         </Navbar.Collapse>
