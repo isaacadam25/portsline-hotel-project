@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Col, Card } from "react-bootstrap";
 
-const BlogPostCard = ({ title, subTitle, description, postImage }) => {
+const BlogPostCard = ({ title, subTitle, description, postImage, blogId }) => {
   return (
     <Col md={{ span: 5 }} xs={{ span: 12 }}>
       <Card
@@ -17,7 +17,7 @@ const BlogPostCard = ({ title, subTitle, description, postImage }) => {
             <i className="fa fa-calendar" /> {subTitle}
           </Card.Title>
           <Card.Text>{description}</Card.Text>
-          <Link href="/blog/200" passHref>
+          <Link href={`/blog/${blogId}`} passHref>
             <a href="#">Read more...</a>
           </Link>
         </Card.Body>

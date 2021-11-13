@@ -55,6 +55,7 @@ export default function Blog({ data }) {
                 subTitle="2021-3-4"
                 description={post.description}
                 postImage={post.post_image}
+                blogId={post.id}
               />
             ))}
           </Row>

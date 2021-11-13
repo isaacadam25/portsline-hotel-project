@@ -18,13 +18,13 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
 ];
 
-export default function RoomDetail({ caution, room_type }) {
-  console.log(room_type);
+export default function RoomDetail({ caution, room_type, room_types }) {
+  // console.log(room_type);
   const router = useRouter();
   const roomId = router.query.roomId;
   return (
     <Layout title="Rooms">
-      <Banner title={`Room ${roomId}`} backgroundImg={bg} />
+      <Banner title={`${room_type.type_name}`} backgroundImg={bg} />
       <Container>
         <Row className="justify-content-center">
           <Col
@@ -32,7 +32,8 @@ export default function RoomDetail({ caution, room_type }) {
             xs={12}
             className="d-none d-md-block"
           >
-            <h1 className="room-header">Room Details - {roomId}</h1>
+            <h1 className="room-header">Room Details</h1>
+            {/* <h1 className="room-header">Room Details - {roomId}</h1> */}
             <Image
               className="room-image"
               src={Room}
@@ -139,10 +140,7 @@ export default function RoomDetail({ caution, room_type }) {
               <Card.Body>
                 <div className="service-description">
                   <p style={{ textAlign: "justify" }}>
-                    This room is located on the top floor of the hotel and has
-                    hot / cold air conditioned, a furnished balcony with sun
-                    loungers with swimming pool or mountain views and free WI
-                    FI.
+                    {room_type.description}
                   </p>
                   <p style={{ textAlign: "justify" }}>
                     <b>Room surface area:</b> 17 m²
@@ -158,6 +156,7 @@ export default function RoomDetail({ caution, room_type }) {
                     shampoo dispenser and bathtub.
                   </p>
                   <p>
+                    {/* <i>Non smoking room.</i> */}
                     <i>{caution ? caution : "Non smoking room"}.</i>
                   </p>
                   <button>Book Now</button>
@@ -167,7 +166,7 @@ export default function RoomDetail({ caution, room_type }) {
           </Col>
         </Row>
       </Container>
-      <FeaturedRooms />
+      <FeaturedRooms room_types={room_types} />
       <SpaceDiv />
     </Layout>
   );
@@ -176,12 +175,7 @@ export default function RoomDetail({ caution, room_type }) {
 export async function getStaticPaths() {
   // Call an external API endpoint to get room_types
   let room_types = [];
-  try {
-    room_types = await getAllRoomTypes();
-    console.log("room types", room_types);
-  } catch (error) {
-    console.log({ "Error => ": error });
-  }
+  room_types = await getAllRoomTypes();
 
   // Get the paths we want to pre-render based on room_type
   const paths = room_types.map((room) => ({
@@ -194,19 +188,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log("id => ", params.roomId);
   // params contains the room_type `id`.
   // If the route is like /room_type/1, then params.id is 1
-  let room_type = "";
-  try {
-    room_type = await getSingleRoomType(params.roomId);
-    console.log("single room ", room_type);
-  } catch (error) {
-    console.log({ "Error => ": error });
-  }
-  // const res = await fetch(`https://.../posts/${params.id}`);
-  // const post = await res.json();
+  const room_type = await getSingleRoomType(params.roomId);
+  const room_types = await getAllRoomTypes();
 
   // Pass room_type data to the page via props
-  return { props: { room_type } };
+  return { props: { room_type: room_type, room_types: room_types } };
 }
