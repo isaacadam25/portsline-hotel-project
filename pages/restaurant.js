@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Banner from "../components/Banner";
 import Layout from "../components/Layout";
 import MenuCard from "../components/MenuCard";
@@ -8,8 +9,72 @@ import mshkaki from "../public/images/mishkaki.jpg";
 import SpaceDiv from "../components/SpaceDiv";
 
 export default function Restaurant() {
+  const table_booking_info = {
+    full_name: "",
+    email: "",
+    phone: "",
+    date: "",
+    time: "",
+    guests: "",
+    comment: "",
+  };
+
   const menus = [];
   const answers = [1, 2, 3, 4];
+
+  const [tableForm, setTableForm] = useState(table_booking_info);
+  const [formErrorMessage, setFormErrorMessage] = useState("");
+
+  const handleTableBookingForm = (e) => {
+    setFormErrorMessage("");
+    const { name, value } = e.target;
+    setTableForm({ ...tableForm, [name]: value });
+  };
+
+  const validateTableBookingForm = () => {
+    let re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const emailResult = re.test(tableForm.email);
+    if (!tableForm.full_name) {
+      setFormErrorMessage("Enter Full Name");
+      return false;
+    } else if (!tableForm.email) {
+      setFormErrorMessage("Enter Email Address");
+      return false;
+    } else if (!emailResult) {
+      setFormErrorMessage("Enter a valid email");
+      return false;
+    } else if (!tableForm.date) {
+      setFormErrorMessage("Select date");
+      return false;
+    } else if (!tableForm.time) {
+      setFormErrorMessage("Select reporting time");
+      return false;
+    } else if (!tableForm.guests) {
+      setFormErrorMessage("Enter number of guests");
+      return false;
+    } else if (!tableForm.phone) {
+      setFormErrorMessage("Enter phone number");
+      return false;
+    } else if (!tableForm.comment) {
+      setFormErrorMessage("Enter comments/booking details");
+      return false;
+    } else {
+      setFormErrorMessage("");
+      return true;
+    }
+  };
+
+  const onFinish = (e) => {
+    e.preventDefault();
+    const isFormValid = validateTableBookingForm();
+    if (isFormValid) {
+      console.log("Table Booking Form Is Valid", tableForm);
+      setTableForm(table_booking_info);
+    } else {
+      console.log("Table Booking Form Is Not Valid");
+    }
+  };
 
   for (let i = 1; i < 7; i++) {
     menus.push(
@@ -83,25 +148,66 @@ export default function Restaurant() {
                 <Col md={6} xs={12} sm={12}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Full Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter full name" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter full name"
+                      name="full_name"
+                      value={tableForm.full_name}
+                      onChange={handleTableBookingForm}
+                    />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email </Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control
+                      type="email"
+                      placeholder="Enter email"
+                      name="email"
+                      value={tableForm.email}
+                      onChange={handleTableBookingForm}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Date </Form.Label>
+                    <Form.Control
+                      type="date"
+                      placeholder="select date"
+                      name="date"
+                      value={tableForm.date}
+                      onChange={handleTableBookingForm}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Time </Form.Label>
+                    <Form.Control
+                      type="time"
+                      placeholder="Enter arrival time"
+                      name="time"
+                      value={tableForm.time}
+                      onChange={handleTableBookingForm}
+                    />
+                  </Form.Group>
+                </Col>
+                <Col md={6} xs={12} sm={12}>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Guests </Form.Label>
+                    <Form.Control
+                      type="number"
+                      placeholder="Enter number of guests"
+                      name="guests"
+                      value={tableForm.guests}
+                      onChange={handleTableBookingForm}
+                    />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Phone </Form.Label>
                     <Form.Control
                       type="number"
                       placeholder="Enter phone number"
+                      name="phone"
+                      value={tableForm.phone}
+                      onChange={handleTableBookingForm}
                     />
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Date </Form.Label>
-                    <Form.Control type="date" placeholder="select date" />
-                  </Form.Group>
-                </Col>
-                <Col md={6} xs={12} sm={12}>
                   <Form.Group
                     className="mb-3"
                     controlId="exampleForm.ControlTextarea1"
@@ -109,22 +215,41 @@ export default function Restaurant() {
                     <Form.Label>Comments</Form.Label>
                     <Form.Control
                       as="textarea"
+                      placeholder="enter description if any"
                       rows={3}
-                      style={{ height: "36vh" }}
+                      style={{ height: "16vh" }}
+                      name="comment"
+                      value={tableForm.comment}
+                      onChange={handleTableBookingForm}
                     />
                   </Form.Group>
                 </Col>
               </Row>
               <Row>
                 <Col md={2}>
-                <Button
-                  variant=""
-                  type="submit"
-                  style={{ backgroundColor: "blue" }}
-                >
-                  Submit
-                </Button>
+                  <Button
+                    variant=""
+                    type="button"
+                    style={{ backgroundColor: "blue" }}
+                    onClick={onFinish}
+                  >
+                    Submit
+                  </Button>
                 </Col>
+              </Row>
+              <Row>
+                <span
+                  hidden={!formErrorMessage}
+                  style={{
+                    color: "white",
+                    backgroundColor: "red",
+                    width: "60%",
+                    padding: "2%",
+                    marginLeft: "20%",
+                  }}
+                >
+                  {formErrorMessage}
+                </span>
               </Row>
             </Form>
           </Card>
