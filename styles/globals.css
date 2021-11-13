@@ -92,6 +92,7 @@ input[type='date']:after {
 
 .welcome-text {
   padding: 0.5rem;
+  font-family: 'Abel', sans-serif;
 }
 
 .welcome-note {
@@ -121,6 +122,7 @@ input[type='date']:after {
 .welcome-note p {
   padding: 0.5rem 1.2rem;
   text-align: justify;
+  font-family: 'Abel', sans-serif;
 }
 
 .welcome-note b {
@@ -171,6 +173,7 @@ input[type='date']:after {
   color: #000;
   font-size: 1rem;
   padding: 0.4rem 0.6rem;
+  font-family: 'Abel', sans-serif;
 }
 
 .top-nav a:nth-child(3) {
@@ -219,6 +222,7 @@ input[type='date']:after {
   font-weight: 600;
   font-size: 1.1rem;
   padding: 0.5rem 0.1rem;
+  font-family: 'Abel', sans-serif;
 }
 
 @media screen and (min-width: 760px) {
@@ -367,6 +371,7 @@ input[type='date']:after {
   font-size: 2rem;
   position: relative;
   margin: 2rem 0;
+  font-family: 'Abel', sans-serif;
 }
 
 .scroll-button::after {
@@ -444,6 +449,7 @@ input[type='date']:after {
   text-align: justify;
   padding: 0 0.5rem;
   font-style: italic;
+  font-family: 'Abel', sans-serif;
 }
 
 .testimonial-content .testimonial-message i {
@@ -455,6 +461,7 @@ input[type='date']:after {
 .testimonial-content .author {
   padding: 0.5rem;
   text-align: center;
+  font-family: 'Abel', sans-serif;
 }
 
 .rec-arrow {
@@ -599,6 +606,7 @@ input[type='date']:after {
 
 .quick-links ul li a {
   color: var(--color-primary);
+  font-family: 'Abel', sans-serif;
 }
 
 .quick-links ul li a:hover {
@@ -627,6 +635,7 @@ input[type='date']:after {
 
 .addresses p {
   font-size: 0.9rem;
+  font-family: 'Abel', sans-serif;
 }
 
 .map {
@@ -659,6 +668,7 @@ input[type='date']:after {
 
 .bottom-links {
   color: var(--color-primary);
+  font-family: 'Abel', sans-serif;
 }
 
 .bottom-links:hover {
