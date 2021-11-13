@@ -1,17 +1,17 @@
-import React from "react";
-import Image from "next/image";
-import HotelMap from "../public/images/portsline-map.png";
-import { Container, Row, Col } from "react-bootstrap";
-import GoogleMapReact from "google-map-react";
+import React from 'react';
+import Image from 'next/image';
+import HotelMap from '../public/images/portsline-map.png';
+import { Container, Row, Col } from 'react-bootstrap';
+import GoogleMapReact from 'google-map-react';
 
 const Footer = () => {
   const year = new Date().getFullYear();
-    const props = {
+  const props = {
     center: {
       lat: 59.95,
-      lng: 30.33
+      lng: 30.33,
     },
-    zoom: 11
+    zoom: 11,
   };
 
   return (
@@ -51,7 +51,6 @@ const Footer = () => {
           <address>
             <p>Phone : +255 754 249 777</p>
             <p>Email : info@portslinehotel.co.tz</p>
-            <p>info@portslinehotel.co.tz</p>
           </address>
           <div className="social-icons">
             <i className="fa fa-facebook" />
@@ -72,9 +71,9 @@ const Footer = () => {
         </Col>
         <Col className="map" xs={12} md={3}>
           <h6>Visit Us:</h6>
-          <div style={{ height: "175px", width: "100%" }}>
+          <div style={{ height: '175px', width: '100%' }}>
             <GoogleMapReact
-              bootstrapURLKeys={{ key: "" }}
+              bootstrapURLKeys={{ key: '' }}
               defaultCenter={props.center}
               defaultZoom={props.zoom}
             ></GoogleMapReact>
@@ -97,7 +96,7 @@ const Footer = () => {
             <a className="bottom-links" href="#">
               FAQs
             </a>
-            <span style={{ float: "right", padding: "" }}>
+            <span style={{ float: 'right', padding: '' }}>
               &copy; {year} | Portsline Hotel & SPA Limited
             </span>
           </Col>

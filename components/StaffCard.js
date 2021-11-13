@@ -27,7 +27,9 @@ const StaffCard = ({ name, title, description }) => {
       />
       <h3>{name}</h3>
       <h6>{title}</h6>
-      <p style={{ padding: '0 20%' }}>{description}</p>
+      <p className="staff-text" style={{ padding: '0 20%' }}>
+        {description}
+      </p>
     </Col>
   );
 };
