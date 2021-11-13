@@ -19,8 +19,12 @@ const RoomCard = ({ roomTitle, roomPrice, roomTypeId }) => {
           <Col>
             <div className="card-title h6">{roomTitle}</div>
           </Col>
-          <Col className="d-none d-lg-block">
-            <div className="room-price-div">{roomPrice} Tsh</div>
+          <Col className="">
+            <div className="room-price-div">
+              <p className="tsh-price">
+                {roomPrice} <span>Tsh</span>
+              </p>
+            </div>
           </Col>
         </Row>
         <Link href={`/rooms/${roomTypeId}`} passHref>

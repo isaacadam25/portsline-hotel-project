@@ -4,7 +4,7 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 :root {
   --color-primary: #fff;
@@ -26,13 +26,13 @@ ul {
 h1,
 h2,
 h3 {
-  font-family: "Kaushan Script", Andina New Basic;
+  font-family: 'Kaushan Script', Andina New Basic;
 }
 
 /* Button Styles Starts */
 
 input[type='date']:after {
-  content: attr(placeholder)
+  content: attr(placeholder);
 }
 
 .btn-primary {
@@ -71,6 +71,7 @@ input[type='date']:after {
 .navigation-links {
   color: #fff !important;
   padding: 2px 5px;
+  font-family: 'Abel', sans-serif;
 }
 
 .navigation-links:hover {
@@ -91,6 +92,7 @@ input[type='date']:after {
 
 .welcome-text {
   padding: 0.5rem;
+  font-family: 'Abel', sans-serif;
 }
 
 .welcome-note {
@@ -102,14 +104,14 @@ input[type='date']:after {
   color: var(--color-headings);
   display: inline-block;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
   padding: 0.4rem 0;
 }
 
 .welcome-note .welcome-title::after {
   background: var(--color-secondary);
-  content: "";
+  content: '';
   height: 3px;
   left: 8rem;
   position: absolute;
@@ -120,12 +122,13 @@ input[type='date']:after {
 .welcome-note p {
   padding: 0.5rem 1.2rem;
   text-align: justify;
+  font-family: 'Abel', sans-serif;
 }
 
 .welcome-note b {
   display: inline-block;
   padding: 0.5rem 0;
-  font-family: "Tangerine", cursive;
+  font-family: 'Tangerine', cursive;
   font-size: 1.5rem;
 }
 
@@ -140,7 +143,7 @@ input[type='date']:after {
 
   .welcome-note .welcome-title::after {
     background: var(--color-secondary);
-    content: "";
+    content: '';
     height: 3px;
     left: 12rem;
     position: absolute;
@@ -163,12 +166,14 @@ input[type='date']:after {
   padding: 0.4rem;
   width: 100%;
   text-align: center;
+  justify-content: center;
 }
 
 .top-nav a {
   color: #000;
   font-size: 1rem;
   padding: 0.4rem 0.6rem;
+  font-family: 'Abel', sans-serif;
 }
 
 .top-nav a:nth-child(3) {
@@ -187,6 +192,7 @@ input[type='date']:after {
     padding: 0.4rem;
     width: 100%;
     text-align: left;
+    justify-content: start;
   }
 
   .top-nav a:nth-child(3) {
@@ -201,123 +207,43 @@ input[type='date']:after {
 /* Showcase styles starts */
 
 .showcase {
-  background-image: url("../public/images/receiption.jpg");
+  background-image: url('../public/images/receiption.jpg');
   display: flex;
   background-size: 100% 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  /* background-color: red; */
-  /* width:100%; */
-  /* margin: 0; */
-}
-
-.showcase button {
-  background: var(--color-secondary) !important;
-  color: var(--color-primary);
-  margin: 1rem 0;
-  border: 0;
-}
-
-.showcase button:hover {
-  background: var(--color-primary) !important;
-  color: var(--color-secondary);
-  margin: 1rem 0;
-  border: 0;
-}
-
-.showcase .title {
-  color: var(--color-primary);
-  text-align: center;
-  font-size: 2rem;
-  padding: 0.5rem 0;
-  padding-top: 2rem;
+  height: 100vh;
 }
 
 .showcase .subtitle {
-  color: var(--color-primary);
+  color: var(--color-accent);
   text-align: center;
+  font-weight: 600;
   font-size: 1.1rem;
   padding: 0.5rem 0.1rem;
-}
-
-.showcase-input {
-  display: flex;
-  flex-direction: column;
-  /* background-color: red; */
-  padding-top: 1%;
+  font-family: 'Abel', sans-serif;
 }
 
 @media screen and (min-width: 760px) {
   .showcase .subtitle {
-    color: var(--color-primary);
     text-align: center;
     font-size: 1.5rem;
-    padding: 1rem 0.5rem;
-  }
-
-  .showcase .title {
-    color: var(--color-primary);
-    text-align: center;
-    font-size: 4rem;
-    padding: 1rem 0;
-    padding-top: 3rem;
+    padding: 0rem 0.5rem;
   }
 
   .showcase {
-    background-image: url("../public/images/receiption.jpg");
+    background-image: url('../public/images/receiption.jpg');
     display: flex;
-    height: 85vh;
+    height: 80vh;
     flex-direction: column;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .showcase-input {
-    display: flex;
-    flex-direction: row;
-    margin: 1rem 0;
+    justify-content: end;
   }
 }
 
 /* Showcase styles ends */
-
-/* Showcase Buttons style starts */
-.input {
-  width: 10rem;
-  padding: 8px;
-  margin: 4px;
-  border-radius: 10px;
-  border: none;
-}
-
-.icon-inside {
-  width: 10rem;
-  position: relative;
-  margin: 0 1rem;
-}
-
-.icon-inside i {
-  position: absolute;
-  right: 0;
-  top: 6px;
-  padding: 10px;
-  color: #30a3f1;
-}
-
-/* .input[type='date'] {
-  text-align: left;
-}
-
-.input[type='date']:before {
-  color: lightgrey;
-  content: attr(placeholder) !important;
-  margin-right: 1.5em;
-} */
-
-/* Showcase Buttons style ends */
 
 /* Featured Rooms style starts */
 
@@ -335,16 +261,17 @@ input[type='date']:after {
   color: var(--color-headings);
   padding: 0;
   font-size: 2rem;
-  font-weight: 600;
+  /* font-weight: 400; */
   margin: 0;
 }
 
 .position-container h3::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 5rem;
   height: 3px;
   background: var(--color-secondary);
+  top: 2.4rem;
   top: 2.5rem;
   left: 8rem;
 }
@@ -358,11 +285,12 @@ input[type='date']:after {
   }
 
   .position-container h3::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 7rem;
     height: 3px;
     background: var(--color-secondary);
+    top: 4.1rem;
     top: 4rem;
     left: 32rem;
   }
@@ -400,11 +328,13 @@ input[type='date']:after {
 }
 
 .room-price-div {
-  bottom: 1.5rem;
   position: absolute;
-  font-weight: bolder;
-  font-size: x-large;
-  padding-left: 4%;
+  bottom: 0;
+  right: 0;
+  height: 3rem;
+  width: 5rem;
+  background: var(--color-secondary);
+  border-top-left-radius: 10px;
 }
 .card-img-overlay a {
   position: absolute;
@@ -417,13 +347,18 @@ input[type='date']:after {
 }
 
 .card-img-overlay a::after {
-  content: "";
+  content: '';
   position: inherit;
   bottom: 0;
   left: 1rem;
   height: 2px;
   width: 1.5rem;
   background: var(--color-secondary);
+}
+
+.tsh-price {
+  font-weight: 600;
+  padding: 0.2rem;
 }
 
 /* Room card styles ends */
@@ -436,10 +371,11 @@ input[type='date']:after {
   font-size: 2rem;
   position: relative;
   margin: 2rem 0;
+  font-family: 'Abel', sans-serif;
 }
 
 .scroll-button::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   width: 2rem;
@@ -451,29 +387,31 @@ input[type='date']:after {
 .scroll-button:hover {
   color: black;
 }
+
 /* Button scroll from room featured ends */
 
 /* Testimonial Style starts */
+
 .testimonial-section {
-  /* background-image: url("../public//hotel.jpg"); */
   padding: 0.5rem;
   position: relative;
-  /* height: 50vh; // TODO Remove this height property later */
 }
 
 .testimonial-header {
   text-align: center;
   padding: 1rem 0;
   font-size: 3rem;
+  color: var(--color-primary);
   font-weight: 600;
   color: var(--color-headings);
-  /* color: var(--color-primary); */
 }
 
 .testimonial-header::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 5rem;
+  left: 6rem;
+  width: 8rem;
   left: 8rem;
   width: 4rem;
   margin-bottom: 5px;
@@ -511,6 +449,7 @@ input[type='date']:after {
   text-align: justify;
   padding: 0 0.5rem;
   font-style: italic;
+  font-family: 'Abel', sans-serif;
 }
 
 .testimonial-content .testimonial-message i {
@@ -522,6 +461,7 @@ input[type='date']:after {
 .testimonial-content .author {
   padding: 0.5rem;
   text-align: center;
+  font-family: 'Abel', sans-serif;
 }
 
 .rec-arrow {
@@ -558,13 +498,13 @@ input[type='date']:after {
     text-align: center;
     padding: 1rem 0;
     font-size: 3rem;
-    font-weight: 600;
+    color: var(--color-primary);
+    font-weight: 400;
     color: var(--color-headings);
-    /* color: var(--color-primary); */
   }
 
   .testimonial-header::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 5.5rem;
     left: 48%;
@@ -586,16 +526,16 @@ input[type='date']:after {
   text-align: center;
   color: var(--color-headings);
   font-size: 3rem;
-  font-weight: 600;
+  /* font-weight: 600; */
   padding-top: 1rem;
   margin: 0;
   position: relative;
 }
 
 .services .services-header::after {
-  content: "";
+  content: '';
   position: absolute;
-  bottom: 0;
+  top: 4.5rem;
   left: 8rem;
   width: 3rem;
   margin-bottom: -2px;
@@ -605,7 +545,7 @@ input[type='date']:after {
 
 @media screen and (min-width: 760px) {
   .services .services-header::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 12rem;
@@ -627,7 +567,7 @@ input[type='date']:after {
 }
 
 .footer::before {
-  content: "";
+  content: '';
   background-image: url('../public/logo/Portsline\ logo-single-p.png');
   background-size: 100% 100%;
   display: inline-block;
@@ -637,21 +577,11 @@ input[type='date']:after {
   width: 8rem;
 
   /*if you want to change the position you can use margins or:*/
-  position:absolute;
+  position: absolute;
   background-color: whitesmoke;
   border-radius: 50%;
   top: -4rem;
 }
-
-/* .footer::before {
-  content: ""; TODO: Add logo here 
-  content: url(../public/logo/Portsline\ logo-single-p.png);
-  width: 8rem;
-  position: absolute;
-  height: 8rem;
-   background: var(--color-accent); 
-  top: -4rem;
-} */
 
 .footer-header {
   text-align: center;
@@ -676,6 +606,7 @@ input[type='date']:after {
 
 .quick-links ul li a {
   color: var(--color-primary);
+  font-family: 'Abel', sans-serif;
 }
 
 .quick-links ul li a:hover {
@@ -704,6 +635,7 @@ input[type='date']:after {
 
 .addresses p {
   font-size: 0.9rem;
+  font-family: 'Abel', sans-serif;
 }
 
 .map {
@@ -736,6 +668,7 @@ input[type='date']:after {
 
 .bottom-links {
   color: var(--color-primary);
+  font-family: 'Abel', sans-serif;
 }
 
 .bottom-links:hover {
@@ -823,12 +756,12 @@ input[type='date']:after {
 .staff-image {
   border-radius: 95px;
 }
+
 /* About-Us-Page styles end */
 
 /* Restaurant-Page styles start */
 
 .restaurant-first-row {
-  /* background-color: green; */
   background-image: url(../public/images/foodPlate.png);
   background-repeat: no-repeat;
   background-size: 50% 100%;
@@ -838,7 +771,6 @@ input[type='date']:after {
 .shadowCard {
   -moz-box-shadow: 3px 3px 5px 6px #ccc;
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  /* box-shadow:         3px 3px 5px 6px #ccc; */
   box-shadow: 0px 5px 20px 1px lightgray;
 }
 /* Restaurant-Page styles end */
@@ -925,8 +857,8 @@ input[type='date']:after {
 
 /* Single Room Style ends */
 
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
   opacity: 0;
@@ -940,3 +872,117 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Booking Style ends */
+
+/* Blog Styles starts */
+
+.blog-description {
+  text-align: justify;
+  font-size: 1rem;
+  padding: 0 0.5rem 5rem 0.5rem;
+}
+
+.blog-heading {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Blog Styles ends */
+
+/* Booking CASE starts */
+
+.booking-case {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(119, 114, 114, 0.5);
+  border-radius: 16px;
+  padding: 0.8rem;
+  margin: 0.5rem 1rem 0.4rem 1rem;
+}
+
+.booking-case button {
+  background: var(--color-secondary);
+  border-radius: 10px;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin: 0.8rem 0 0 0;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  display: block;
+  width: 95%;
+}
+
+.icon-label {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 0 0 0.4rem;
+}
+
+@media screen and (min-width: 760px) {
+  .booking-case {
+    display: flex;
+    flex-direction: row;
+    padding: 0.6rem;
+    margin: 0 0 1rem 0;
+    border-radius: 10px;
+  }
+
+  .icon-label {
+    font-size: 0.9rem;
+    padding: 0.1rem 0.4rem;
+  }
+
+  .booking-case button {
+    border-radius: 7px;
+    border: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin: 1.5rem 0.7rem 0 0;
+    padding: 0.3rem;
+    text-transform: uppercase;
+    display: block;
+    width: 50%;
+  }
+
+  .booking-case button:hover {
+    background: #ffd730;
+  }
+}
+
+/* Booking CASE ends */
+
+/* Showcase Buttons style starts */
+.input {
+  width: 95%;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background: #e6dddd;
+}
+
+.icon-inside {
+  width: 100%;
+  position: relative;
+  margin: 0 0 0 1rem;
+}
+
+@media screen and (min-width: 760px) {
+  .input {
+    width: 90%;
+    padding: 8px;
+    margin: 1px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .icon-inside {
+    width: 80%;
+    position: relative;
+    margin: 0 1rem;
+  }
+}
+
+/* Showcase Buttons style ends */

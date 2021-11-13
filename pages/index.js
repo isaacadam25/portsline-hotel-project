@@ -6,6 +6,7 @@ import Testimonial from "../components/Testimonial";
 import Services from "../components/Services";
 import SpaceDiv from "../components/SpaceDiv";
 import { getAllRoomTypes, getAllTestimonials } from "./api/api";
+import BookingCase from "../components/BookingCase";
 
 export default function Home({ testimonials, room_types }) {
   // console.log("props => ", testimonials);
@@ -27,12 +28,12 @@ export async function getStaticProps() {
   let testimonials = [];
   let room_types = [];
   try {
-  room_types = await getAllRoomTypes();
-  try {
-  testimonials = await getAllTestimonials();
-  } catch (error) {
-    console.log({ "Error => ": error });
-  }
+    room_types = await getAllRoomTypes();
+    try {
+      testimonials = await getAllTestimonials();
+    } catch (error) {
+      console.log({ "Error => ": error });
+    }
   } catch (error) {
     console.log({ "Error => ": error });
   }
