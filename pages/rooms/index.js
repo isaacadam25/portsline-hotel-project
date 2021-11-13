@@ -35,7 +35,7 @@ export default function Rooms() {
               md={{ span: 4, offset: 0 }}
               key={room.id}
             >
-              <RoomCard roomTitle={room.name} roomPrice={room.price} />
+              <RoomCard roomTitle={room.name} roomPrice={room.price} roomTypeId={room.id} />
             </Col>
           ))}
       </Row>

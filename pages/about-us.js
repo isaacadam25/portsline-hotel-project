@@ -251,13 +251,14 @@ export default function AboutUs({ data }) {
             <h3>OUR STAFF</h3>
             <div className="title-under-line-center" /> <br />
           </div>
-          {staffs.map(staff => (
-            <StaffCard key={staff.id}
-              name={staff.first_name}
-              title={staff.username}
+          {staffs.map((staff) => (
+            <StaffCard
+              key={staff.id}
+              photo={staff.profile_image}
+              full_name={staff.first_name + ' ' + staff.last_name}
+              title={staff.employee_type_str}
               description="A strategically built Hotel with features of its own kind."
             />
-
           ))}
         </Row>
         {/* Staffs Row Ends */}
@@ -277,7 +278,7 @@ export async function getStaticProps() {
   try {
     data = await getAllStaff();
   } catch (error) {
-    // console.log({ "Error => ": error });
+    console.log({ "Error => ": error });
     // return error;
   }
 

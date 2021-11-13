@@ -74,7 +74,6 @@ Home page -->
         -Znakuja ID only instead of words(string)
     7. Testimonial Author-Title ie.. Aika Magolo-Project Manager
 
-
     <==========  UI Issues Section  ==========>
     <!-- 1. Either Add Max-Height Css-Property or leave as it is (Blog-Post-Card-->
     2. Testimonial Card Size(Height and Width) Should be the same for comments(long and short comments)
@@ -88,3 +87,28 @@ Home page -->
     1. When Fetching Data In Next-js using getStaticProps() Method,
         -Dont Put that method in a component(Sub Element Which Is Not In a page-file In Which It Is Called), Bcoz The Method will not be called. So, Put the method in the parent page-file where this component is called and pass the data to that component as props.
         -Reason: getStaticProps Method is called when building the page not a component.
+
+Meeting Agenda:
+    <!-- => Progress
+    -Finish Fast Ang Get New Deal Fast Though We Are Free To Any Speed -->
+    <!-- 1. Drive-Todo.txt => Jira
+        -if drive, check it frequently -->
+    <!-- 2. API vs XD-Design  -->
+    <!-- 3. Mode of Communication 
+        -Active Email
+        -SMS
+        -Waxap -->
+    <!-- 4. Things that needs documentations
+        -Markdown For Debugging Tips
+            >For
+            -Django
+            -React
+            -Next-js -->
+    <!-- 5. Fetching Data In Admin Page - Aika -->
+    jira-waxap, slack
+
+    timotheomhoja@gmail.com
+    isaacadam04@gmail.com
+    jjmgonja@gmail.com
+    ikermagolo@gmail.com
+    mohamedmfaume700@gmail.com

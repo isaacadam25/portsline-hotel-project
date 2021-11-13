@@ -11,7 +11,7 @@ const FeaturedRooms = ({ room_types }) => {
         </Col>
         {room_types.map((item) => (
           <Col className="room-card" xs={12} md={4} key={item.id}>
-            <RoomCard roomTitle={item.type_name} roomPrice={item.room_price} />
+            <RoomCard roomTitle={item.type_name} roomPrice={item.room_price} roomTypeId={item.id} />
             {/* <RoomCard roomTitle="Comfort Tripple Room" roomPrice="150,000" /> */}
           </Col>
         ))}

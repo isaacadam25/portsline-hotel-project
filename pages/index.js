@@ -25,11 +25,14 @@ export default function Home({ testimonials, room_types }) {
 
 export async function getStaticProps() {
   let testimonials = [];
-  let room_types = ["one1", "two1", "three1"];
-  // let room_types = [];
+  let room_types = [];
   try {
-    testimonials = await getAllTestimonials();
-    // room_types = await getAllRoomTypes();
+  room_types = await getAllRoomTypes();
+  try {
+  testimonials = await getAllTestimonials();
+  } catch (error) {
+    console.log({ "Error => ": error });
+  }
   } catch (error) {
     console.log({ "Error => ": error });
   }

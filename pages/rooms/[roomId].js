@@ -9,6 +9,7 @@ import FeaturedRooms from "../../components/FeaturedRooms";
 import Room from "../../public/images/room1.jpg";
 import bg from "../../public/images/acc1.jpg";
 import Carousel from "react-elastic-carousel";
+import { getAllRoomTypes, getSingleRoomType } from "../api/api";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -17,7 +18,8 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
 ];
 
-export default function RoomDetail({ caution }) {
+export default function RoomDetail({ caution, room_type }) {
+  console.log(room_type);
   const router = useRouter();
   const roomId = router.query.roomId;
   return (
@@ -169,4 +171,42 @@ export default function RoomDetail({ caution }) {
       <SpaceDiv />
     </Layout>
   );
+}
+
+export async function getStaticPaths() {
+  // Call an external API endpoint to get room_types
+  let room_types = [];
+  try {
+    room_types = await getAllRoomTypes();
+    console.log("room types", room_types);
+  } catch (error) {
+    console.log({ "Error => ": error });
+  }
+
+  // Get the paths we want to pre-render based on room_type
+  const paths = room_types.map((room) => ({
+    params: { roomId: room.id.toString() },
+  }));
+
+  // We'll pre-render only these paths at build time.
+  // { fallback: false } means other routes should 404.
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  console.log("id => ", params.roomId);
+  // params contains the room_type `id`.
+  // If the route is like /room_type/1, then params.id is 1
+  let room_type = "";
+  try {
+    room_type = await getSingleRoomType(params.roomId);
+    console.log("single room ", room_type);
+  } catch (error) {
+    console.log({ "Error => ": error });
+  }
+  // const res = await fetch(`https://.../posts/${params.id}`);
+  // const post = await res.json();
+
+  // Pass room_type data to the page via props
+  return { props: { room_type } };
 }

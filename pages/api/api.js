@@ -19,6 +19,11 @@ export async function getAllRoomTypes() {
   const response = await baseLink.get("room_type/", config);
   return response.data;
 }
+// Pull Single Room-Type
+export async function getSingleRoomType({room_type_id}) {
+  const response = await baseLink.get(`room_type/${room_type_id}/`, config);
+  return response.data;
+}
 
 // Pull All Staff
 export async function getAllStaff() {

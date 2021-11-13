@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Card, Row, Col } from 'react-bootstrap';
 import Hotel from '../public/hotel.jpg';
 
-const RoomCard = ({ roomTitle, roomPrice }) => {
+const RoomCard = ({ roomTitle, roomPrice, roomTypeId }) => {
   return (
     <Card
       className="bg-dark text-white"
@@ -23,7 +23,7 @@ const RoomCard = ({ roomTitle, roomPrice }) => {
             <div className="room-price-div">{roomPrice} Tsh</div>
           </Col>
         </Row>
-        <Link href="/rooms/200" passHref>
+        <Link href={`/rooms/${roomTypeId}`} passHref>
           <a href="#">View More</a>
         </Link>
       </Card.ImgOverlay>
