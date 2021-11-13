@@ -1,5 +1,4 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
 
 const InputWithIcon = ({ type, placeholder, fontAwesome, label }) => {
   return (

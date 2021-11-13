@@ -5,6 +5,7 @@ import FeaturedRooms from '../components/FeaturedRooms';
 import Testimonial from '../components/Testimonial';
 import Services from '../components/Services';
 import SpaceDiv from '../components/SpaceDiv';
+import BookingCase from '../components/BookingCase';
 
 export default function Home() {
   return (

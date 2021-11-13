@@ -18,6 +18,7 @@ const BookingCase = () => {
         placeholder="Number of Guests"
         fontAwesome=""
       />
+      <button className="book-case-button">Book Now</button>
     </div>
   );
 };
