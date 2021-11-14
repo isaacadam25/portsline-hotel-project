@@ -1,11 +1,11 @@
-import Banner from "../components/Banner";
-import Layout from "../components/Layout";
-import MenuCard from "../components/MenuCard";
-import { Card, Row, Col, Form, Button } from "react-bootstrap";
-import chicken from "../public/images/grilled.jpg";
-import beef from "../public/images/roast-beef.jpg";
-import mshkaki from "../public/images/mishkaki.jpg";
-import SpaceDiv from "../components/SpaceDiv";
+import Banner from '../components/Banner';
+import Layout from '../components/Layout';
+import MenuCard from '../components/MenuCard';
+import { Card, Row, Col, Form, Button } from 'react-bootstrap';
+import chicken from '../public/images/grilled.jpg';
+import beef from '../public/images/roast-beef.jpg';
+import mshkaki from '../public/images/mishkaki.jpg';
+import SpaceDiv from '../components/SpaceDiv';
 
 export default function Restaurant() {
   const menus = [];
@@ -31,21 +31,26 @@ export default function Restaurant() {
       {/* Menu Contents Start */}
       <Row
         className="contents-parent"
-        style={{ width: "100%", backgroundColor: "", margin: 0 }}
+        style={{ width: '100%', backgroundColor: '', margin: 0 }}
       >
         <Row
           style={{
-            backgroundColor: "",
-            height: "50vh",
-            margin: "0 0 5% 0",
+            backgroundColor: '',
+            height: '50vh',
+            margin: '0 0 5% 0',
             padding: 0,
           }}
         >
           <div className="restaurant-first-row">
-            <Row style={{ width: "100%", margin: 0, padding: 0 }}>
-              <Card style={{ padding: "2%" }}>
-                <Card.Title>FOOD AND MEALS</Card.Title>
-                <Card.Text>
+            <Row style={{ width: '100%', margin: 0, padding: 0 }}>
+              <Card style={{ padding: '2%' }}>
+                <Card.Title
+                  style={{ fontWeight: 600 }}
+                  className="restaurant-text"
+                >
+                  FOOD AND MEALS
+                </Card.Title>
+                <Card.Text className="restaurant-text">
                   Ports Line Hotel & Spa gives attention in choice of genuine,
                   local as well as international ingredients, culinary abilities
                   of our chefs, exemplary service and cozy restaurant ambience
@@ -58,8 +63,8 @@ export default function Restaurant() {
 
         <Row
           style={{
-            width: "100%",
-            backgroundColor: "",
+            width: '100%',
+            backgroundColor: '',
             margin: 0,
             padding: 0,
           }}
@@ -69,61 +74,79 @@ export default function Restaurant() {
 
         <Row
           style={{
-            backgroundColor: "lightgray",
-            padding: "5% 10%",
-            borderRadius: "30px",
+            backgroundColor: 'lightgray',
+            padding: '5% 10%',
+            borderRadius: '30px',
             margin: 0,
           }}
         >
           {/* <Col md={6} xs={12} sm={12}> */}
-          <Card style={{ backgroundColor: "inherit", border: "none" }}>
-            <Card.Title style={{ marginBottom: "3%" }}>Book a Table</Card.Title>
+          <Card style={{ backgroundColor: 'inherit', border: 'none' }}>
+            <Card.Title
+              className="restaurant-text"
+              style={{ marginBottom: '3%', fontWeight: 600 }}
+            >
+              Book a Table
+            </Card.Title>
             <Form>
               <Row>
                 <Col md={6} xs={12} sm={12}>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Group
+                    className="mb-3 restaurant-text"
+                    controlId="formBasicEmail"
+                  >
                     <Form.Label>Full Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter full name" />
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Group
+                    className="mb-3 restaurant-text"
+                    controlId="formBasicEmail"
+                  >
                     <Form.Label>Email </Form.Label>
                     <Form.Control type="email" placeholder="Enter email" />
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Group
+                    className="mb-3 restaurant-text"
+                    controlId="formBasicEmail"
+                  >
                     <Form.Label>Phone </Form.Label>
                     <Form.Control
                       type="number"
                       placeholder="Enter phone number"
                     />
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Group
+                    className="mb-3 restaurant-text"
+                    controlId="formBasicEmail"
+                  >
                     <Form.Label>Date </Form.Label>
                     <Form.Control type="date" placeholder="select date" />
                   </Form.Group>
                 </Col>
                 <Col md={6} xs={12} sm={12}>
                   <Form.Group
-                    className="mb-3"
+                    className="mb-3 restaurant-text"
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>Comments</Form.Label>
                     <Form.Control
                       as="textarea"
                       rows={3}
-                      style={{ height: "36vh" }}
+                      style={{ height: '36vh' }}
                     />
                   </Form.Group>
                 </Col>
               </Row>
               <Row>
-                <Col md={2}>
-                <Button
-                  variant=""
-                  type="submit"
-                  style={{ backgroundColor: "blue" }}
-                >
-                  Submit
-                </Button>
+                <Col md={12}>
+                  <Button
+                    variant=""
+                    type="submit"
+                    className="restaurant-button float-end"
+                    style={{ backgroundColor: 'blue' }}
+                  >
+                    Submit
+                  </Button>
                 </Col>
               </Row>
             </Form>

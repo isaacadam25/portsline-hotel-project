@@ -66,7 +66,7 @@ const Footer = () => {
             <p>CR No. 489654</p>
             <p>Open: 24 HRS</p>
             <p>63/65 Block-T Bingo/Taifa Road</p>
-            <p>P.O Box 6052,</p>
+            <p>P.O Box 6052, Dar es salaam</p>
           </address>
         </Col>
         <Col className="map" xs={12} md={3}>

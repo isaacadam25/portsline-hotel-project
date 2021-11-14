@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
-import Logo from '../public/logo/pl_min_logo_white-01.png';
+import Logo from '../public/logo/Portsline logo-single-p.png';
 import PortLogo from '../public/logo/LOGO-Single-P.png';
 
 const NavigationBar = () => {
@@ -11,7 +11,7 @@ const NavigationBar = () => {
       <Container>
         <Link href="/" passHref>
           <Navbar.Brand href="#" style={{ backgroundColor: '' }}>
-            <Image src={PortLogo} alt="logo-image" width={50} height={40} />
+            <Image src={Logo} alt="logo-image" width={70} height={40} />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -39,9 +39,10 @@ const NavigationBar = () => {
             <Link href="/blog">
               <a className="navigation-links">Blog</a>
             </Link>
-            <Link href="#">
+            <Link passHref>
               <a
-                href="#"
+                href="https://covid19.who.int/region/afro/country/tz"
+                target="_blank"
                 className="d-inline d-md-none"
                 style={{ color: 'yellow' }}
               >
@@ -58,7 +59,7 @@ const NavigationBar = () => {
             <Nav.Link href="#">Blog</Nav.Link> */}
             <Link href="/booking" passHref>
               <button className="nav-button">
-                <marquee> Book Now</marquee>
+                <marquee loop> Book Now</marquee>
               </button>
             </Link>
           </Nav>

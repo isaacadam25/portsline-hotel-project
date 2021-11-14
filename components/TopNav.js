@@ -17,12 +17,15 @@ const TopNav = () => {
         >
           <i className="fa fa-envelope" /> info@portslinehotel.co.tz
         </a>
-        <a
-          href="https://covid19.who.int/region/afro/country/tz"
-          className="d-none d-md-inline"
-        >
-          <i className="fa fa-exclamation-circle " /> COVID-19 Travel Updates
-        </a>
+        <Link passHref>
+          <a
+            href="https://covid19.who.int/region/afro/country/tz"
+            target="_blank"
+            className="d-none d-md-inline"
+          >
+            <i className="fa fa-exclamation-circle " /> COVID-19 Travel Updates
+          </a>
+        </Link>
       </div>
       <div className="lang-div d-none d-md-inline">
         <select>

@@ -25,7 +25,7 @@ export default function RoomDetail({ caution }) {
       <Container>
         <Row className="justify-content-center">
           <Col
-            md={{ span: 11, offset: 1 }}
+            md={{ span: 12, offset: 0 }}
             xs={12}
             className="d-none d-md-block"
           >
@@ -34,21 +34,21 @@ export default function RoomDetail({ caution }) {
               className="room-image"
               src={Room}
               alt="Room-Image"
-              width={372}
+              width={370}
               height={200}
             />
             <Image
               className="room-image"
               src={Room}
               alt="Room-Image"
-              width={372}
+              width={370}
               height={200}
             />
             <Image
               className="room-image"
               src={Room}
               alt="Room-Image"
-              width={372}
+              width={370}
               height={200}
             />
           </Col>
@@ -70,27 +70,27 @@ export default function RoomDetail({ caution }) {
                 src={bg}
                 alt="Room-Image"
                 width={372}
-                height={200}
+                height={300}
               />
               <Image
                 className="room-image"
                 src={Room}
                 alt="Room-Image"
                 width={372}
-                height={200}
+                height={300}
               />
               <Image
                 className="room-image"
                 src={Room}
                 alt="Room-Image"
                 width={372}
-                height={200}
+                height={300}
               />
               <Image
                 className="room-image"
                 src={bg}
                 alt="Room-Image"
-                width={372}
+                width={37}
                 height={200}
               />
             </Carousel>

@@ -7,14 +7,19 @@ const MenuCard = ({ title, subTitle, description, pic }) => {
     <Col md={{ span: 4 }} xs={{ span: 12 }}>
       <Card
         className="shadowCard"
-        style={{ width: "100%", border: "none", marginBottom: "10%" }}
+        style={{ width: '100%', border: 'none', marginBottom: '10%' }}
       >
         <Image src={pic} width={300} height={200} alt="Menu-Image" />
         <Card.Body>
           <h3 style={{ color: 'gray' }}>{title}</h3>
           <Card.Title style={{ color: 'darkblue' }}>{subTitle}</Card.Title>
-          <Card.Text>{description}</Card.Text>
-          <button style={{ backgroundColor: 'white' }}>Read more...</button>
+          <Card.Text className="restaurant-text">{description}</Card.Text>
+          <button
+            className="restaurant-button"
+            style={{ backgroundColor: 'white' }}
+          >
+            View Menu
+          </button>
         </Card.Body>
       </Card>
     </Col>
