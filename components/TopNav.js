@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const TopNav = () => {
   return (
@@ -17,12 +18,8 @@ const TopNav = () => {
         >
           <i className="fa fa-envelope" /> info@portslinehotel.co.tz
         </a>
-        <Link passHref>
-          <a
-            href="https://covid19.who.int/region/afro/country/tz"
-            target="_blank"
-            className="d-none d-md-inline"
-          >
+        <Link href="https://covid19.who.int/region/afro/country/tz" passHref>
+          <a target="_blank" className="d-none d-md-inline">
             <i className="fa fa-exclamation-circle " /> COVID-19 Travel Updates
           </a>
         </Link>

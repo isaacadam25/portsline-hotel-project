@@ -39,9 +39,11 @@ const NavigationBar = () => {
             <Link href="/blog">
               <a className="navigation-links">Blog</a>
             </Link>
-            <Link passHref>
+            <Link
+              href="https://covid19.who.int/region/afro/country/tz"
+              passHref
+            >
               <a
-                href="https://covid19.who.int/region/afro/country/tz"
                 target="_blank"
                 className="d-inline d-md-none"
                 style={{ color: 'yellow' }}
