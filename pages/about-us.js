@@ -1,15 +1,19 @@
-import TopNav from '../components/TopNav';
-import NavigationBar from '../components/NavigationBar';
-import Banner from '../components/Banner';
-import Footer from '../components/Footer';
-import { Card, Row, Col } from 'react-bootstrap';
-import RoomImage from '../public/images/acc1.jpg';
-import RoomImage2 from '../public/images/room2.jpg';
-import Image from 'next/image';
-import StaffCard from '../components/StaffCard';
-import SpaceDiv from '../components/SpaceDiv';
+import TopNav from "../components/TopNav";
+import NavigationBar from "../components/NavigationBar";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
+import { Card, Row, Col } from "react-bootstrap";
+import RoomImage from "../public/images/acc1.jpg";
+import RoomImage2 from "../public/images/room2.jpg";
+import Image from "next/image";
+import StaffCard from "../components/StaffCard";
+import SpaceDiv from "../components/SpaceDiv";
+import { getAllStaff } from "./api/api";
 
-export default function AboutUs() {
+export default function AboutUs({ data }) {
+  const staffs = data;
+  // console.log("Staffs => > > ", data);
+
   return (
     <div style={{ height: '100vh', position: 'relative' }}>
       <TopNav />
@@ -247,21 +251,15 @@ export default function AboutUs() {
             <h3>OUR STAFF</h3>
             <div className="title-under-line-center" /> <br />
           </div>
-          <StaffCard
-            name="John Doe"
-            title="Project Manager"
-            description="A strategically built Hotel with features of its own kind."
-          />
-          <StaffCard
-            name="John Doe"
-            title="Project Manager"
-            description="A strategically built Hotel with features of its own kind."
-          />
-          <StaffCard
-            name="John Doe"
-            title="Project Manager"
-            description="A strategically built Hotel with features of its own kind."
-          />
+          {staffs.map((staff) => (
+            <StaffCard
+              key={staff.id}
+              photo={staff.profile_image}
+              full_name={staff.first_name + ' ' + staff.last_name}
+              title={staff.employee_type_str}
+              description="A strategically built Hotel with features of its own kind."
+            />
+          ))}
         </Row>
         {/* Staffs Row Ends */}
         <SpaceDiv />
@@ -272,4 +270,21 @@ export default function AboutUs() {
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  let data = [];
+  // let data = ['one', 'two', 'three']
+  try {
+    data = await getAllStaff();
+  } catch (error) {
+    console.log({ "Error => ": error });
+    // return error;
+  }
+
+  return {
+    props: {
+      data,
+    },
+  };
 }

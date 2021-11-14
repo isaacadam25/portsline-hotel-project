@@ -2,8 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+<<<<<<< HEAD
 import Logo from '../public/logo/Portsline logo-single-p.png';
 import PortLogo from '../public/logo/LOGO-Single-P.png';
+=======
+import Logo from '../public/logo/pl_min_logo_white-01.png';
+import PortLogo from '../public/logo/Portsline logo-single-p.png';
+>>>>>>> 001fd0712fa2141b514f829252c2ddf8dbe3004a
 
 const NavigationBar = () => {
   return (
@@ -11,7 +16,11 @@ const NavigationBar = () => {
       <Container>
         <Link href="/" passHref>
           <Navbar.Brand href="#" style={{ backgroundColor: '' }}>
+<<<<<<< HEAD
             <Image src={Logo} alt="logo-image" width={70} height={40} />
+=======
+            <Image src={PortLogo} alt="logo-image" width={90} height={40} />
+>>>>>>> 001fd0712fa2141b514f829252c2ddf8dbe3004a
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

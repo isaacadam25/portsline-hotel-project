@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import RoomCard from './RoomCard';
@@ -5,12 +6,20 @@ import RoomCard from './RoomCard';
 const FeaturedRooms = () => {
   const [show, setShow] = useState(false);
 
+=======
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import RoomCard from "./RoomCard";
+
+const FeaturedRooms = ({ room_types }) => {
+>>>>>>> 001fd0712fa2141b514f829252c2ddf8dbe3004a
   return (
     <Container>
       <Row className="justify-content-center featured-rooms">
         <Col xs={12} md={12} className="position-container">
           <h3>Featured Rooms</h3>
         </Col>
+<<<<<<< HEAD
         <Col className="room-card" xs={12} md={4}>
           <RoomCard roomTitle="Comfort Tripple Room" roomPrice="150,000" />
         </Col>
@@ -34,6 +43,14 @@ const FeaturedRooms = () => {
           </>
         ) : null}
 
+=======
+        {room_types.map((item) => (
+          <Col className="room-card" xs={12} md={4} key={item.id}>
+            <RoomCard roomTitle={item.type_name} roomPrice={item.room_price} roomTypeId={item.id} />
+            {/* <RoomCard roomTitle="Comfort Tripple Room" roomPrice="150,000" /> */}
+          </Col>
+        ))}
+>>>>>>> 001fd0712fa2141b514f829252c2ddf8dbe3004a
         <Col className="room-card" xs={12} md={12}>
           {!show ? (
             <a onClick={() => setShow(true)} className="scroll-button">
