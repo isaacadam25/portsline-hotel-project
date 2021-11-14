@@ -4,6 +4,7 @@ import RoomCard from './RoomCard';
 
 const FeaturedRooms = ({ room_types }) => {
   const [show, setShow] = useState(false);
+
   return (
     <Container>
       <Row className="justify-content-center featured-rooms">
