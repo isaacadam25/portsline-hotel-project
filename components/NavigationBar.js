@@ -12,7 +12,6 @@ const NavigationBar = () => {
         <Link href="/" passHref>
           <Navbar.Brand href="#" style={{ backgroundColor: '' }}>
             <Image src={Logo} alt="logo-image" width={70} height={40} />
-            <Image src={PortLogo} alt="logo-image" width={90} height={40} />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

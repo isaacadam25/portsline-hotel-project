@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 import Banner from '../components/Banner';
-import Layout from '../components/Layout';
-import MenuCard from '../components/MenuCard';
-import { Card, Row, Col, Form, Button } from 'react-bootstrap';
-import chicken from '../public/images/grilled.jpg';
-import beef from '../public/images/roast-beef.jpg';
-import mshkaki from '../public/images/mishkaki.jpg';
-import SpaceDiv from '../components/SpaceDiv';
-=======
 import React, { useState } from "react";
 import Banner from "../components/Banner";
 import Layout from "../components/Layout";
@@ -17,7 +8,6 @@ import chicken from "../public/images/grilled.jpg";
 import beef from "../public/images/roast-beef.jpg";
 import mshkaki from "../public/images/mishkaki.jpg";
 import SpaceDiv from "../components/SpaceDiv";
->>>>>>> 001fd0712fa2141b514f829252c2ddf8dbe3004a
 
 export default function Restaurant() {
   const table_booking_info = {
