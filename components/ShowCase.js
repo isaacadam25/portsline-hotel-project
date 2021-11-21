@@ -5,7 +5,7 @@ const ShowCase = () => {
   return (
     <div className="showcase">
       <p className="subtitle">
-        We guarantee to offer the world-famous, Deeply relaxing quality
+        We guarantee to offer the world-famous, deeply relaxing quality
         unforgetable experience to all our guests
       </p>
       <BookingCase />

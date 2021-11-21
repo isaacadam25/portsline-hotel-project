@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { Container } from 'react-bootstrap';
 import NavigationBar from './NavigationBar';
 import TopNav from './TopNav';
 import Footer from './Footer';
@@ -10,19 +11,18 @@ const Layout = ({ children, title }) => {
       <Head>
         <title>Portsline Hotel and SPA | {title ? title : 'Home'}</title>
       </Head>
-
-      <header>
+      <Container className="p-0" fluid>
         <TopNav />
         <NavigationBar />
-      </header>
 
-      <main style={{ backgroundColor: ''}}>{children}</main>
+        <main>{children}</main>
 
-      <footer>
-        <section>
-          <Footer />
-        </section>
-      </footer>
+        <footer>
+          <section>
+            <Footer />
+          </section>
+        </footer>
+      </Container>
     </>
   );
 };

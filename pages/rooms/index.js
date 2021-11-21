@@ -1,23 +1,11 @@
-import { Col, Row } from "react-bootstrap";
-import Banner from "../../components/Banner";
-import Layout from "../../components/Layout";
-import RoomCard from "../../components/RoomCard";
-import SpaceDiv from "../../components/SpaceDiv";
-import { getAllRoomTypes } from "../api/api";
+import { Col, Row } from 'react-bootstrap';
+import Banner from '../../components/Banner';
+import Layout from '../../components/Layout';
+import RoomCard from '../../components/RoomCard';
+import SpaceDiv from '../../components/SpaceDiv';
+import { getAllRoomTypes } from '../api/api';
 
-<<<<<<< HEAD
-export default function Rooms() {
-  const rooms = [
-    { id: 0, name: 'Comfort Tripple Room', price: '150,000' },
-    { id: 1, name: 'Comfort Tripple Room', price: '200,000' },
-    { id: 2, name: 'Comfort Tripple Room', price: '250,000' },
-    { id: 3, name: 'Comfort Tripple Room', price: '300,000' },
-    { id: 4, name: 'Comfort Tripple Room', price: '350,000' },
-    { id: 5, name: 'Standard Twin Room', price: '400,000' },
-    { id: 6, name: 'Business Twin Room', price: '450,000' },
-  ];
-=======
-export default function Rooms({room_types}) {
+export default function Rooms({ room_types }) {
   // const rooms = [
   //   { id: 0, name: "Comfort Tripple Room", price: "150,000/=" },
   //   { id: 1, name: "Comfort Tripple Room", price: "200,000/=" },
@@ -27,7 +15,6 @@ export default function Rooms({room_types}) {
   //   { id: 5, name: "Standard Twin Room", price: "400,000/=" },
   //   { id: 6, name: "Business Twin Room", price: "450,000/=" },
   // ];
->>>>>>> 001fd0712fa2141b514f829252c2ddf8dbe3004a
 
   return (
     <Layout title="Rooms">
@@ -36,9 +23,9 @@ export default function Rooms({room_types}) {
       <Row
         className="featured-rooms"
         style={{
-          backgroundColor: "",
+          backgroundColor: '',
           margin: 0,
-          padding: "5% ",
+          padding: '5% ',
         }}
       >
         {room_types.map((room) => (

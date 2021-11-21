@@ -1,32 +1,25 @@
-import TopNav from "../components/TopNav";
-import NavigationBar from "../components/NavigationBar";
-import Banner from "../components/Banner";
-import Footer from "../components/Footer";
-import { Card, Row, Col } from "react-bootstrap";
-import RoomImage from "../public/images/acc1.jpg";
-import RoomImage2 from "../public/images/room2.jpg";
-import Image from "next/image";
-import StaffCard from "../components/StaffCard";
-import SpaceDiv from "../components/SpaceDiv";
-import { getAllStaff } from "./api/api";
+import Banner from '../components/Banner';
+import Layout from '../components/Layout';
+import { Card, Row, Col } from 'react-bootstrap';
+import RoomImage from '../public/images/acc1.jpg';
+import RoomImage2 from '../public/images/room2.jpg';
+import Image from 'next/image';
+import StaffCard from '../components/StaffCard';
+import SpaceDiv from '../components/SpaceDiv';
+import { getAllStaff } from './api/api';
 
 export default function AboutUs({ data }) {
   const staffs = data;
-  // console.log("Staffs => > > ", data);
 
   return (
-    <div style={{ height: '100vh', position: 'relative' }}>
-      <TopNav />
-      <NavigationBar />
+    <Layout>
       <Banner title="About Us" />
 
       {/*  About-Us contents start */}
 
-      <Row className="contents-parent" style={{ width: '100%', margin: 0 }}>
+      <Row className="contents-parent">
         {/* First Row Starts */}
-        <Row
-          style={{ backgroundColor: '', padding: 0, width: '100%', margin: 0 }}
-        >
+        <Row>
           <Col
             style={{ backgroundColor: '', padding: '0', margin: 0 }}
             md={6}
@@ -266,9 +259,7 @@ export default function AboutUs({ data }) {
       </Row>
 
       {/* About-Us contents end */}
-
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 
@@ -278,7 +269,7 @@ export async function getStaticProps() {
   try {
     data = await getAllStaff();
   } catch (error) {
-    console.log({ "Error => ": error });
+    console.log({ 'Error => ': error });
     // return error;
   }
 
